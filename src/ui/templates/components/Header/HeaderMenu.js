@@ -44,7 +44,6 @@ export default function HeaderMenu() {
                 }
                 alt="Icon impressum"
                 to="/impressum"
-                target="_blank"
                 margin="0"
             />
         </Flex>

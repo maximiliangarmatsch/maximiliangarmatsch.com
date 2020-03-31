@@ -1,24 +1,19 @@
 import React from 'react';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Box } from '../../components/Base/Base';
-import NavLinkHome from '../../components/Navigation/NavLinkHome';
-import theme from '../../../config/theme';
 import DeviceProvider from '../../../helpers/DeviceProvider';
-import TextAdress from './components/TextAdress';
-import TextPrivacyPolicy from './components/TextPrivacyPolicy';
+import TextAdress from './sections/TextAdress';
+import TextPrivacyPolicy from './sections/TextPrivacyPolicy';
+import TextTermsOfService from './sections/TextTermsOfService';
+import TextSecurityOverview from './sections/TextSecurityOverview';
 
 export default function Impressum() {
-    const isDesktop = useMediaQuery(`(min-width:${theme.breakpoints.md})`);
     return (
         <DeviceProvider>
             <Box lineHeight="1.3rem" mt="2rem" p="0 15px">
                 <TextAdress />
+                <TextTermsOfService />
                 <TextPrivacyPolicy />
-                {!isDesktop && (
-                    <Box textAlign="center" m="2rem">
-                        <NavLinkHome />
-                    </Box>
-                )}
+                <TextSecurityOverview />
             </Box>
         </DeviceProvider>
     );
