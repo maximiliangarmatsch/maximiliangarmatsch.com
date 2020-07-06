@@ -5,6 +5,8 @@ import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from './components/BackgroundLayerDesktop';
 import TextWelcome from './components/TextWelcome';
 import IconButtonBig from './components/IconButtonBig';
+import LoginButton from './components/LoginButton';
+import UserNameText from './components/UserNameText';
 
 export default function LandingPageDesktop() {
     return (
@@ -25,6 +27,19 @@ export default function LandingPageDesktop() {
                         <IconButtonBig to="/achievements">
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
+                    </Box>
+                </Box>
+
+                <Box
+                    maxWidth={{ lg: '550px', xl: '650px', xxl: '800px' }}
+                    position="absolute"
+                    top="calc(75% - 30px)"
+                    left={{ lg: '2%', xl: '2%', xxl: '2%' }}
+                    zIndex="5"
+                >
+                    <Box height="50px" mt="25px">
+                        <LoginButton />
+                        <UserNameText />
                     </Box>
                 </Box>
             </BackgroundLayerDesktop>

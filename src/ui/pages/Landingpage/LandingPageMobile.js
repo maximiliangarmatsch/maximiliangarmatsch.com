@@ -5,6 +5,7 @@ import { Box } from '../../components/Base/Base';
 import TextWelcome from './components/TextWelcome';
 import BackgroundLayerMobile from './components/BackgroundLayerMobile';
 import IconButtonBig from './components/IconButtonBig';
+import LoginButton from './components/LoginButton';
 
 export default function LandingPageMobile() {
     return (
@@ -29,6 +30,9 @@ export default function LandingPageMobile() {
                         <IconButtonBig to="/achievements">
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
+                    </Box>
+                    <Box height="50px" width="100%" mt="25px">
+                        <LoginButton />
                     </Box>
                 </Box>
             </BackgroundLayerMobile>
