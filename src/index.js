@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Auth0Provider as AuthProvider } from '@auth0/auth0-react';
 import App from './ui/App';
-import { AuthProvider } from './context/AuthContext';
 import apolloClient from './data/apolloClient';
-import * as serviceWorker from './config/serviceWorker';
+import config from './config/authConfig.json';
+// import * as serviceWorker from './config/serviceWorker';
+
+const authSetUp = {
+    domain: config.DOMAIN,
+    clientId: config.CLIENTID,
+    cacheLocation: 'localstorage',
+    redirectUri: window.location.origin,
+};
 
 ReactDOM.render(
-    <AuthProvider>
+    <AuthProvider {...authSetUp}>
         <ApolloProvider client={apolloClient}>
             <Router>
                 <App />
