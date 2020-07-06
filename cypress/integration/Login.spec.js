@@ -1,11 +1,11 @@
-describe('testing with a test user data to show that our app is connected with auth0', () => {
+describe('testing login by test user', () => {
     beforeEach(() => {
         cy.visit('/');
         cy.viewport(1440, 660);
         cy.get('button[class*="CookieMessageDesktop"]').click();
     });
 
-    it('logging test user data on console', () => {
+    it('should log test user data on console', () => {
         cy.login()
             .then(resp => {
                 return resp.body;
@@ -22,6 +22,7 @@ describe('testing with a test user data to show that our app is connected with a
                 })
                     .then(res => res.body)
                     .then(user => console.log(user));
+                cy.visit('/');
             });
     });
 });
