@@ -2,7 +2,7 @@ import { InMemoryCache, HttpLink, ApolloClient } from 'apollo-boost';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-    uri: 'https://n4pky2nyw0.sse.codesandbox.io/',
+    uri: process.env.REACT_APP_DATASOURCE_URI,
     headers: {
         authorization: localStorage.getItem('token') || '',
     },
