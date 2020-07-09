@@ -11,7 +11,6 @@ describe('Landing page testing', () => {
 
     it('testing icon button big', () => {
         cy.get('div[class*="IconButtonBig"]').click();
-
         cy.url().should('eq', 'http://localhost:3000/letsgetstarted');
     });
 
