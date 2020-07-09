@@ -6,7 +6,6 @@ export default function UserNameText() {
     const { user } = useAuth0();
     return (
         <Box
-            as="button"
             width="100%"
             minWidth="140px"
             minHeight="100%"
@@ -23,6 +22,7 @@ export default function UserNameText() {
             border="none"
             css={`
                 box-shadow: 0px 0px 6px #0cd58c;
+                box-sizing: border-box;
                 &:focus {
                     outline: none;
                 }

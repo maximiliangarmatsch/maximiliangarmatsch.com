@@ -40,6 +40,7 @@ export default function LoginButton() {
             style={{ cursor: 'pointer' }}
             css={`
                 box-shadow: 0px 0px 6px #0cd58c;
+                box-sizing: border-box;
                 &:focus {
                     outline: none;
                 }
