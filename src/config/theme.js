@@ -22,6 +22,7 @@ export default {
         green: '#0de99a',
         grey: '#f8f9fa',
         darkgrey: '#191919',
+        deepBlack: '#222222',
     },
     space: [], // [0, 4, 8, 16, 32, 64, 128, 256]
     // fonts: {

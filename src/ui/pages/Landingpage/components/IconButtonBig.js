@@ -19,12 +19,12 @@ export default function IconButtonBig({ to, children, newTab = false }) {
                 css={`
                     box-shadow: 0px 0px 6px #0cd58c;
                 `}
-                bg="#0DE99A"
+                bg="green"
                 borderRadius="12px"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                color="#222222"
+                color="deepBlack"
                 fontSize="18px"
                 fontWeight="500"
             >

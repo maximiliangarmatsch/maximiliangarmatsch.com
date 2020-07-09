@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Box } from '../../../components/Base/Base';
-
-export default function UserNameText() {
+//import {} from "../../../../config/theme"
+export default function UserNameText(props) {
     const { user } = useAuth0();
     return (
         <Box
@@ -10,13 +10,13 @@ export default function UserNameText() {
             minWidth="140px"
             minHeight="100%"
             mt="25px"
-            bg="#0DE99A"
+            bg="green"
             p="10px"
             borderRadius="14px"
             display="flex"
             justifyContent="center"
             alignItems="center"
-            color="#222222"
+            color="deepBlack"
             fontSize="18px"
             fontWeight="500"
             border="none"
