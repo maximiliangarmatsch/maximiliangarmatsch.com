@@ -4,15 +4,15 @@ Cypress.Commands.add('login', (overrides = {}) => {
     });
     const options = {
         method: 'POST',
-        url: Cypress.env('auth_url'),
+        url: process.env.REACT_APP_AUTH_URL,
         body: {
             grant_type: 'password',
-            username: Cypress.env('auth_username'),
-            password: Cypress.env('auth_password'),
-            audience: Cypress.env('auth_audience'),
+            username: process.env.REACT_APP_AUTH_USERNAME,
+            password: process.env.REACT_APP_AUTH_PASSWORD,
+            audience: process.env.REACT_APP_AUTH_AUDIENCE,
             scope: 'openid profile email',
-            client_id: Cypress.env('auth_client_id'),
-            client_secret: Cypress.env('auth_client_secret'),
+            client_id: process.env.REACT_APP_AUTH_CLIENT_ID,
+            client_secret: process.env.REACT_APP_AUTH_CLIENT_SECRET,
             failOnStatusCode: false,
         },
     };

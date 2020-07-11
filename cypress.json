@@ -1,13 +1,5 @@
 {
     "experimentalComponentTesting": true,
     "componentFolder": "src/ui/components/Base",
-    "baseUrl": "http://localhost:3000",
-    "env": {
-        "auth_audience": "https://yeehaw69.us.auth0.com/api/v2/",
-        "auth_url": "https://yeehaw69.us.auth0.com/oauth/token",
-        "auth_client_id": "3q6XrgYEBQOc4dpP84R4aSMg2UTm8uV5",
-        "auth_client_secret": "mQp1QuQ8i6HAR0__q0tZ3b-6ZVU-vRDotEmiB2frLHaz-2ZAkkLJ_CZgvKTa0VJ0",
-        "auth_username": "e2e-testing@mydomain.com",
-        "auth_password": "s#m3R4nd0m-pass"
-    }
+    "baseUrl": "http://localhost:3000"
 }
