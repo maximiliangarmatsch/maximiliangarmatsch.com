@@ -1,5 +1,6 @@
 ### env variables
 
+```
 -> create an env file in root of project
 -> add following information for env variables:
 
@@ -11,3 +12,5 @@
 -> REACT_APP_AUTH_CLIENT_SECRET="YOUR AUTH0 CLIENT_SECRET"
 -> REACT_APP_AUTH_USERNAME="YOUR APPLICATION TEST USER NAME"
 -> REACT_APP_AUTH_PASSWORD="YOUR TEST USER NAME's PASSWORD"
+
+```
