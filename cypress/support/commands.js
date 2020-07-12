@@ -11,7 +11,7 @@ Cypress.Commands.add('login', (overrides = {}) => {
             password: process.env.REACT_APP_AUTH_PASSWORD,
             audience: process.env.REACT_APP_AUTH_AUDIENCE,
             scope: 'openid profile email',
-            client_id: process.env.REACT_APP_AUTH_CLIENTID,
+            client_id: process.env.REACT_APP_AUTH_CLIENT_ID,
             client_secret: process.env.REACT_APP_AUTH_CLIENT_SECRET,
             failOnStatusCode: false,
         },
