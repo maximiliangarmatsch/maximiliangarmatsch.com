@@ -2,6 +2,7 @@
 
 ```
 -> create an env file in root of project
+-> add the file to .gitignore
 -> add following information for env variables:
 
 -> REACT_APP_DATASOURCE_URI="YOUR_GRAPHQL_API_DATASOURCE"
