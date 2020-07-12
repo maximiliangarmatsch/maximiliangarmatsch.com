@@ -18,14 +18,3 @@ jobs:
           npm test
         env:
           CI: true ## optional
-      - name: "configure env"
-        env:
-          REACT_APP_DATASOURCE_URI: ${{ secrets.REACT_APP_DATASOURCE_URI }}
-          REACT_APP_AUTH0_DOMAIN: ${{ secrets.REACT_APP_AUTH0_DOMAIN }}
-          REACT_APP_AUTH0_CLIENTID: ${{secrets.REACT_APP_AUTH0_CLIENTID}}
-          REACT_APP_AUTH_AUDIENCE: ${{secrets.REACT_APP_AUTH_AUDIENCE}}
-          REACT_APP_AUTH_URL: ${{secrets.REACT_APP_AUTH_URL}}
-          REACT_APP_AUTH_CLIENT_ID: ${{secrets.REACT_APP_AUTH_CLIENT_ID}}
-          REACT_APP_AUTH_CLIENT_SECRET: ${{secrets.REACT_APP_AUTH_CLIENT_SECRET}}
-          REACT_APP_AUTH_USERNAME: ${{secrets.REACT_APP_AUTH_USERNAME}}
-          REACT_APP_AUTH_PASSWORD: ${{secrets.REACT_APP_AUTH_PASSWORD}}
