@@ -8,7 +8,7 @@ import apolloClient from './data/apolloClient';
 
 const authSetUp = {
     domain: process.env.REACT_APP_AUTH0_DOMAIN,
-    clientId: process.env.REACT_APP_AUTH0_CLIENT_ID,
+    clientId: process.env.REACT_APP_AUTH0_CLIENTID,
     cacheLocation: 'localstorage',
     redirectUri: window.location.origin,
 };
