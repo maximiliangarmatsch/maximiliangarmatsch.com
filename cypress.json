@@ -1,7 +1,6 @@
 {
     "experimentalComponentTesting": true,
-    "componentFolder": "src/ui/components/Base",
+    "componentFolder": "src/tests",
     "baseUrl": "http://localhost:3000",
-    "projectId": "cdbje3",
-    "testFiles": "**/*spec.js"
+    "projectId": "cdbje3"
 }
