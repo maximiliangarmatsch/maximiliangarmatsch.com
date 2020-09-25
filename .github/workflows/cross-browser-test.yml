@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v1
+      - name: Install dependencies
+        run: npm install
       - name: Firefox Browser Tests
         uses: cypress-io/github-action@v1
         with:
@@ -24,5 +26,5 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           browser: chrome
-          start: yarn start
+          start: npm start
           wait-on: 'http://localhost:3000'
