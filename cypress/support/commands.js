@@ -18,3 +18,7 @@ Cypress.Commands.add('login', (overrides = {}) => {
     };
     cy.request(options);
 });
+
+Cypress.Commands.add('getSel', (selector, ...args) => {
+    return cy.get(`[data-testId=${selector}]`, ...args);
+});
