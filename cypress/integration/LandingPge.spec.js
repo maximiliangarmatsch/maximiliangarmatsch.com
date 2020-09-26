@@ -1,4 +1,4 @@
-describe('Landing page testing', () => {
+describe('Landing Page', () => {
     beforeEach(() => {
         cy.visit('/');
         cy.viewport(1440, 660);

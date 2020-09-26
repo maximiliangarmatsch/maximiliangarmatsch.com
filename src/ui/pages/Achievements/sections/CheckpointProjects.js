@@ -16,7 +16,12 @@ export default function CheckpointDevelopers() {
                 xxl: '145px',
             }}
         >
-            <Text color="green" textAlign="center" lineHeight="14px">
+            <Text
+                color="green"
+                textAlign="center"
+                lineHeight="14px"
+                data-testId="iron-checkpoint"
+            >
                 <FormattedMessage
                     defaultMessage="
                     <header>12</header>

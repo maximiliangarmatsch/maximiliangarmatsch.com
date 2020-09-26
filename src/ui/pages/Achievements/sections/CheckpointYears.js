@@ -16,7 +16,12 @@ export default function CheckpointYears() {
                 xxl: '140px',
             }}
         >
-            <Text color="green" textAlign="center" lineHeight="12px">
+            <Text
+                color="green"
+                textAlign="center"
+                lineHeight="12px"
+                data-testId="iron-checkpoint"
+            >
                 <FormattedMessage
                     defaultMessage="
                     <header>14</header> 

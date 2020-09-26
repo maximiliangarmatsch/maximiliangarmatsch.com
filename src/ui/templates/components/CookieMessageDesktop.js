@@ -68,6 +68,7 @@ export default function CookieMessageDesktop({ acceptCookie }) {
                 p="10px 15px"
                 mt="20px"
                 onClick={acceptCookie}
+                data-testId="cookie-button"
             >
                 Accept
             </Box>

@@ -1,12 +1,12 @@
-describe('Achievements page testing', () => {
+describe('Achievement Page', () => {
     beforeEach(() => {
         cy.visit('/achievements');
         cy.viewport(1440, 660);
-        cy.get('button[class*="CookieMessageDesktop"]').click();
+        cy.getSel('cookie-button').click();
     });
 
-    it('testing icon checkpoints', () => {
-        cy.get('div[class*="IconCheckpoint"]').should('have.length', 6);
+    it('display six point', () => {
+        cy.get('iron-checkpoint').should('have.length', 6);
     });
 
     it('testing icon button big', () => {
