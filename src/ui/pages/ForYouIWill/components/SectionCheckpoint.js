@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '../../../components/Base/Base';
 
-export default function SectionCheckpoint({ children }) {
+export default function SectionCheckpoint({ children, dataTestId }) {
     return (
         <Box
             bg="#222"
@@ -14,6 +14,7 @@ export default function SectionCheckpoint({ children }) {
             lineHeight={{ _: '16px', lg: '22px', xl: '19px' }}
             fontWeight="300"
             mt={{ _: '15px', lg: '30px' }}
+            data-testid={dataTestId}
         >
             {children}
         </Box>

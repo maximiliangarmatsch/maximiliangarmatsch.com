@@ -1,20 +1,20 @@
-describe('Landing page testing', () => {
+describe('For You I Will', () => {
     beforeEach(() => {
         cy.visit('/foryouiwill');
         cy.viewport(1440, 660);
-        cy.get('button[class*="CookieMessageDesktop"]').click();
+        cy.getSel('cookie-button').click();
     });
 
-    it('testing checkpoints', () => {
-        cy.get('div[class*="SectionCheckpoint"]').should('have.length', 3);
+    it('For You I Will Sections', () => {
+        cy.getSel('section-checkpoint').should('have.length', 3);
     });
 
-    it('testing icon button big', () => {
+    it('Last Step', () => {
         cy.get('div[class*="IconButtonBig"]').click();
         cy.url().should('eq', 'http://localhost:3000/letsgetstarted');
     });
 
-    it('Icon large content test', () => {
+    it('Last Step Button Content', () => {
         cy.get('div[class*="IconButtonBig"]').should('contain', 'Last step');
     });
 });

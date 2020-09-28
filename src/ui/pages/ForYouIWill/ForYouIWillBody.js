@@ -29,7 +29,7 @@ export default function ForYouIWillBody() {
                 }
             `}
         >
-            <SectionCheckpoint>
+            <SectionCheckpoint dataTestId="section-checkpoint">
                 <FormattedMessage
                     defaultMessage="
                         <first>Understand</first> your needs
@@ -38,7 +38,7 @@ export default function ForYouIWillBody() {
                     values={messageValues}
                 />
             </SectionCheckpoint>
-            <SectionCheckpoint>
+            <SectionCheckpoint dataTestId="section-checkpoint">
                 <FormattedMessage
                     defaultMessage="
                         <first>Create</first> a prototype
@@ -49,7 +49,7 @@ export default function ForYouIWillBody() {
                     values={messageValues}
                 />
             </SectionCheckpoint>
-            <SectionCheckpoint>
+            <SectionCheckpoint dataTestId="section-checkpoint">
                 <FormattedMessage
                     defaultMessage="
                         <first>Manage</first> your project
