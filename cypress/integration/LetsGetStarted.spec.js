@@ -1,8 +1,8 @@
-describe('Achievements page testing', () => {
+describe('Lets Get Started', () => {
     beforeEach(() => {
         cy.visit('/letsgetstarted');
         cy.viewport(1440, 660);
-        cy.get('button[class*="CookieMessageDesktop"]').click();
+        cy.getSel('cookie-button').click();
     });
 
     it('testing intro link', () => {
