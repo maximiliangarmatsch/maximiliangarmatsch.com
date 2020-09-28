@@ -68,7 +68,7 @@ export default function CookieMessageMobile({ acceptCookie }) {
                 p="10px 15px"
                 mt="10px"
                 onClick={acceptCookie}
-                data-testId="cookie-button"
+                data-testid="cookie-button"
             >
                 Accept
             </Box>

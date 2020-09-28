@@ -20,7 +20,7 @@ export default function CheckpointStartups() {
                 color="green"
                 textAlign="center"
                 lineHeight="12px"
-                data-testId="iron-checkpoint"
+                data-testid="iron-checkpoint"
             >
                 <FormattedMessage
                     defaultMessage="
