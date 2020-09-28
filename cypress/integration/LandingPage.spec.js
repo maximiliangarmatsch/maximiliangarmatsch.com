@@ -2,25 +2,23 @@ describe('Landing Page', () => {
     beforeEach(() => {
         cy.visit('/');
         cy.viewport(1440, 660);
-        cy.get('button[class*="CookieMessageDesktop"]').click();
+        cy.getSel('cookie-button').click();
     });
 
-    it('Logo reference testing', () => {
-        cy.get("a[class*='TextLogo']")
-            .click()
-            .url()
-            .should('eq', 'http://localhost:3000/');
+    it('Homepage Navigation', () => {
+        cy.getSel('home-page-navigation').click();
+        cy.url().should('eq', 'http://localhost:3000/');
     });
 
-    it('Link text meeting reference', () => {
-        cy.get("a[class*='LinkTextMeeting']")
+    it('Schedule Meeting', () => {
+        cy.getSel('schedule-meeting-link')
             .invoke('attr', 'href')
             .then(href =>
                 expect(href).to.eq('https://calendly.com/maximilian-garmatsch')
             );
     });
 
-    it('Learn more icon testing on desktop view port', () => {
+    it('Learn More', () => {
         cy.get("div[class*='IconButtonBig']").should('have.length', 1);
     });
 

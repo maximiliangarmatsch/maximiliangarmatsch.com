@@ -10,6 +10,7 @@ export default function TextLogo() {
             css={`
                 text-decoration: none;
             `}
+            data-testid="home-page-navigation"
         >
             <Text
                 as="h1"

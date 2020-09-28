@@ -13,6 +13,7 @@ export default function LinkTextMeeting() {
             css={`
                 text-decoration: none;
             `}
+            data-testid="schedule-a-meeting-link"
         >
             <Text
                 color="green"
