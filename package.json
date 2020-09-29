@@ -57,8 +57,7 @@
             "npm run lint:fix"
         ],
         "*.{html}": [
-            "prettier --write",
-            "git add"
+            "prettier --write"
         ]
     },
     "husky": {
