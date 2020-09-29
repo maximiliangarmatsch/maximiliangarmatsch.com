@@ -42,7 +42,7 @@
         "start": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
-        "lint": "eslint src --ext .js,.jsx .spec.js",
+        "lint": "eslint src --ext .js,.jsx,.spec.js",
         "lint:fix": "eslint src --ext .js,.jsx --fix --no-error-on-unmatched-pattern",
         "translations": "node ./translationRunner.js",
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
