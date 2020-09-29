@@ -15,7 +15,7 @@ import ChangesToPrivacyPolicy from './PrivacyPolicy/9_ChangesOfPrivacyPolicy';
 
 export default function TextPrivacyPolicy() {
     const { t } = useTranslation();
-    const a = chunks => (
+    const A = chunks => (
         <Text
             as={Link}
             color="white"
@@ -33,9 +33,9 @@ export default function TextPrivacyPolicy() {
             <H1>{t('Privacy Policy')}</H1>
             <P>
                 {t(`This privacy policy discloses the privacy practices for ${(
-                    <a>https://maximiliangarmatsch.com</a>
+                    <A>https://maximiliangarmatsch.com</A>
                 )}  owned and operated by Maximilian Franz Peter Garmatsch. This privacy policy applies solely to information collected by ${(
-                    <a>https://maximiliangarmatsch.com</a>
+                    <A>https://maximiliangarmatsch.com</A>
                 )}. It will notify you of the following:${(<br />)}
                                     What Personally Identifiable and Proprietary Information is collected from you through the web site, how it is used and with whom it may be shared. What choices are available to you regarding the use of your data. The security procedures in place to protect the misuse of your information.How you can correct any inaccuracies in the information.`)}
             </P>

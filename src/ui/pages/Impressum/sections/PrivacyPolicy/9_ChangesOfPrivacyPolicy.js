@@ -11,7 +11,7 @@ export default function ChangesToPrivacyPolicy() {
             {chunks}
         </Text>
     );
-    const a = chunks => (
+    const A = chunks => (
         <Text
             as={Link}
             color="white"
@@ -29,7 +29,7 @@ export default function ChangesToPrivacyPolicy() {
             <H2>{t('9. Changes to Privacy Policy')}</H2>
             <P>
                 {t(`Maximilian Franz Peter Garmatschs privacy policy may change from time to time and all updates will be posted on this page ${(
-                    <a>https://coderconsulting.de/impressum</a>
+                    <A>https://coderconsulting.de/impressum</A>
                 )}. We reserve the right, at our sole discretion, to modify or replace this Privacy Policy at any time. If a revision is material we will try to provide at least days’ notice via email prior to any new privacy policies taking effect. What constitutes a material change will be determined at our sole discretion. Your continued use of the Service establishes your agreement to such changes to the Privacy Policy. Your only restoration, if you do not agree to the terms of this Privacy Policy, is to stop use of the Service.${(
                     <br />
                 )}
