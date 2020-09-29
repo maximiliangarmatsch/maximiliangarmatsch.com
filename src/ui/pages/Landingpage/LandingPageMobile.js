@@ -5,7 +5,7 @@ import { Box } from '../../components/Base/Base';
 import TextWelcome from './components/TextWelcome';
 import BackgroundLayerMobile from './components/BackgroundLayerMobile';
 import IconButtonBig from './components/IconButtonBig';
-import LoginButton from './components/LoginButton';
+// import LoginButton from './components/LoginButton';
 
 export default function LandingPageMobile() {
     return (
@@ -31,9 +31,9 @@ export default function LandingPageMobile() {
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
                     </Box>
-                    <Box height="50px" width="100%" mt="25px">
-                        <LoginButton />
-                    </Box>
+                    {/*<Box height="50px" width="100%" mt="25px">*/}
+                    {/*    <LoginButton />*/}
+                    {/*</Box>*/}
                 </Box>
             </BackgroundLayerMobile>
         </DeviceProvider>

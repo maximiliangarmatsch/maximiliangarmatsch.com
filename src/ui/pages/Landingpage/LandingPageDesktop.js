@@ -5,8 +5,8 @@ import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from './components/BackgroundLayerDesktop';
 import TextWelcome from './components/TextWelcome';
 import IconButtonBig from './components/IconButtonBig';
-import LoginButton from './components/LoginButton';
-import UserNameText from './components/UserNameText';
+// import LoginButton from './components/LoginButton';
+// import UserNameText from './components/UserNameText';
 
 export default function LandingPageDesktop() {
     return (
@@ -37,10 +37,10 @@ export default function LandingPageDesktop() {
                     left={{ lg: '2%', xl: '2%', xxl: '2%' }}
                     zIndex="5"
                 >
-                    <Box height="50px" mt="25px">
-                        <LoginButton />
-                        <UserNameText />
-                    </Box>
+                    {/*<Box height="50px" mt="25px">*/}
+                    {/*    <LoginButton />*/}
+                    {/*    <UserNameText />*/}
+                    {/*</Box>*/}
                 </Box>
             </BackgroundLayerDesktop>
         </DeviceProvider>
