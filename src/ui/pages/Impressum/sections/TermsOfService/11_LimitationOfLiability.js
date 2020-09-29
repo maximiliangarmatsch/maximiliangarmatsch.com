@@ -27,7 +27,9 @@ export default function LimitationOfLiability() {
                     <br />
                 )}
 You acknowledge that you have read, understand and agree to Maximilian Franz Peter Garmatsch’s Privacy Policy located at ${(
-                    <a>https://maximiliangarmatsch.com/impressum</a>
+                    <a href="https://maximiliangarmatsch.com/impressum">
+                        https://maximiliangarmatsch.com/impressum
+                    </a>
                 )}, which is hereby incorporated into and made a part of these Terms of Service by this reference. ${(
                     <br />
                 )}
