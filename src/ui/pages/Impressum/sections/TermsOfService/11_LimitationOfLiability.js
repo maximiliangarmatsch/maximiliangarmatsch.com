@@ -6,7 +6,7 @@ import { Text } from '../../../../components/Base/Base';
 
 export default function LimitationOfLiability() {
     const { t } = useTranslation();
-    const a = chunks => (
+    const A = chunks => (
         <Text
             as={Link}
             color="white"
@@ -27,7 +27,7 @@ export default function LimitationOfLiability() {
                     <br />
                 )}
 You acknowledge that you have read, understand and agree to Maximilian Franz Peter Garmatsch’s Privacy Policy located at ${(
-                    <a>https://maximiliangarmatsch.com/impressum</a>
+                    <A>https://maximiliangarmatsch.com/impressum</A>
                 )}, which is hereby incorporated into and made a part of these Terms of Service by this reference. ${(
                     <br />
                 )}
