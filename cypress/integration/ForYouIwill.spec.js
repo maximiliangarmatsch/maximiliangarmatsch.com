@@ -2,7 +2,7 @@ describe('For You I Will', () => {
     beforeEach(() => {
         cy.visit('/foryouiwill');
         cy.viewport(1440, 660);
-        cy.getSel('cookie-button').click();
+        cy.getSel('cookie-button').click({ force: true });
     });
 
     it('For You I Will Sections', () => {

@@ -2,7 +2,7 @@ describe('Lets Get Started', () => {
     beforeEach(() => {
         cy.visit('/letsgetstarted');
         cy.viewport(1440, 660);
-        cy.getSel('cookie-button').click();
+        cy.getSel('cookie-button').click({ force: true });
     });
 
     it('testing intro link', () => {

@@ -2,20 +2,12 @@ describe('Landing Page', () => {
     beforeEach(() => {
         cy.visit('/');
         cy.viewport(1440, 660);
-        cy.getSel('cookie-button').click();
+        cy.getSel('cookie-button').click({ force: true });
     });
 
     it('Homepage Navigation', () => {
-        cy.getSel('home-page-navigation').click();
+        cy.getSel('home-page-navigation').click({ force: true });
         cy.url().should('eq', 'http://localhost:3000/');
-    });
-
-    it('Schedule Meeting', () => {
-        cy.getSel('schedule-meeting-link')
-            .invoke('attr', 'href')
-            .then(href =>
-                expect(href).to.eq('https://calendly.com/maximilian-garmatsch')
-            );
     });
 
     it('Learn More', () => {
