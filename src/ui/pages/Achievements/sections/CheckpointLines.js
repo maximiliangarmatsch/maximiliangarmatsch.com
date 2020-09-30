@@ -22,7 +22,6 @@ export default function CheckpointLines() {
                 lineHeight="12px"
                 p="5px"
                 width="100px"
-                data-testid="iron-checkpoint"
             >
                 <FormattedMessage
                     defaultMessage="

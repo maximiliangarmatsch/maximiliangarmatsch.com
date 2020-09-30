@@ -14,6 +14,7 @@ export default function IconCheckpoint({ size, children }) {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            data-testid="iron-checkpoint"
         >
             {children}
         </Box>
