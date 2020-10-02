@@ -20,7 +20,7 @@ export default function BackgroundLayerDesktop({ children }) {
     return (
         <Box
             css={`
-                background: url('/assets/Gradient.png');
+                background: linear-gradient(45deg, #f9f9f9, #2e2d42);
                 background-size: cover;
             `}
             position="absolute"
