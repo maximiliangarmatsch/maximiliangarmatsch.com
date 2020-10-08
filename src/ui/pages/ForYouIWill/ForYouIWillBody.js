@@ -20,7 +20,11 @@ const messageValues = {
 export default function ForYouIWillBody() {
     return (
         <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-around"
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
+            height="100%"
             p="10px"
             pt="0"
             css={`

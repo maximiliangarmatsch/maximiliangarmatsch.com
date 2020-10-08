@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box } from '../../../components/Base/Base';
-import LinkTextMeeting from '../../../components/LinkTextMeeting';
 
 export default function Footer() {
     return (
@@ -16,8 +15,6 @@ export default function Footer() {
             p="10px 0"
             textAlign="center"
             zIndex="10"
-        >
-            <LinkTextMeeting />
-        </Box>
+        ></Box>
     );
 }

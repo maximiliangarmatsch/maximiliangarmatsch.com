@@ -44,7 +44,7 @@ export default function App() {
                             <Route path="/foryouiwill">
                                 <ForYouIWill />
                             </Route>
-                            <Route path="/letsgetstarted">
+                            <Route path="/contactform">
                                 <LetsGetStarted />
                             </Route>
                             <Route path="/cv">

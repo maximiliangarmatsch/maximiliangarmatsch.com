@@ -1,44 +1,13 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Box, Text } from '../../components/Base/Base';
-import CountSection from './components/CountSection';
+import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import { Box } from '../../components/Base/Base';
 
-const formatValues = {
-    green: chunks => (
-        <Text
-            color="green"
-            fontSize={{ _: '16px', lg: '24px' }}
-            fontWeight="400"
-        >
-            {chunks} <br />
-        </Text>
-    ),
-    linebreak: <br />,
-    a: chunks => (
-        <Text
-            as="a"
-            href="https://maximiliangarmatsch.com/intro"
-            target="_blank"
-            color="green"
-        >
-            {chunks} <br />
-        </Text>
-    ),
-    calendly: chunks => (
-        <Text
-            as="a"
-            href="https://calendly.com/maximilian-garmatsch"
-            target="_blank"
-            color="green"
-        >
-            {chunks} <br />
-        </Text>
-    ),
-};
 export default function LetsGetStartedBody() {
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
+            height="100%"
             p="10px"
             pt="0"
             css={`
@@ -47,33 +16,47 @@ export default function LetsGetStartedBody() {
                 }
             `}
         >
-            <CountSection number="1">
-                <FormattedMessage
-                    defaultMessage="
-                                    <green>Free introdution</green>
-                                    1-on-1 meeting: {linebreak}
-                                    <a>maximiliangarmatsch.com/intro</a>"
-                    values={formatValues}
-                />
-            </CountSection>
-            <CountSection number="2">
-                <FormattedMessage
-                    defaultMessage="
-                                    <green>Pay-as-you-go consulting</green>
-                                    <calendly>Super easy booking</calendly>
-                                    with PayPal purchase protection."
-                    values={formatValues}
-                />
-            </CountSection>
-            <CountSection number="3">
-                <FormattedMessage
-                    defaultMessage="
-                                    <green>Individual Projects</green>
-                                    Designed to fit your budget. {linebreak}
-                                    "
-                    values={formatValues}
-                />
-            </CountSection>
+            <form
+                style={{
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    flexDirection: 'column',
+                    height: '100%',
+                }}
+            >
+                <Box>
+                    <InputLabel style={{ color: '#0DE99A' }}>
+                        Your Fullname
+                    </InputLabel>
+                    <TextField
+                        variant="filled"
+                        style={{ width: '100%', color: 'white' }}
+                    />
+                </Box>
+
+                <Box>
+                    <InputLabel style={{ color: '#0DE99A' }}>
+                        Your Company and Your Position
+                    </InputLabel>
+                    <TextField
+                        variant="filled"
+                        style={{ width: '100%', color: 'white' }}
+                    />
+                </Box>
+
+                <Box height="40%">
+                    <InputLabel style={{ color: '#0DE99A' }}>
+                        Tell me about your project
+                    </InputLabel>
+                    <TextField
+                        variant="filled"
+                        style={{
+                            width: '100%',
+                            color: 'white',
+                        }}
+                    />
+                </Box>
+            </form>
         </Box>
     );
 }

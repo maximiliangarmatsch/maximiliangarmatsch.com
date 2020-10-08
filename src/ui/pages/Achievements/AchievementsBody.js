@@ -1,12 +1,6 @@
 import React from 'react';
 import { Box, Text } from '../../components/Base/Base';
 import { FormatValuesContext } from '../../../context/FormatValuesContext';
-import CheckpointYears from './sections/CheckpointYears';
-import CheckpointLines from './sections/CheckpointLines';
-import CheckpointStartups from './sections/CheckpointStartups';
-import CheckpointExperts from './sections/CheckpointExperts';
-import CheckpointDevelopers from './sections/CheckpointDevelopers';
-import CheckpointProjects from './sections/CheckpointProjects';
 
 const formatValues = {
     header: chunks => (
@@ -38,49 +32,31 @@ export default function AchievementsBody() {
     return (
         <FormatValuesContext.Provider value={formatValues}>
             <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
                 position="absolute"
+                width="100%"
                 left={{ _: '10px', lg: '0%' }}
                 top={{ _: '15px', lg: '9%' }}
             >
-                <CheckpointYears />
-            </Box>
-            <Box
-                position="absolute"
-                right={{ _: '20px', lg: '4%' }}
-                top={{ _: '15px', lg: '7%' }}
-            >
-                <CheckpointLines />
-            </Box>
-            <Box
-                position="absolute"
-                left="50%"
-                top={{ _: '100px', lg: '24%' }}
-                css={`
-                    transform: translateX(-50%);
-                `}
-            >
-                <CheckpointStartups />
-            </Box>
-            <Box
-                position="absolute"
-                left={{ _: '-5px', lg: '-5%' }}
-                bottom={{ _: '210px', lg: '32%' }}
-            >
-                <CheckpointExperts />
-            </Box>
-            <Box
-                position="absolute"
-                left={{ _: '30%', lg: '34%' }}
-                bottom={{ _: '150px', lg: '20%' }}
-            >
-                <CheckpointDevelopers />
-            </Box>
-            <Box
-                position="absolute"
-                right={{ _: '10px', lg: '0%' }}
-                bottom={{ _: '180px', lg: '33%' }}
-            >
-                <CheckpointProjects />
+                <Box
+                    as="img"
+                    borderRadius="5px"
+                    src="/assets/Max.jpg"
+                    width="150px"
+                    height="150px"
+                    alt="Logo"
+                />
+                <Box display="flex" flexDirection="column" padding="10px">
+                    <Text color="#0DE99A">
+                        Maximilian Garmatsch 33, based in Berlin
+                    </Text>
+                    <Text fontSize="14px">Freelance IT Consultant</Text>
+                    <Text fontSize="14px">Software Developer</Text>
+                    <Text fontSize="14px">Engineering Manager</Text>
+                    <Text fontSize="14px">Bachelor of Science</Text>
+                </Box>
             </Box>
         </FormatValuesContext.Provider>
     );
