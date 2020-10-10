@@ -88,15 +88,20 @@ export default function AchievementsBody() {
                         <Text>My CV </Text>
                     </Link>
                 </Box>
-                <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-between"
-                    width="41%"
-                    height="15%"
-                >
-                    <BuildIcon style={{ fontSize: '40px' }} />{' '}
-                    <Text>My PORTFOLIO </Text>
+                <Box width="41%" height="15%">
+                    <Link
+                        to="portfolio"
+                        style={{
+                            color: 'white',
+                            textDecoration: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                        }}
+                    >
+                        <BuildIcon style={{ fontSize: '40px' }} />{' '}
+                        <Text>My PORTFOLIO </Text>
+                    </Link>
                 </Box>
             </Box>
         </FormatValuesContext.Provider>
