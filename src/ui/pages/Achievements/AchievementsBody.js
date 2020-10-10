@@ -1,6 +1,9 @@
 import React from 'react';
-import { Box, Text } from '../../components/Base/Base';
+import PortraitIcon from '@material-ui/icons/Portrait';
+import BuildIcon from '@material-ui/icons/Build';
+import { Link } from 'react-router-dom';
 import { FormatValuesContext } from '../../../context/FormatValuesContext';
+import { Box, Text } from '../../components/Base/Base';
 
 const formatValues = {
     header: chunks => (
@@ -33,29 +36,67 @@ export default function AchievementsBody() {
         <FormatValuesContext.Provider value={formatValues}>
             <Box
                 display="flex"
-                justifyContent="space-between"
-                alignItems="center"
+                flexDirection="column"
                 position="absolute"
                 width="100%"
+                height="80%"
                 left={{ _: '10px', lg: '0%' }}
                 top={{ _: '15px', lg: '9%' }}
             >
                 <Box
-                    as="img"
-                    borderRadius="5px"
-                    src="/assets/Max.jpg"
-                    width="150px"
-                    height="150px"
-                    alt="Logo"
-                />
-                <Box display="flex" flexDirection="column" padding="10px">
-                    <Text color="#0DE99A">
-                        Maximilian Garmatsch 33, based in Berlin
-                    </Text>
-                    <Text fontSize="14px">Freelance IT Consultant</Text>
-                    <Text fontSize="14px">Software Developer</Text>
-                    <Text fontSize="14px">Engineering Manager</Text>
-                    <Text fontSize="14px">Bachelor of Science</Text>
+                    display="flex"
+                    width="100%"
+                    height="50%"
+                    alignItems="flex-start"
+                    justifyContent="space-between"
+                >
+                    <Box
+                        as="img"
+                        borderRadius="5px"
+                        src="/assets/Max.jpg"
+                        width="150px"
+                        height="150px"
+                        alt="Logo"
+                    />
+                    <Box
+                        display="flex"
+                        flexDirection="column"
+                        padding="0px 10px"
+                    >
+                        <Text color="#0DE99A">
+                            {' '}
+                            Maximilian Garmatsch 33, based in Berlin
+                        </Text>
+                        <Text fontSize="14px">Freelance IT Consultant</Text>
+                        <Text fontSize="14px">Software Developer</Text>
+                        <Text fontSize="14px">Engineering Manager</Text>
+                        <Text fontSize="14px">Bachelor of Science</Text>
+                    </Box>
+                </Box>
+                <Box width="25%" height="15%">
+                    <Link
+                        to="/cv"
+                        style={{
+                            color: 'white',
+                            textDecoration: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                        }}
+                    >
+                        <PortraitIcon style={{ fontSize: '40px' }} />{' '}
+                        <Text>My CV </Text>
+                    </Link>
+                </Box>
+                <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="space-between"
+                    width="41%"
+                    height="15%"
+                >
+                    <BuildIcon style={{ fontSize: '40px' }} />{' '}
+                    <Text>My PORTFOLIO </Text>
                 </Box>
             </Box>
         </FormatValuesContext.Provider>
