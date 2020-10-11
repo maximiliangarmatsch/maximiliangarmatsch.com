@@ -9,11 +9,7 @@ export default function LetsGetStarted() {
     const isDesktop = useContext(SizeContext);
     const templateProperty = {
         title: <FormattedMessage defaultMessage="Let's get started." />,
-        ButtonText: (
-            <FormattedMessage defaultMessage="Schedule a meeting now" />
-        ),
-        to: '/intro',
-        lastStep: true,
+        ButtonText: <FormattedMessage defaultMessage="Submit" />,
     };
     return (
         <>

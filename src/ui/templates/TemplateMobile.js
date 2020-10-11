@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Box } from '../components/Base/Base';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 
 export default function TemplateMobile({ children }) {
     return (
@@ -20,9 +19,6 @@ export default function TemplateMobile({ children }) {
             </Box>
             <Box as={Grid} container>
                 {children}
-            </Box>
-            <Box as={Grid} container>
-                <Footer />
             </Box>
         </>
     );

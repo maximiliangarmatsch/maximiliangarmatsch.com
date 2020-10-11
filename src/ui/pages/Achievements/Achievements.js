@@ -9,8 +9,10 @@ import AchievementsBody from './AchievementsBody';
 export default function Achievements() {
     const isDesktop = useContext(SizeContext);
     const templateProperty = {
-        title: <FormattedMessage defaultMessage="My Achievements" />,
-        ButtonText: <FormattedMessage defaultMessage="Learn even more" />,
+        title: <FormattedMessage defaultMessage="About Me" />,
+        ButtonText: (
+            <FormattedMessage defaultMessage="What I will do for you" />
+        ),
         to: '/foryouiwill',
     };
     return (

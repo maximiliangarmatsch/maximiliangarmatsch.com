@@ -10,7 +10,7 @@ export default function ForYouIWill() {
     const templateProperty = {
         title: <FormattedMessage defaultMessage="For you, I will..." />,
         ButtonText: <FormattedMessage defaultMessage="Last step" />,
-        to: '/letsgetstarted',
+        to: '/contactform',
     };
     return (
         <>
