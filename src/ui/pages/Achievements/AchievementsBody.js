@@ -57,6 +57,7 @@ export default function AchievementsBody() {
                         width="150px"
                         height="150px"
                         alt="Logo"
+                        data-testid="achievement-image"
                     />
                     <Box
                         display="flex"

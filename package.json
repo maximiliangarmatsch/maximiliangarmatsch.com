@@ -53,7 +53,8 @@
         "cypress": "cypress open",
         "workboxStart": "workbox injectManifest",
         "cover:report": "nyc report --reporter=text",
-        "cover:report:summary": "nyc report --reporter=text-summary"
+        "cover:report:summary": "nyc report --reporter=text-summary",
+        "cypress:run": "cypress run"
     },
     "lint-staged": {
         "*.{js, jsx }": [
