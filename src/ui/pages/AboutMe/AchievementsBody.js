@@ -67,13 +67,11 @@ export default function AchievementsBody() {
                             {' '}
                             Maximilian Garmatsch 33, based in Berlin
                         </Text>
-                        <Text fontSize="14px">Freelance IT Consultant</Text>
                         <Text fontSize="14px">Software Developer</Text>
                         <Text fontSize="14px">Engineering Manager</Text>
-                        <Text fontSize="14px">Bachelor of Science</Text>
                     </Box>
                 </Box>
-                <Box width="25%" height="15%">
+                <Box width="100%" height="15%">
                     <Link
                         to="/cv"
                         style={{
@@ -81,14 +79,16 @@ export default function AchievementsBody() {
                             textDecoration: 'none',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'space-between',
+                            justifyContent: 'flex-start',
                         }}
                     >
                         <PortraitIcon style={{ fontSize: '40px' }} />{' '}
-                        <Text>My CV </Text>
+                        <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
+                            My CV{' '}
+                        </Text>
                     </Link>
                 </Box>
-                <Box width="41%" height="15%">
+                <Box width="100%" height="15%">
                     <Link
                         to="portfolio"
                         style={{
@@ -96,11 +96,13 @@ export default function AchievementsBody() {
                             textDecoration: 'none',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'space-between',
+                            justifyContent: 'flex-start',
                         }}
                     >
                         <BuildIcon style={{ fontSize: '40px' }} />{' '}
-                        <Text>My PORTFOLIO </Text>
+                        <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
+                            My PORTFOLIO{' '}
+                        </Text>
                     </Link>
                 </Box>
             </Box>

@@ -9,7 +9,7 @@ import { SizeContext } from '../context/SizeContext';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
 import MyTeam from './pages/MyTeam/MyTeam';
-import Achievements from './pages/Achievements/Achievements';
+import AboutMe from './pages/AboutMe/AboutMe';
 import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 import DownloadCV from './pages/Download/DownloadCV';
@@ -39,8 +39,8 @@ export default function App() {
                                         'https://calendly.com/maximilian-garmatsch/intro';
                                 }}
                             </Route>
-                            <Route path="/achievements">
-                                <Achievements />
+                            <Route path="/aboutme">
+                                <AboutMe />
                             </Route>
                             <Route path="/foryouiwill">
                                 <ForYouIWill />

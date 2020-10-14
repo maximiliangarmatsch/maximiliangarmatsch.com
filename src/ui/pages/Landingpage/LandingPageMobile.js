@@ -27,7 +27,7 @@ export default function LandingPageMobile() {
                 >
                     <TextWelcome />
                     <Box height="50px" width="100%" mt="25px">
-                        <IconButtonBig to="/achievements">
+                        <IconButtonBig to="/aboutme">
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
                     </Box>

@@ -24,7 +24,7 @@ export default function LandingPageDesktop() {
                 >
                     <TextWelcome />
                     <Box height="50px" width="70%" mt="25px">
-                        <IconButtonBig to="/achievements">
+                        <IconButtonBig to="/aboutme">
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
                     </Box>

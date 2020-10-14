@@ -6,7 +6,7 @@ import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
 import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
 import AchievementsBody from './AchievementsBody';
 
-export default function Achievements() {
+export default function AboutMe() {
     const isDesktop = useContext(SizeContext);
     const templateProperty = {
         title: <FormattedMessage defaultMessage="About Me" />,
