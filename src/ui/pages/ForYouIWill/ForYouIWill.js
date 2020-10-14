@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
 import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
 import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
 import ForYouIWillBody from './ForYouIWillBody';
 
 export default function ForYouIWill() {
+    const { t } = useTranslation();
     const isDesktop = useContext(SizeContext);
     const templateProperty = {
-        title: <FormattedMessage defaultMessage="For you, I will..." />,
-        ButtonText: <FormattedMessage defaultMessage="Last step" />,
+        title: t('For you, I will...'),
+        ButtonText: t('Last step'),
         to: '/contactform',
     };
     return (

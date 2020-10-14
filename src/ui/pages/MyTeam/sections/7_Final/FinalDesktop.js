@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../../../components/Base/Base';
 import Line from '../../components/Line';
 import IconCheckpoint from '../../Icons/IconCheckpoint';
 
 export default function FinalDesktop() {
+    const { t } = useTranslation();
     return (
         <Box id="Final" height="70vh" position="relative">
             <Line
@@ -32,16 +33,15 @@ export default function FinalDesktop() {
                 textAlign="center"
             >
                 <Text as="p" color="green">
-                    <FormattedMessage defaultMessage="That’s us." />
+                    {t('That’s us.')}
                 </Text>
                 <Text as="p">
-                    <FormattedMessage
-                        defaultMessage="Now tell us about your project and we will schedule a call
-                    within 48 hours."
-                    />
+                    {t(
+                        'Now tell us about your project and we will schedule a call within 48 hours.'
+                    )}
                 </Text>
                 <Text as="p" color="green">
-                    <FormattedMessage defaultMessage="Tell us about your project" />
+                    {t('Tell us about your project')}
                 </Text>
             </Box>
             <Box
@@ -55,7 +55,7 @@ export default function FinalDesktop() {
                     text-decoration: none;
                 `}
             >
-                <FormattedMessage defaultMessage="Back to Home" />
+                {t('Back to Home')}
             </Box>
         </Box>
     );

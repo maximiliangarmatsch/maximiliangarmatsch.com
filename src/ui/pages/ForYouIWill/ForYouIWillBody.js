@@ -1,15 +1,15 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../components/Base/Base';
 import SectionCheckpoint from './components/SectionCheckpoint';
 
 const messageValues = {
-    first: chunks => (
+    First: chunks => (
         <Text color="green" fontSize="23px" lineHeight="18px" fontWeight="400">
             {chunks}
         </Text>
     ),
-    green: chunks => <Text color="green">{chunks}</Text>,
+    Green: chunks => <Text color="green">{chunks}</Text>,
     linebreak: <br />,
     a: chunks => (
         <Text as="a" textDecoration="underline" href="#" color="green">
@@ -17,7 +17,9 @@ const messageValues = {
         </Text>
     ),
 };
+
 export default function ForYouIWillBody() {
+    const { t } = useTranslation();
     return (
         <Box
             display="flex"
@@ -34,34 +36,33 @@ export default function ForYouIWillBody() {
             `}
         >
             <SectionCheckpoint dataTestId="section-checkpoint">
-                <FormattedMessage
-                    defaultMessage="
-                        <first>Understand</first> your needs
-                        <green>in days.</green>
-                        My budget and time estimations will allow confident decision making."
-                    values={messageValues}
-                />
+                {t(
+                    `${(
+                        <messageValues.First>Understand</messageValues.First>
+                    )} your needs ${(
+                        <messageValues.Green>in days.</messageValues.Green>
+                    )} My budget and time estimations will allow confident decision making.`
+                )}
             </SectionCheckpoint>
             <SectionCheckpoint dataTestId="section-checkpoint">
-                <FormattedMessage
-                    defaultMessage="
-                        <first>Create</first> a prototype
-                        <green>in weeks.</green>
-                        My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.
-                        {linebreak}
-                        "
-                    values={messageValues}
-                />
+                {t(`
+                        ${(
+                            <messageValues.First>Create</messageValues.First>
+                        )} a prototype
+                        ${(
+                            <messageValues.Green>in weeks.</messageValues.Green>
+                        )}
+                        My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.`)}
             </SectionCheckpoint>
             <SectionCheckpoint dataTestId="section-checkpoint">
-                <FormattedMessage
-                    defaultMessage="
-                        <first>Manage</first> your project
-                        <green>long-term</green>.
+                {t(`${(
+                    <messageValues.First>Manage</messageValues.First>
+                )} your project
+                        ${(
+                            <messageValues.Green>long-term</messageValues.Green>
+                        )}.
                         You want to continously add components or scale your product?
-                        I will lead the digital team that will do it."
-                    values={messageValues}
-                />
+                        I will lead the digital team that will do it.`)}
             </SectionCheckpoint>
         </Box>
     );
