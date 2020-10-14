@@ -10,19 +10,45 @@ export default function HeaderMenu() {
 
     return (
         <Flex alignItems="center">
-            {isDesktop && (
+            {isDesktop ? (
                 <Text
                     fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}
                     lineHeight="18px"
-                    mr={{ lg: '80px', xl: '110px', xxl: '150px' }}
+                    mr={{ lg: '50px', xl: '50px', xxl: '50px' }}
                 >
                     <Link to="/contactform">
                         <AlternateEmailOutlinedIcon
-                            style={{ color: '#0DE99A', fontSize: '40px' }}
+                            style={{
+                                color: '#0DE99A',
+                                fontSize: '40px',
+                                border: '1px solid #0DE99A ',
+                                padding: '5px',
+                                borderRadius: '5px',
+                            }}
+                        />
+                    </Link>
+                </Text>
+            ) : (
+                <Text
+                    fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}
+                    lineHeight="18px"
+                    mr={{ lg: '50px', xl: '50px', xxl: '50px', s: '20px' }}
+                    mt={{ s: '3px' }}
+                >
+                    <Link to="/contactform">
+                        <AlternateEmailOutlinedIcon
+                            style={{
+                                color: '#0DE99A',
+                                fontSize: '19px',
+                                border: '1px solid #0DE99A ',
+                                padding: '5px',
+                                borderRadius: '5px',
+                            }}
                         />
                     </Link>
                 </Text>
             )}
+
             <Icon
                 iconSrc={
                     isDesktop
