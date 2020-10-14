@@ -59,7 +59,7 @@ export default function ForYouIWillBody() {
                         <first>Manage</first> your project
                         <green>long-term</green>.
                         You want to continuously add components and scale your product?
-                        I will hire and lead the digital team that will do it!"
+                        I will hire, train and lead the digital team that will do it!"
                     values={messageValues}
                 />
             </SectionCheckpoint>
