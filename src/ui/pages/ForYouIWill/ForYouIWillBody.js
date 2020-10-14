@@ -38,16 +38,16 @@ export default function ForYouIWillBody() {
                     defaultMessage="
                         <first>Understand</first> your needs
                         <green>in days.</green>
-                        My budget and time estimations will allow confident decision making."
+                        My budget- and time-estimations will allow smart planning and decision making!"
                     values={messageValues}
                 />
             </SectionCheckpoint>
             <SectionCheckpoint dataTestId="section-checkpoint">
                 <FormattedMessage
                     defaultMessage="
-                        <first>Create</first> a prototype
+                        <first>Create</first> a foundation
                         <green>in weeks.</green>
-                        My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.
+                        I write all initial code myself and guarantee a clean software architecture that we can build on!
                         {linebreak}
                         "
                     values={messageValues}
@@ -58,8 +58,8 @@ export default function ForYouIWillBody() {
                     defaultMessage="
                         <first>Manage</first> your project
                         <green>long-term</green>.
-                        You want to continously add components or scale your product?
-                        I will lead the digital team that will do it."
+                        You want to continuously add components and scale your product?
+                        I will hire and lead the digital team that will do it!"
                     values={messageValues}
                 />
             </SectionCheckpoint>
