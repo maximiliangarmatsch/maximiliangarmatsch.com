@@ -19,7 +19,7 @@ export default function MobileStepsTemplate({
                 width="calc(100% - 40px)"
                 height="calc(100vh - 40px)"
                 left="50%"
-                top="50%"
+                top="55%"
                 p="0 20px"
                 css={`
                     transform: translate(-50%, -50%);

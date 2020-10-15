@@ -24,18 +24,30 @@ export default function LetsGetStartedBody() {
                     height: '100%',
                 }}
             >
-                <Box>
-                    <InputLabel style={{ color: '#0DE99A' }}>
+                <Box
+                    height="15%"
+                    width="100%"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                >
+                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
                         Your Fullname
                     </InputLabel>
                     <TextField
                         variant="filled"
-                        style={{ width: '100%', color: 'white' }}
+                        style={{ width: '100%', color: 'white !important' }}
                     />
                 </Box>
 
-                <Box>
-                    <InputLabel style={{ color: '#0DE99A' }}>
+                <Box
+                    height="15%"
+                    width="100%"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                >
+                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
                         Your Company and Your Position
                     </InputLabel>
                     <TextField
@@ -44,11 +56,18 @@ export default function LetsGetStartedBody() {
                     />
                 </Box>
 
-                <Box height="40%">
-                    <InputLabel style={{ color: '#0DE99A' }}>
+                <Box
+                    height="40%"
+                    width="100%"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                >
+                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
                         Tell me about your project
                     </InputLabel>
                     <TextField
+                        id="textarea-form"
                         variant="filled"
                         style={{
                             width: '100%',
