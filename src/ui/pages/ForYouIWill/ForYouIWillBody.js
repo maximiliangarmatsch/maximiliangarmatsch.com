@@ -41,7 +41,7 @@ export default function ForYouIWillBody() {
                         <messageValues.First>Understand</messageValues.First>
                     )} your needs ${(
                         <messageValues.Green>in days.</messageValues.Green>
-                    )} My budget and time estimations will allow confident decision making.`
+                    )} My budget- and time-estimations will allow smart planning and decision making!`
                 )}
             </SectionCheckpoint>
             <SectionCheckpoint dataTestId="section-checkpoint">
@@ -52,7 +52,7 @@ export default function ForYouIWillBody() {
                         ${(
                             <messageValues.Green>in weeks.</messageValues.Green>
                         )}
-                        My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.`)}
+                        I write all initial code myself and guarantee a clean software architecture that we can build on!`)}
             </SectionCheckpoint>
             <SectionCheckpoint dataTestId="section-checkpoint">
                 {t(`${(
@@ -61,8 +61,8 @@ export default function ForYouIWillBody() {
                         ${(
                             <messageValues.Green>long-term</messageValues.Green>
                         )}.
-                        You want to continously add components or scale your product?
-                        I will lead the digital team that will do it.`)}
+                        You want to continuously add components and scale your product?
+                        I will hire, train and lead the digital team that will do it!`)}
             </SectionCheckpoint>
         </Box>
     );

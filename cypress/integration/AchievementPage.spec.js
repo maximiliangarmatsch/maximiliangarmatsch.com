@@ -5,8 +5,8 @@ describe('Achievement Page', () => {
         cy.getSel('cookie-button').click({ force: true });
     });
 
-    it('display six point', () => {
-        cy.get('iron-checkpoint').should('have.length', 6);
+    it('display image', () => {
+        cy.getSel('achievement-image').should('be.visible');
     });
 
     it('testing icon button big', () => {

@@ -37,6 +37,7 @@ export default function LetsGetStartedBody() {
                     <TextField
                         variant="filled"
                         style={{ width: '100%', color: 'white !important' }}
+                        inputProps={{ 'data-testid': 'contact-form-name' }}
                     />
                 </Box>
 
@@ -53,6 +54,7 @@ export default function LetsGetStartedBody() {
                     <TextField
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
+                        inputProps={{ 'data-testid': 'contact-form-company' }}
                     />
                 </Box>
 
@@ -72,6 +74,9 @@ export default function LetsGetStartedBody() {
                         style={{
                             width: '100%',
                             color: 'white',
+                        }}
+                        inputProps={{
+                            'data-testid': 'contact-form-about-project',
                         }}
                     />
                 </Box>
