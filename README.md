@@ -45,3 +45,8 @@ Code coverage is also hosted with CI via Codecov and can be assessed in this [li
 -> REACT_APP_AUTH_PASSWORD="YOUR TEST USER NAME's PASSWORD"
 
 ```
+
+### Build production
+npm run build
+npm install serve -g
+npm serve
