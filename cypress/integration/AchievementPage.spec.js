@@ -2,7 +2,6 @@ describe('Achievement Page', () => {
     beforeEach(() => {
         cy.visit('/achievements');
         cy.viewport(1440, 660);
-        cy.getSel('cookie-button').click({ force: true });
     });
 
     it('display image', () => {

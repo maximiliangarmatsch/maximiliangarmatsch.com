@@ -16,6 +16,6 @@ describe('Landing Page', () => {
 
     it('Learn more icon testing on desktop view port', () => {
         cy.get("div[class*='IconButtonBig']").click();
-        cy.url().should('contain', 'achievements');
+        cy.url().should('contain', 'aboutme');
     });
 });
