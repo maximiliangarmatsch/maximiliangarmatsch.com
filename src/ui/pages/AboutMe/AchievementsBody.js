@@ -57,7 +57,7 @@ export default function AchievementsBody() {
                         width="150px"
                         height="150px"
                         alt="Logo"
-                        data-testid="achievement-image"
+                        data-testid="max_image"
                     />
                     <Box
                         display="flex"
@@ -82,6 +82,7 @@ export default function AchievementsBody() {
                             alignItems: 'center',
                             justifyContent: 'flex-start',
                         }}
+                        data-testid="cv-link"
                     >
                         <PortraitIcon style={{ fontSize: '40px' }} />{' '}
                         <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
@@ -99,6 +100,7 @@ export default function AchievementsBody() {
                             alignItems: 'center',
                             justifyContent: 'flex-start',
                         }}
+                        data-testid="portfolio-link"
                     >
                         <BuildIcon style={{ fontSize: '40px' }} />{' '}
                         <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
