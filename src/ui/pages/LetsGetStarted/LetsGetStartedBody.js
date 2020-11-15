@@ -3,7 +3,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '../../components/Base/Base';
 
-export default function LetsGetStartedBody() {
+export default function LetsGetStartedBody({
+    setFullname,
+    setCompanyPosition,
+    setProjectIdea,
+    onSubmit,
+}) {
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
@@ -23,6 +28,7 @@ export default function LetsGetStartedBody() {
                     flexDirection: 'column',
                     height: '100%',
                 }}
+                onSubmit={() => onSubmit()}
             >
                 <Box
                     height="15%"
@@ -38,6 +44,7 @@ export default function LetsGetStartedBody() {
                         variant="filled"
                         style={{ width: '100%', color: 'white !important' }}
                         inputProps={{ 'data-testid': 'contact-form-name' }}
+                        onChange={e => setFullname(e.target.value)}
                     />
                 </Box>
 
@@ -55,6 +62,7 @@ export default function LetsGetStartedBody() {
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
                         inputProps={{ 'data-testid': 'contact-form-company' }}
+                        onChange={e => setCompanyPosition(e.target.value)}
                     />
                 </Box>
 
@@ -78,7 +86,28 @@ export default function LetsGetStartedBody() {
                         inputProps={{
                             'data-testid': 'contact-form-about-project',
                         }}
+                        onChange={e => setProjectIdea(e.target.value)}
                     />
+                </Box>
+                <Box
+                    as="button"
+                    type="submit"
+                    css={`
+                        box-shadow: 0px 0px 6px #0cd58c;
+                    `}
+                    bg="green"
+                    borderRadius="12px"
+                    p="15px 80px"
+                    border="1px solid rgba(27, 25, 25, 0.5)"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    color="deepBlack"
+                    fontSize="18px"
+                    fontWeight="500"
+                    cursor="pointer"
+                >
+                    Submit
                 </Box>
             </form>
         </Box>

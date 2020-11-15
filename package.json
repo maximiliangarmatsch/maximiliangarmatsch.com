@@ -20,6 +20,7 @@
         "babel-jest": "^24.9.0",
         "babel-plugin-istanbul": "^6.0.0",
         "cypress-react-unit-test": "^4.11.2",
+        "emailjs-com": "^2.6.4",
         "graphql": "^15.2.0",
         "i18next": "^19.7.0",
         "istanbul-lib-coverage": "^3.0.0",

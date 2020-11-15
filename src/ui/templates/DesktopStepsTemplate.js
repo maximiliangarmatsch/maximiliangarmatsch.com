@@ -11,6 +11,7 @@ export default function DesktopStepsTemplate({
     to,
     ButtonText,
     lastStep = false,
+    type,
 }) {
     return (
         <DeviceProvider>
@@ -37,7 +38,13 @@ export default function DesktopStepsTemplate({
 
                     {children}
 
-                    <StepButton to={to} text={ButtonText} lastStep={lastStep} />
+                    <StepButton
+                        as="button"
+                        to={to}
+                        type={type}
+                        text={ButtonText}
+                        lastStep={lastStep}
+                    />
                 </Box>
             </BackgroundLayerDesktop>
         </DeviceProvider>

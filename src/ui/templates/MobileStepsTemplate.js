@@ -10,6 +10,7 @@ export default function MobileStepsTemplate({
     to,
     ButtonText,
     lastStep = false,
+    type,
 }) {
     return (
         <DeviceProvider>
@@ -29,7 +30,12 @@ export default function MobileStepsTemplate({
 
                 {children}
 
-                <StepButton lastStep={lastStep} to={to} text={ButtonText} />
+                <StepButton
+                    lastStep={lastStep}
+                    type={type}
+                    to={to}
+                    text={ButtonText}
+                />
             </Box>
         </DeviceProvider>
     );
