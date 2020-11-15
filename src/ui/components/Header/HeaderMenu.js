@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-// import AlternateEmailOutlinedIcon from '@material-ui/icons/AlternateEmailOutlined';
-// import { Link } from 'react-router-dom';
-import { Flex } from '../Base/Base';
+import AlternateEmailOutlinedIcon from '@material-ui/icons/AlternateEmailOutlined';
+import { Link } from 'react-router-dom';
+import { Flex, Text } from '../Base/Base';
 import Icon from '../PortfolioIcons/Icon';
 import { SizeContext } from '../../../context/SizeContext';
 
@@ -10,44 +10,44 @@ export default function HeaderMenu() {
 
     return (
         <Flex alignItems="center">
-            {/*{isDesktop ? (*/}
-            {/*    <Text*/}
-            {/*        fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}*/}
-            {/*        lineHeight="18px"*/}
-            {/*        mr={{ lg: '50px', xl: '50px', xxl: '50px' }}*/}
-            {/*    >*/}
-            {/*        <Link to="/contact">*/}
-            {/*            <AlternateEmailOutlinedIcon*/}
-            {/*                style={{*/}
-            {/*                    color: '#0DE99A',*/}
-            {/*                    fontSize: '40px',*/}
-            {/*                    border: '1px solid #0DE99A ',*/}
-            {/*                    padding: '5px',*/}
-            {/*                    borderRadius: '5px',*/}
-            {/*                }}*/}
-            {/*            />*/}
-            {/*        </Link>*/}
-            {/*    </Text>*/}
-            {/*) : (*/}
-            {/*    <Text*/}
-            {/*        fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}*/}
-            {/*        lineHeight="18px"*/}
-            {/*        mr={{ lg: '50px', xl: '50px', xxl: '50px', s: '20px' }}*/}
-            {/*        mt={{ s: '3px' }}*/}
-            {/*    >*/}
-            {/*        <Link to="/contact">*/}
-            {/*            <AlternateEmailOutlinedIcon*/}
-            {/*                style={{*/}
-            {/*                    color: '#0DE99A',*/}
-            {/*                    fontSize: '19px',*/}
-            {/*                    border: '1px solid #0DE99A ',*/}
-            {/*                    padding: '5px',*/}
-            {/*                    borderRadius: '5px',*/}
-            {/*                }}*/}
-            {/*            />*/}
-            {/*        </Link>*/}
-            {/*    </Text>*/}
-            {/*)}*/}
+            {isDesktop ? (
+                <Text
+                    fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}
+                    lineHeight="18px"
+                    mr={{ lg: '50px', xl: '50px', xxl: '50px' }}
+                >
+                    <Link to="/contact">
+                        <AlternateEmailOutlinedIcon
+                            style={{
+                                color: '#0DE99A',
+                                fontSize: '40px',
+                                border: '1px solid #0DE99A ',
+                                padding: '5px',
+                                borderRadius: '5px',
+                            }}
+                        />
+                    </Link>
+                </Text>
+            ) : (
+                <Text
+                    fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}
+                    lineHeight="18px"
+                    mr={{ lg: '50px', xl: '50px', xxl: '50px', s: '20px' }}
+                    mt={{ s: '3px' }}
+                >
+                    <Link to="/contact">
+                        <AlternateEmailOutlinedIcon
+                            style={{
+                                color: '#0DE99A',
+                                fontSize: '19px',
+                                border: '1px solid #0DE99A ',
+                                padding: '5px',
+                                borderRadius: '5px',
+                            }}
+                        />
+                    </Link>
+                </Text>
+            )}
 
             <Icon
                 iconSrc={

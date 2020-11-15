@@ -3,12 +3,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '../../components/Base/Base';
 
-export default function ContactBody({
-    setFullname,
-    setCompanyPosition,
-    setProjectIdea,
-    onSubmit,
-}) {
+export default function ContactBody({ onSubmit }) {
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
@@ -28,9 +23,8 @@ export default function ContactBody({
                     flexDirection: 'column',
                     height: '100%',
                 }}
-                onSubmit={e => {
-                    onSubmit(e);
-                }}
+                name="test"
+                onSubmit={onSubmit}
             >
                 <Box
                     height="15%"
@@ -43,10 +37,10 @@ export default function ContactBody({
                         Your Fullname
                     </InputLabel>
                     <TextField
+                        name="fullname"
                         variant="filled"
                         style={{ width: '100%', color: 'white !important' }}
                         inputProps={{ 'data-testid': 'contact-form-name' }}
-                        onChange={e => setFullname(e.target.value)}
                     />
                 </Box>
 
@@ -61,10 +55,10 @@ export default function ContactBody({
                         Your Company and Your Position
                     </InputLabel>
                     <TextField
+                        name="companyposition"
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
                         inputProps={{ 'data-testid': 'contact-form-company' }}
-                        onChange={e => setCompanyPosition(e.target.value)}
                     />
                 </Box>
 
@@ -79,6 +73,7 @@ export default function ContactBody({
                         Tell me about your project
                     </InputLabel>
                     <TextField
+                        name="aboutproject"
                         id="textarea-form"
                         variant="filled"
                         style={{
@@ -88,12 +83,13 @@ export default function ContactBody({
                         inputProps={{
                             'data-testid': 'contact-form-about-project',
                         }}
-                        onChange={e => setProjectIdea(e.target.value)}
                     />
                 </Box>
+
                 <Box
-                    as="button"
+                    as="input"
                     type="submit"
+                    value="Submit"
                     css={`
                         box-shadow: 0px 0px 6px #0cd58c;
                     `}
@@ -113,9 +109,7 @@ export default function ContactBody({
                     bottom="50px"
                     left="60px"
                     width="80%"
-                >
-                    Submit
-                </Box>
+                />
             </form>
         </Box>
     );
