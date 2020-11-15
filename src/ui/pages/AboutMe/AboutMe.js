@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { SizeContext } from '../../../context/SizeContext';
 import { Box } from '../../components/Base/Base';
-import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
-import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
+import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
+import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
 import AchievementsBody from './AchievementsBody';
 
 export default function AboutMe() {
     const isDesktop = useContext(SizeContext);
-    const templateProperty = {
+    const layoutProperty = {
         title: <FormattedMessage defaultMessage="About Me" />,
         ButtonText: (
             <FormattedMessage defaultMessage="What I will do for you" />
@@ -18,7 +18,7 @@ export default function AboutMe() {
     return (
         <>
             {isDesktop ? (
-                <DesktopStepsTemplate {...templateProperty}>
+                <DesktopStepsLayout {...layoutProperty}>
                     <Box
                         position="relative"
                         maxWidth="420px"
@@ -32,9 +32,9 @@ export default function AboutMe() {
                     >
                         <AchievementsBody />
                     </Box>
-                </DesktopStepsTemplate>
+                </DesktopStepsLayout>
             ) : (
-                <MobileStepsTemplate {...templateProperty}>
+                <MobileStepsLayout {...layoutProperty}>
                     <Box
                         position="relative"
                         maxWidth="400px"
@@ -49,7 +49,7 @@ export default function AboutMe() {
                     >
                         <AchievementsBody />
                     </Box>
-                </MobileStepsTemplate>
+                </MobileStepsLayout>
             )}
         </>
     );

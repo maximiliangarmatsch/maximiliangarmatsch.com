@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Box } from '../components/Base/Base';
-import Header from './components/Header/Header';
+import { Box } from '../Base/Base';
+import Header from '../Header/Header';
 
-export default function TemplateMobile({ children }) {
+export default function LayoutMobile({ children }) {
     return (
         <>
             <Box as={Grid} container mb="4rem">

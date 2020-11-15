@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../../../components/Base/Base';
+import { Box } from '../Base/Base';
 
 export default function Footer() {
     return (

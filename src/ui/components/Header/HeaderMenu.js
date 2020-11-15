@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 // import AlternateEmailOutlinedIcon from '@material-ui/icons/AlternateEmailOutlined';
 // import { Link } from 'react-router-dom';
-import { Flex } from '../../../components/Base/Base';
-import Icon from '../../../components/PortfolioIcons/Icon';
-import { SizeContext } from '../../../../context/SizeContext';
+import { Flex } from '../Base/Base';
+import Icon from '../PortfolioIcons/Icon';
+import { SizeContext } from '../../../context/SizeContext';
 
 export default function HeaderMenu() {
     const isDesktop = useContext(SizeContext);
@@ -16,7 +16,7 @@ export default function HeaderMenu() {
             {/*        lineHeight="18px"*/}
             {/*        mr={{ lg: '50px', xl: '50px', xxl: '50px' }}*/}
             {/*    >*/}
-            {/*        <Link to="/contactform">*/}
+            {/*        <Link to="/contact">*/}
             {/*            <AlternateEmailOutlinedIcon*/}
             {/*                style={{*/}
             {/*                    color: '#0DE99A',*/}
@@ -35,7 +35,7 @@ export default function HeaderMenu() {
             {/*        mr={{ lg: '50px', xl: '50px', xxl: '50px', s: '20px' }}*/}
             {/*        mt={{ s: '3px' }}*/}
             {/*    >*/}
-            {/*        <Link to="/contactform">*/}
+            {/*        <Link to="/contact">*/}
             {/*            <AlternateEmailOutlinedIcon*/}
             {/*                style={{*/}
             {/*                    color: '#0DE99A',*/}

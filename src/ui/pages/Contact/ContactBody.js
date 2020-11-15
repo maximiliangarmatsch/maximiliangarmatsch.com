@@ -3,7 +3,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '../../components/Base/Base';
 
-export default function LetsGetStartedBody({
+export default function ContactBody({
     setFullname,
     setCompanyPosition,
     setProjectIdea,
@@ -28,7 +28,9 @@ export default function LetsGetStartedBody({
                     flexDirection: 'column',
                     height: '100%',
                 }}
-                onSubmit={() => onSubmit()}
+                onSubmit={e => {
+                    onSubmit(e);
+                }}
             >
                 <Box
                     height="15%"

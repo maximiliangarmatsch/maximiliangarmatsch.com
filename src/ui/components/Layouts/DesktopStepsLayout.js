@@ -1,11 +1,11 @@
 import React from 'react';
-import BackgroundLayerDesktop from '../pages/Landingpage/components/BackgroundLayerDesktop';
-import { Box } from '../components/Base/Base';
-import DeviceProvider from '../../helpers/DeviceProvider';
+import BackgroundLayerDesktop from '../../pages/Landingpage/components/BackgroundLayerDesktop';
+import { Box } from '../Base/Base';
+import DeviceProvider from '../../../helpers/DeviceProvider';
 import Title from './components/Title';
 import StepButton from './components/StepButton';
 
-export default function DesktopStepsTemplate({
+export default function DesktopStepsLayout({
     children,
     title,
     to,

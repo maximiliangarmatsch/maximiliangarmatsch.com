@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '../../../components/Base/Base';
-import CookieMessageDesktop from '../../../templates/components/CookieMessageDesktop';
+import CookieMessageDesktop from '../../../components/Layouts/components/CookieMessageDesktop';
 import ShadowLayer from './ShadowLayer';
 
 export default function BackgroundLayerDesktop({ children }) {

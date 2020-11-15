@@ -1,16 +1,20 @@
 import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SizeContext } from '../../../context/SizeContext';
-import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
-import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
-import LetsGetStartedBody from './LetsGetStartedBody';
 import emailjs from 'emailjs-com';
+import { SizeContext } from '../../../context/SizeContext';
+import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
+import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import ContactBody from './ContactBody';
 
-export default function LetsGetStarted() {
-    emailjs.init('user_wFM4BRSbqWS35PxOiUTq7');
+const EMAILJS_userId = 'user_eBhucvRwzq5R3bUPaNqI7';
+const EMAILJS_serviceId = 'service_cq190pr';
+const EMAILJS_templateId = 'template_4mbrgz9';
+
+export default function Contact() {
+    emailjs.init(EMAILJS_userId);
     const { t } = useTranslation();
     const isDesktop = useContext(SizeContext);
-    const templateProperty = {
+    const layoutProperty = {
         title: t(`Let's get started.`),
         ButtonText: t('Submit'),
         type: 'submit',
@@ -20,19 +24,21 @@ export default function LetsGetStarted() {
     const [aboutproject, setAboutProject] = useState('');
 
     function onSubmit(e) {
-        e.preventDefault();
+        // e.preventDefault();
+        // debugger;
 
         const payload = {
             fullname,
             companyposition,
             aboutproject,
         };
+
         emailjs
             .sendForm(
-                'service_7p4zwu2',
-                '',
-                payload,
-                'user_wFM4BRSbqWS35PxOiUTq7'
+                EMAILJS_serviceId,
+                EMAILJS_templateId,
+                payload, // maybe e.target / payload
+                EMAILJS_userId
             )
             .then(
                 result => {
@@ -42,32 +48,33 @@ export default function LetsGetStarted() {
                     console.log(error.text);
                 }
             );
+        return true;
     }
 
-    // if (window.location.pathname == '/contactform') {
+    // if (window.location.pathname == '/contact') {
     //     const submitBtn = document.querySelector('.submit-btn');
     // }
 
     return (
         <>
             {isDesktop ? (
-                <DesktopStepsTemplate onSubmit={onSubmit} {...templateProperty}>
-                    <LetsGetStartedBody
+                <DesktopStepsLayout onSubmit={onSubmit} {...layoutProperty}>
+                    <ContactBody
                         setFullname={setFullname}
                         setCompanyPosition={setCompanyPosition}
                         setProjectIdea={setAboutProject}
                         onSubmit={onSubmit}
                     />
-                </DesktopStepsTemplate>
+                </DesktopStepsLayout>
             ) : (
-                <MobileStepsTemplate {...templateProperty}>
-                    <LetsGetStartedBody
+                <MobileStepsLayout {...layoutProperty}>
+                    <ContactBody
                         setFullname={setFullname}
                         setCompanyPosition={setCompanyPosition}
                         setProjectIdea={setAboutProject}
                         onSubmit={onSubmit}
                     />
-                </MobileStepsTemplate>
+                </MobileStepsLayout>
             )}
         </>
     );
