@@ -106,6 +106,11 @@ export default function LetsGetStartedBody({
                     fontSize="18px"
                     fontWeight="500"
                     cursor="pointer"
+                    mt="50px"
+                    position="absolute"
+                    bottom="50px"
+                    left="60px"
+                    width="80%"
                 >
                     Submit
                 </Box>
