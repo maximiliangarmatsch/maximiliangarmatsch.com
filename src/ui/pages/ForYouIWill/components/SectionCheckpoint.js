@@ -6,15 +6,13 @@ export default function SectionCheckpoint({ children, dataTestId }) {
         <Box
             bg="#222"
             css={`
+                @media screen and (max-width: 1024px) and (min-width: 768px) {
+                    height: 250px;
+                    font-size: 20px;
+                    line-height: 40px;
+                }
                 box-shadow: 0px 0px 16px #000000;
             `}
-            css={`
-            @media screen and (max-width: 1024px) and (min-width:768px) {
-                height:250px;
-                font-size:20px;
-                line-height:40px
-
-                `}
             borderRadius="12px"
             p="20px 16px"
             fontSize={{ _: '14px', lg: '22px', xl: '19px' }}

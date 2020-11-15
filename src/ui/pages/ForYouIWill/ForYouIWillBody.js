@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Box, Text } from '../../components/Base/Base';
+import { Box } from '../../components/Base/Base';
 import SectionCheckpoint from './components/SectionCheckpoint';
 
 // const messageValues = {

@@ -13,7 +13,7 @@ export default function StepButton({ to, text, lastStep }) {
             bottom={{ _: '50px', lg: '50px' }}
             className="submit-btn"
             display={
-                window.location.pathname == '/contactform' ? 'none' : 'block'
+                window.location.pathname === '/contactform' ? 'none' : 'block'
             }
         >
             <IconButtonBig type="submit" as="button" to={to} newTab={lastStep}>
