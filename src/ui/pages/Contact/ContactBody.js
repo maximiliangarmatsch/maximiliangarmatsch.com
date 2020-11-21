@@ -27,7 +27,7 @@ export default function ContactBody({ onSubmit }) {
                 onSubmit={onSubmit}
             >
                 <Box
-                    height="15%"
+                    height="12%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
@@ -45,7 +45,7 @@ export default function ContactBody({ onSubmit }) {
                 </Box>
 
                 <Box
-                    height="15%"
+                    height="12%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
@@ -58,12 +58,52 @@ export default function ContactBody({ onSubmit }) {
                         name="companyposition"
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
-                        inputProps={{ 'data-testid': 'contact-form-company' }}
+                        inputProps={{
+                            'data-testid': 'contact-form-company',
+                        }}
+                    />
+                </Box>
+                <Box
+                    height="12%"
+                    width="100%"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                >
+                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
+                        Email
+                    </InputLabel>
+                    <TextField
+                        variant="filled"
+                        style={{ width: '100%', color: 'white' }}
+                        inputProps={{
+                            'data-testid': 'contact-form-company',
+                        }}
+                        name="email"
+                    />
+                </Box>
+                <Box
+                    height="12%"
+                    width="100%"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="space-between"
+                >
+                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
+                        Phone Number
+                    </InputLabel>
+                    <TextField
+                        variant="filled"
+                        style={{ width: '100%', color: 'white' }}
+                        inputProps={{
+                            'data-testid': 'contact-form-company',
+                        }}
+                        name="phone"
                     />
                 </Box>
 
                 <Box
-                    height="40%"
+                    height="30%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
@@ -106,8 +146,8 @@ export default function ContactBody({ onSubmit }) {
                     cursor="pointer"
                     mt="50px"
                     position="absolute"
-                    bottom="50px"
-                    left="60px"
+                    bottom="10px"
+                    left="55px"
                     width="80%"
                 />
             </form>
