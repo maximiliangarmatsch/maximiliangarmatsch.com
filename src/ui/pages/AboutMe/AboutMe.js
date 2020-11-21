@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
 import { Box } from '../../components/Base/Base';
 import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
@@ -8,11 +8,10 @@ import AchievementsBody from './AchievementsBody';
 
 export default function AboutMe() {
     const isDesktop = useContext(SizeContext);
+    const { t } = useTranslation();
     const layoutProperty = {
-        title: <FormattedMessage defaultMessage="About Me" />,
-        ButtonText: (
-            <FormattedMessage defaultMessage="What I will do for you" />
-        ),
+        title: t('About Me'),
+        ButtonText: t('What I will do for you'),
         to: '/foryouiwill',
     };
     return (
