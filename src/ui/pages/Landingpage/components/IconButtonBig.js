@@ -27,6 +27,7 @@ export default function IconButtonBig({ to, children, newTab = false }) {
                 color="deepBlack"
                 fontSize="18px"
                 fontWeight="500"
+                data-testid="primary-button"
             >
                 {children}
             </Box>

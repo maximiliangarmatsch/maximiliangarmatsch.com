@@ -102,9 +102,9 @@ export default function AchievementsBody() {
                         }}
                         data-testid="portfolio-link"
                     >
-                        <BuildIcon style={{ fontSize: '40px' }} />{' '}
+                        <BuildIcon style={{ fontSize: '40px' }} />
                         <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
-                            My PORTFOLIO{' '}
+                            My PORTFOLIO
                         </Text>
                     </Link>
                 </Box>

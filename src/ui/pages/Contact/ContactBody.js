@@ -77,7 +77,7 @@ export default function ContactBody({ onSubmit }) {
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
                         inputProps={{
-                            'data-testid': 'contact-form-company',
+                            'data-testid': 'contact-form-email',
                         }}
                         name="email"
                     />
@@ -96,7 +96,7 @@ export default function ContactBody({ onSubmit }) {
                         variant="filled"
                         style={{ width: '100%', color: 'white' }}
                         inputProps={{
-                            'data-testid': 'contact-form-company',
+                            'data-testid': 'contact-form-phone',
                         }}
                         name="phone"
                     />
