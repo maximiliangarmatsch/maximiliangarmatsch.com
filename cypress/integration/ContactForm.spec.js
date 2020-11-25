@@ -15,16 +15,14 @@ describe('Lets Get Started', () => {
                 .click()
                 .type(contactForm.company);
 
-            //email
             cy.getSel('contact-form-email')
                 .click()
                 .type(contactForm.email);
-            //phone number
+
             cy.getSel('contact-form-phone')
                 .click()
                 .type(contactForm.phoneNumber);
 
-            // cool
             cy.getSel('contact-form-about-project')
                 .click()
                 .type(contactForm.aboutProject);
