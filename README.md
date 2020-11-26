@@ -1,4 +1,4 @@
-[![MG website](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/cdbje3/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/cdbje3/runs)  [![codecov](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com/branch/master/graph/badge.svg)](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com)
+[![cypress](https://github.com/maximiliangarmatsch/maximiliangarmatsch.com/workflows/End-to-end%20tests/badge.svg)](https://dashboard.cypress.io/projects/cdbje3/runs?branches=%5B%5D&committers=%5B%5D&flaky=%5B%5D&page=1&status=%5B%5D&tags=%5B%5D&timeRange=%7B%22startDate%22%3A%221970-01-01%22%2C%22endDate%22%3A%222038-01-19%22%7D) [![codecov](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com/branch/master/graph/badge.svg)](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com)
 
 # maximiliangarmatsch.com
 www.maximiliangarmatsch.com is my main portfolio item that also uses my personal frontend-boilerplate. 
