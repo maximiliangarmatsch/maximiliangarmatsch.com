@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import { FormatValuesContext } from '../../../context/FormatValuesContext';
 import { Box, Text } from '../../components/Base/Base';
 
-const formatValues = {
+// exported for testing purpose
+export const formatValues = {
     header: chunks => (
         <Text
             fontSize={{ _: '20px', sm: '20px', md: '26px' }}

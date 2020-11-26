@@ -1,5 +1,8 @@
 {
     "exclude": [
-        "**/MyTeam/**"
+        "**/MyTeam/**",
+        "**/Contact.js",
+        "**/DownloadCV.js",
+        "src/**/App.js"
     ]
 }

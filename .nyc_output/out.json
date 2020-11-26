@@ -1,6 +1,30 @@
 {
-  "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\ui\\components\\Base\\Base.js": {
-    "path": "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\ui\\components\\Base\\Base.js",
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/context/FormatValuesContext.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/context/FormatValuesContext.js",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 35
+        },
+        "end": {
+          "line": 3,
+          "column": 52
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 4
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "a01b70f57e84c4641c6c24090453a6c608177a5d"
+  },
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/components/Base/Base.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/components/Base/Base.js",
     "statementMap": {
       "0": {
         "start": {
@@ -202,33 +226,453 @@
       }
     },
     "s": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2,
-      "6": 2,
-      "7": 2,
-      "8": 2,
-      "9": 0,
-      "10": 0
+      "0": 8,
+      "1": 17,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8,
+      "7": 8,
+      "8": 8,
+      "9": 12,
+      "10": 12
     },
     "f": {
-      "0": 2,
-      "1": 0
+      "0": 17,
+      "1": 12
     },
     "b": {
       "0": [
-        0,
+        12,
         0
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "85dafbc49f537532c97f98f7b1008f8dbe17c939"
+    "hash": "8507a130b257685479698306f16a9407f864d80b"
   },
-  "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\ui\\components\\ImageMaximilian.js": {
-    "path": "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\ui\\components\\ImageMaximilian.js",
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/pages/AboutMe/AchievementsBody.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/pages/AboutMe/AchievementsBody.js",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 9,
+          "column": 28
+        },
+        "end": {
+          "line": 33,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 11,
+          "column": 8
+        },
+        "end": {
+          "line": 17,
+          "column": 15
+        }
+      },
+      "2": {
+        "start": {
+          "line": 20,
+          "column": 8
+        },
+        "end": {
+          "line": 26,
+          "column": 15
+        }
+      },
+      "3": {
+        "start": {
+          "line": 29,
+          "column": 8
+        },
+        "end": {
+          "line": 31,
+          "column": 15
+        }
+      },
+      "4": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 114,
+          "column": 6
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 12
+          },
+          "end": {
+            "line": 10,
+            "column": 13
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 8
+          },
+          "end": {
+            "line": 17,
+            "column": 15
+          }
+        },
+        "line": 11
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 19,
+            "column": 15
+          },
+          "end": {
+            "line": 19,
+            "column": 16
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 8
+          },
+          "end": {
+            "line": 26,
+            "column": 15
+          }
+        },
+        "line": 20
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 28,
+            "column": 10
+          },
+          "end": {
+            "line": 28,
+            "column": 11
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 29,
+            "column": 8
+          },
+          "end": {
+            "line": 31,
+            "column": 15
+          }
+        },
+        "line": 29
+      },
+      "3": {
+        "name": "AchievementsBody",
+        "decl": {
+          "start": {
+            "line": 35,
+            "column": 24
+          },
+          "end": {
+            "line": 35,
+            "column": 40
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 35,
+            "column": 43
+          },
+          "end": {
+            "line": 115,
+            "column": 1
+          }
+        },
+        "line": 35
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 0
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 0
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "260cbb92f9f0156001ef5ce393c4aa58b54b35df"
+  },
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/tests/AchievementsBody.spec.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/tests/AchievementsBody.spec.js",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 8,
+          "column": 7
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 8
+        },
+        "end": {
+          "line": 7,
+          "column": 18
+        }
+      },
+      "3": {
+        "start": {
+          "line": 10,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 7
+        }
+      },
+      "4": {
+        "start": {
+          "line": 11,
+          "column": 26
+        },
+        "end": {
+          "line": 19,
+          "column": 9
+        }
+      },
+      "5": {
+        "start": {
+          "line": 12,
+          "column": 12
+        },
+        "end": {
+          "line": 18,
+          "column": 14
+        }
+      },
+      "6": {
+        "start": {
+          "line": 21,
+          "column": 8
+        },
+        "end": {
+          "line": 25,
+          "column": 11
+        }
+      },
+      "7": {
+        "start": {
+          "line": 22,
+          "column": 12
+        },
+        "end": {
+          "line": 22,
+          "column": 63
+        }
+      },
+      "8": {
+        "start": {
+          "line": 23,
+          "column": 12
+        },
+        "end": {
+          "line": 23,
+          "column": 66
+        }
+      },
+      "9": {
+        "start": {
+          "line": 24,
+          "column": 12
+        },
+        "end": {
+          "line": 24,
+          "column": 61
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 35
+          },
+          "end": {
+            "line": 5,
+            "column": 36
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 41
+          },
+          "end": {
+            "line": 27,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 6,
+            "column": 14
+          },
+          "end": {
+            "line": 6,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 20
+          },
+          "end": {
+            "line": 8,
+            "column": 5
+          }
+        },
+        "line": 6
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 56
+          },
+          "end": {
+            "line": 10,
+            "column": 57
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 62
+          },
+          "end": {
+            "line": 26,
+            "column": 5
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 26
+          },
+          "end": {
+            "line": 11,
+            "column": 27
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 48
+          },
+          "end": {
+            "line": 19,
+            "column": 9
+          }
+        },
+        "line": 11
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 21,
+            "column": 62
+          },
+          "end": {
+            "line": 21,
+            "column": 63
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 68
+          },
+          "end": {
+            "line": 25,
+            "column": 9
+          }
+        },
+        "line": 21
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4
+    },
+    "f": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "7ebe9fd7603d1047335dde75891e3013d58d426c"
+  },
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/components/ImageMaximilian.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/ui/components/ImageMaximilian.js",
     "statementMap": {
       "0": {
         "start": {
@@ -414,34 +858,34 @@
       }
     },
     "s": {
-      "0": 2
+      "0": 5
     },
     "f": {
-      "0": 2
+      "0": 5
     },
     "b": {
       "0": [
-        0,
-        2
+        2,
+        3
       ],
       "1": [
-        0,
-        2
+        2,
+        3
       ],
       "2": [
-        0,
-        2
+        2,
+        3
       ],
       "3": [
-        0,
-        2
+        2,
+        3
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "366b203de2ff196f1272320b61e36dade3911640"
+    "hash": "44f0f725dd4df0e0cde40766283090beaf1b00b0"
   },
-  "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\tests\\ImageMax.spec.js": {
-    "path": "C:\\Users\\USER-PC\\Documents\\Work\\maximiliangarmatsch.com\\src\\tests\\ImageMax.spec.js",
+  "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/tests/ImageMax.spec.js": {
+    "path": "/home/kayode/Documents/Work/maximiliangarmatsch.com/src/tests/ImageMax.spec.js",
     "statementMap": {
       "0": {
         "start": {
@@ -449,7 +893,7 @@
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 3
         }
       },
@@ -470,26 +914,86 @@
         },
         "end": {
           "line": 8,
-          "column": 35
+          "column": 18
         }
       },
       "3": {
         "start": {
-          "line": 10,
+          "line": 11,
           "column": 4
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 7
         }
       },
       "4": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 8
         },
         "end": {
-          "line": 11,
+          "line": 12,
+          "column": 35
+        }
+      },
+      "5": {
+        "start": {
+          "line": 13,
+          "column": 8
+        },
+        "end": {
+          "line": 13,
+          "column": 73
+        }
+      },
+      "6": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 29,
+          "column": 7
+        }
+      },
+      "7": {
+        "start": {
+          "line": 17,
+          "column": 23
+        },
+        "end": {
+          "line": 22,
+          "column": 9
+        }
+      },
+      "8": {
+        "start": {
+          "line": 24,
+          "column": 21
+        },
+        "end": {
+          "line": 24,
+          "column": 75
+        }
+      },
+      "9": {
+        "start": {
+          "line": 26,
+          "column": 8
+        },
+        "end": {
+          "line": 26,
+          "column": 63
+        }
+      },
+      "10": {
+        "start": {
+          "line": 28,
+          "column": 8
+        },
+        "end": {
+          "line": 28,
           "column": 73
         }
       }
@@ -513,7 +1017,7 @@
             "column": 35
           },
           "end": {
-            "line": 13,
+            "line": 30,
             "column": 1
           }
         },
@@ -524,17 +1028,17 @@
         "decl": {
           "start": {
             "line": 7,
-            "column": 15
+            "column": 14
           },
           "end": {
             "line": 7,
-            "column": 16
+            "column": 15
           }
         },
         "loc": {
           "start": {
             "line": 7,
-            "column": 21
+            "column": 20
           },
           "end": {
             "line": 9,
@@ -547,42 +1051,73 @@
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 10,
+            "line": 11,
             "column": 39
           },
           "end": {
-            "line": 10,
+            "line": 11,
             "column": 40
           }
         },
         "loc": {
           "start": {
-            "line": 10,
+            "line": 11,
             "column": 45
           },
           "end": {
-            "line": 12,
+            "line": 14,
             "column": 5
           }
         },
-        "line": 10
+        "line": 11
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 16,
+            "column": 55
+          },
+          "end": {
+            "line": 16,
+            "column": 56
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 61
+          },
+          "end": {
+            "line": 29,
+            "column": 5
+          }
+        },
+        "line": 16
       }
     },
     "branchMap": {},
     "s": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2
+      "0": 4,
+      "1": 4,
+      "2": 5,
+      "3": 4,
+      "4": 3,
+      "5": 3,
+      "6": 4,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2
     },
     "f": {
-      "0": 2,
-      "1": 2,
-      "2": 2
+      "0": 4,
+      "1": 5,
+      "2": 3,
+      "3": 2
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "120a3dbaee268f2eb3a25d5218cddc8c732c3aae"
+    "hash": "59214d06e8fe0a899e8a1a6cf0d1d48af9076e24"
   }
 }
