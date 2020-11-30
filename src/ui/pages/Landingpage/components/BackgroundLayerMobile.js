@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '../../../components/Base/Base';
-import CookieMessageMobile from '../../../templates/components/CookieMessageMobile';
+import CookieMessageMobile from '../../../components/Layouts/components/CookieMessageMobile';
 import ShadowLayer from './ShadowLayer';
 
 export default function BackgroundLayerMobile({ children }) {

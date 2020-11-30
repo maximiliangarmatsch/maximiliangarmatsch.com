@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Text } from '../../../components/Base/Base';
+import { Box, Text } from '../Base/Base';
 
 export default function TextLogo() {
     return (

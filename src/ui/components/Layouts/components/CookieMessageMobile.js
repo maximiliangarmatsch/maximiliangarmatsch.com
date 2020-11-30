@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-import { Box, Text } from '../../components/Base/Base';
+import { Box, Text } from '../../Base/Base';
 
 export default function CookieMessageMobile({ acceptCookie }) {
     return (

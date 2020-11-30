@@ -1,33 +1,33 @@
 name: End-to-end tests
 on: [push]
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-   
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v1
+    cypress-run:
+        runs-on: ubuntu-latest
 
-      - name: "MyCustom Node12 Server"
-        uses: actions/setup-node@v1 ## Github Action ??
-        with:
-          node-version: "12.x"
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v1
 
-      - name: Install Dependencies
-        run: npm install
+            - name: 'MyCustom Node12 Server'
+              uses: actions/setup-node@v1 ## Github Action ??
+              with:
+                  node-version: '12.x'
 
-      - name: Run Cypress
-        uses: cypress-io/github-action@v2
-        with:
-          record: true
-          start: npm start
+            - name: Install Dependencies
+              run: npm install
 
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      
-      - name: Upload code coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+            - name: Run Cypress
+              uses: cypress-io/github-action@v2
+              with:
+                  browser: chrome
+                  record: true
+                  start: npm start
+
+              env:
+                  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Upload code coverage to Codecov
+              uses: codecov/codecov-action@v1
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}

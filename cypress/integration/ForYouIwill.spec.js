@@ -11,7 +11,7 @@ describe('For You I Will', () => {
 
     it('Last Step', () => {
         cy.get('div[class*="IconButtonBig"]').click();
-        cy.url().should('eq', 'http://localhost:3000/contactform');
+        cy.url().should('eq', 'http://localhost:3000/contact');
     });
 
     it('Last Step Button Content', () => {

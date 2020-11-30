@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import TemplateDesktop from '../ui/templates/TemplateDesktop';
-import TemplateMobile from '../ui/templates/TemplateMobile';
+import LayoutDesktop from '../ui/components/Layouts/LayoutDesktop';
+import LayoutMobile from '../ui/components/Layouts/LayoutMobile';
 import { SizeContext } from '../context/SizeContext';
 
 export default function DeviceProvider({ children }) {
@@ -8,9 +8,9 @@ export default function DeviceProvider({ children }) {
     return (
         <>
             {isDesktop ? (
-                <TemplateDesktop>{children}</TemplateDesktop>
+                <LayoutDesktop>{children}</LayoutDesktop>
             ) : (
-                <TemplateMobile>{children}</TemplateMobile>
+                <LayoutMobile>{children}</LayoutMobile>
             )}
         </>
     );

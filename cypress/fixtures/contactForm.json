@@ -1,5 +1,7 @@
 {
     "name": "John Doe",
     "company": "John Doe PLC",
+    "email": "jondoe@johnmail.com",
+    "phoneNumber": "12345678",
     "aboutProject": "about project"
 }

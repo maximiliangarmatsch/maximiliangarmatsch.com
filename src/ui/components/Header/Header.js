@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '../../../components/Base/Base';
+import { Flex } from '../Base/Base';
 import TextLogo from './TextLogo';
 import HeaderMenu from './HeaderMenu';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from '../../components/Base/Base';
+import { Box, Text } from '../../Base/Base';
 
 export default function Title({ text }) {
     return (

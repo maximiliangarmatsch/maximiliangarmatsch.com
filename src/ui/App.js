@@ -11,7 +11,7 @@ import Impressum from './pages/Impressum/Impressum';
 import MyTeam from './pages/MyTeam/MyTeam';
 import AboutMe from './pages/AboutMe/AboutMe';
 import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
-import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
+import Contact from './pages/Contact/Contact';
 import DownloadCV from './pages/Download/DownloadCV';
 import DownloadPortfolio from './pages/Download/DownloadPortfolio';
 
@@ -45,8 +45,8 @@ export default function App() {
                             <Route path="/foryouiwill">
                                 <ForYouIWill />
                             </Route>
-                            <Route path="/contactform">
-                                <LetsGetStarted />
+                            <Route path="/contact">
+                                <Contact />
                             </Route>
                             <Route path="/cv">
                                 <DownloadCV />

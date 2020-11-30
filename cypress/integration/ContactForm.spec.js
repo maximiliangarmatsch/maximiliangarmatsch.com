@@ -1,6 +1,6 @@
 describe('Lets Get Started', () => {
     beforeEach(() => {
-        cy.visit('/contactform');
+        cy.visit('/contact');
         cy.viewport(1440, 660);
         cy.getSel('cookie-button').click({ force: true });
     });
@@ -15,11 +15,22 @@ describe('Lets Get Started', () => {
                 .click()
                 .type(contactForm.company);
 
+            cy.getSel('contact-form-email')
+                .click()
+                .type(contactForm.email);
+
+            cy.getSel('contact-form-phone')
+                .click()
+                .type(contactForm.phoneNumber);
+
             cy.getSel('contact-form-about-project')
                 .click()
                 .type(contactForm.aboutProject);
 
-            cy.get('div[class*="IconButtonBig"]').click();
+            //stub the backend submit button
+            //cy.get('div[class*="IconButtonBig"]').click();
         });
     });
 });
+
+// name

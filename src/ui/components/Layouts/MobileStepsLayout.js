@@ -1,15 +1,16 @@
 import React from 'react';
-import DeviceProvider from '../../helpers/DeviceProvider';
-import { Box } from '../components/Base/Base';
+import DeviceProvider from '../../../helpers/DeviceProvider';
+import { Box } from '../Base/Base';
 import StepButton from './components/StepButton';
 import Title from './components/Title';
 
-export default function MobileStepsTemplate({
+export default function MobileStepsLayout({
     children,
     title,
     to,
     ButtonText,
     lastStep = false,
+    type,
 }) {
     return (
         <DeviceProvider>
@@ -29,7 +30,12 @@ export default function MobileStepsTemplate({
 
                 {children}
 
-                <StepButton lastStep={lastStep} to={to} text={ButtonText} />
+                <StepButton
+                    lastStep={lastStep}
+                    type={type}
+                    to={to}
+                    text={ButtonText}
+                />
             </Box>
         </DeviceProvider>
     );

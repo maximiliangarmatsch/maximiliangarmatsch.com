@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 
 export default function DownloadPortfolio() {
     const location = useLocation();
 
+    const { t } = useTranslation();
     let href = '';
     let downloadName = '';
 
@@ -27,8 +28,8 @@ export default function DownloadPortfolio() {
         <DeviceProvider>
             The download has started...
             <br />
-            <Link to="/">
-                <FormattedMessage defaultMessage="Back to the start" />
+            <Link to="/" style={{ color: 'green', textDecoration: 'none' }}>
+                {t('Back to the start')}
             </Link>
         </DeviceProvider>
     );

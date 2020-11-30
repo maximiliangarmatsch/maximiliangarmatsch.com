@@ -1,28 +1,28 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
-import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
-import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
+import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
 import ForYouIWillBody from './ForYouIWillBody';
 
 export default function ForYouIWill() {
     const { t } = useTranslation();
     const isDesktop = useContext(SizeContext);
-    const templateProperty = {
+    const layoutProperty = {
         title: t('For you, I will...'),
         ButtonText: t('Last step'),
-        to: '/contactform',
+        to: '/contact',
     };
     return (
         <>
             {isDesktop ? (
-                <DesktopStepsTemplate {...templateProperty}>
+                <DesktopStepsLayout {...layoutProperty}>
                     <ForYouIWillBody />
-                </DesktopStepsTemplate>
+                </DesktopStepsLayout>
             ) : (
-                <MobileStepsTemplate {...templateProperty}>
+                <MobileStepsLayout {...layoutProperty}>
                     <ForYouIWillBody />
-                </MobileStepsTemplate>
+                </MobileStepsLayout>
             )}
         </>
     );
