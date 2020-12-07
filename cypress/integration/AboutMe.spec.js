@@ -1,4 +1,3 @@
-///<reference types="cypress"/>
 describe('About Me', () => {
     beforeEach(() => {
         cy.visit('/aboutme');
