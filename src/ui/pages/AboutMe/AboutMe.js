@@ -4,6 +4,7 @@ import { SizeContext } from '../../../context/SizeContext';
 import { Box } from '../../components/Base/Base';
 import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
 import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import DeviceProvider from '../../../helpers/DeviceProvider';
 import AchievementsBody from './AchievementsBody';
 
 export default function AboutMe() {
@@ -15,7 +16,7 @@ export default function AboutMe() {
         to: '/foryouiwill',
     };
     return (
-        <>
+        <DeviceProvider>
             {isDesktop ? (
                 <DesktopStepsLayout {...layoutProperty}>
                     <Box
@@ -50,6 +51,6 @@ export default function AboutMe() {
                     </Box>
                 </MobileStepsLayout>
             )}
-        </>
+        </DeviceProvider>
     );
 }

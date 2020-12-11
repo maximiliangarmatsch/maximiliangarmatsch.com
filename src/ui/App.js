@@ -8,12 +8,13 @@ import theme from '../config/theme';
 import { SizeContext } from '../context/SizeContext';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
-import MyTeam from './pages/MyTeam/MyTeam';
+import MyTeam from './components/OLD_UNUSED/MyTeam/MyTeam';
 import AboutMe from './pages/AboutMe/AboutMe';
 import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
 import Contact from './pages/Contact/Contact';
 import DownloadCV from './pages/Download/DownloadCV';
 import DownloadPortfolio from './pages/Download/DownloadPortfolio';
+import Playground from './pages/Playground/Playground';
 
 export default function App() {
     let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
@@ -27,17 +28,8 @@ export default function App() {
                             <Route exact path="/">
                                 <Landingpage />
                             </Route>
-                            <Route path="/impressum">
-                                <Impressum />
-                            </Route>
                             <Route path="/myteam">
                                 <MyTeam />
-                            </Route>
-                            <Route path="/intro">
-                                {() => {
-                                    window.location.href =
-                                        'https://calendly.com/maximilian-garmatsch/intro';
-                                }}
                             </Route>
                             <Route path="/aboutme">
                                 <AboutMe />
@@ -56,6 +48,14 @@ export default function App() {
                             </Route>
                             <Route path="/portfolio">
                                 <DownloadPortfolio />
+                            </Route>
+
+                            <Route path="/playground">
+                                <Playground />
+                            </Route>
+
+                            <Route path="/impressum">
+                                <Impressum />
                             </Route>
                         </Switch>
                     </SizeContext.Provider>

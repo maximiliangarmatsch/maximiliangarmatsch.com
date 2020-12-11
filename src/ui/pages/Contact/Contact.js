@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { SizeContext } from '../../../context/SizeContext';
 import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
 import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import DeviceProvider from '../../../helpers/DeviceProvider';
 import ContactBody from './ContactBody';
 
 const EMAILJS_userId = 'user_eBhucvRwzq5R3bUPaNqI7';
@@ -42,7 +43,7 @@ export default function Contact() {
     }
 
     return (
-        <>
+        <DeviceProvider>
             {isDesktop ? (
                 <DesktopStepsLayout {...layoutProperty}>
                     <ContactBody onSubmit={onSubmit} />
@@ -52,6 +53,6 @@ export default function Contact() {
                     <ContactBody onSubmit={onSubmit} />
                 </MobileStepsLayout>
             )}
-        </>
+        </DeviceProvider>
     );
 }

@@ -20,7 +20,7 @@
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": ["**/*.test.js", "**/setupTests.js"]
     }],
-    "i18next/no-literal-string": ["error", {"onlyAttribute": [""]}],
+    "i18next/no-literal-string": ["off", {"onlyAttribute": [""]}],
     "react/style-prop-object": "off", // confused by <FormattedNumber style="currency" />
   }
 }

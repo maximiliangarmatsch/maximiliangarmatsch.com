@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '../../Base/Base';
-import IconButtonBig from '../../../pages/Landingpage/components/IconButtonBig';
+import IconButtonBig from '../../Buttons/IconButtonBig';
 
 export default function StepButton({ to, text, lastStep }) {
     return (

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
 import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
 import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
+import DeviceProvider from '../../../helpers/DeviceProvider';
 import ForYouIWillBody from './ForYouIWillBody';
 
 export default function ForYouIWill() {
@@ -14,7 +15,7 @@ export default function ForYouIWill() {
         to: '/contact',
     };
     return (
-        <>
+        <DeviceProvider>
             {isDesktop ? (
                 <DesktopStepsLayout {...layoutProperty}>
                     <ForYouIWillBody />
@@ -24,6 +25,6 @@ export default function ForYouIWill() {
                     <ForYouIWillBody />
                 </MobileStepsLayout>
             )}
-        </>
+        </DeviceProvider>
     );
 }
