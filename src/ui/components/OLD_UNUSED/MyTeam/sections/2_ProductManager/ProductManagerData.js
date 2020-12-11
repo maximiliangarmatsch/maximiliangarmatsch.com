@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Trans } from 'react-i18next';
 import IconProductManagerMobile from '../../Icons/Mobile/IconProductManagerMobile';
 import IconProductManagerDesktop from '../../Icons/Desktop/IconProductManagerDesktop';
 
@@ -10,37 +10,40 @@ export const data = {
     headline: (
         <>
             <span>
-                <FormattedMessage defaultMessage="Product Manager" />
+                <Trans>Product Manager</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Team Lead" />
+                <Trans>Team Lead</Trans>
             </span>
         </>
     ),
     quote: (
-        <FormattedMessage defaultMessage="“We put our effort into creating an intuitive experience for your users.”" />
+        <Trans>
+            "We put our effort into creating an intuitive experience for your
+            users."
+        </Trans>
     ),
     tools: (
         <>
             <span>
-                <FormattedMessage defaultMessage="Jira" />
+                <Trans>Jira</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Project management" />
+                <Trans>Project management</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Google Suite" />
+                <Trans>Google Suite</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Figma" />
+                <Trans>Figma</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Github" />
+                <Trans>Github</Trans>
             </span>
         </>
     ),

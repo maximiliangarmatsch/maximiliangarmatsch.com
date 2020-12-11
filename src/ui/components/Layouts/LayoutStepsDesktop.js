@@ -4,7 +4,7 @@ import { Box } from '../Base/Base';
 import Title from './components/Title';
 import StepButton from './components/StepButton';
 
-export default function DesktopStepsLayout({
+export default function LayoutStepsDesktop({
     children,
     title,
     to,

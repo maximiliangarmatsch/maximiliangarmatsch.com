@@ -1,9 +1,11 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../Base/Base';
 
 export default function CookieMessageDesktop({ acceptCookie }) {
+    const { t } = useTranslation();
+
     return (
         <Box
             maxWidth="600px"
@@ -22,38 +24,27 @@ export default function CookieMessageDesktop({ acceptCookie }) {
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             `}
         >
-            <FormattedMessage
-                defaultMessage="
-                    <header>This site uses cookies.</header>
-                    We use our own cookies and those of third parties
-                    to improve our services, customize our website,
-                    improve users experience in our website, identify and solve
-                    problems, measure the usage, compile statistics. {linebreak}
-                    View our cookie <policy>policy</policy>."
-                values={{
-                    header: chunks => (
-                        <Text fontSize="28px">
-                            {chunks}
-                            <br />
-                            <br />
-                        </Text>
-                    ),
-                    linebreak: <br />,
-                    policy: chunks => (
-                        <Text
-                            as={Link}
-                            to="/impressum"
-                            css={`
-                                text-decoration: none;
-                                color: white;
-                            `}
-                            color="white"
-                        >
-                            {chunks}
-                        </Text>
-                    ),
-                }}
-            />
+            <Text fontSize="28px">
+                {t('This site uses cookies.')}
+                <br />
+                <br />
+            </Text>
+            {t(
+                'We use our own cookies and those of third parties to improve our services, customize our website, improve users experience in our website, identify and solve problems, measure the usage, compile statistics.'
+            )}
+            <br />
+            {t('View our cookie ')}
+            <Text
+                as={Link}
+                to="/impressum"
+                css={`
+                    text-decoration: none;
+                    color: white;
+                `}
+                color="white"
+            >
+                {t('policy')}
+            </Text>
             <br />
             <Box
                 as="button"
@@ -70,7 +61,7 @@ export default function CookieMessageDesktop({ acceptCookie }) {
                 onClick={acceptCookie}
                 data-testid="cookie-button"
             >
-                Accept
+                {t('Accept')}
             </Box>
         </Box>
     );

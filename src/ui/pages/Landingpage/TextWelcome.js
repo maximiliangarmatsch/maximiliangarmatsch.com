@@ -1,8 +1,10 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../components/Base/Base';
 
 export default function TextWelcome() {
+    const { t } = useTranslation();
+
     return (
         <Box>
             <Text
@@ -29,12 +31,9 @@ export default function TextWelcome() {
                 m={0}
                 p={0}
             >
-                <FormattedMessage
-                    defaultMessage="I create custom {linebreak} software solutions"
-                    values={{
-                        linebreak: <br />,
-                    }}
-                />
+                {t('I create custom')}
+                <br />
+                {t('software solutions')}
             </Text>
             <Text
                 as="p"
@@ -60,15 +59,14 @@ export default function TextWelcome() {
                 m={0}
                 p={0}
             >
-                <FormattedMessage
-                    defaultMessage="Digital Transformation of Businesses {linebreak}
-                                    Scalable Web & Mobile Apps {linebreak}
-                                    Digital Marketing {linebreak}
-                                    E-Commerce"
-                    values={{
-                        linebreak: <br />,
-                    }}
-                />
+                {t('Digital Transformation of Businesses')}
+                <br />
+                {t('Scalable Web & Mobile Apps')}
+                <br />
+                {t('Digital Marketing')}
+                <br />
+                {t('E-Commerce"')}
+                <br />
             </Text>
         </Box>
     );

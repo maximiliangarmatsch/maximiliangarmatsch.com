@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Trans } from 'react-i18next';
 import IconSoftwareEngineeringMobile from '../../Icons/Mobile/IconSoftwareEngineeringMobile';
 import IconSoftwareEngineeringDesktop from '../../Icons/Desktop/IconSoftwareEngineeringDesktop';
 
@@ -9,32 +9,37 @@ export const data = {
     iconDesktop: <IconSoftwareEngineeringDesktop />,
     headline: (
         <span>
-            <FormattedMessage defaultMessage="Software Engineering" />
+            {' '}
+            <Trans>Software Engineering</Trans>
         </span>
     ),
     quote: (
-        <FormattedMessage defaultMessage="“We use modern technology to bring your ideas to life, store data securely and ensure the availability of the server around the clock.”" />
+        <Trans>
+            “We use modern technology to bring your ideas to life, store data
+            securely and ensure the availability of the server around the
+            clock.”
+        </Trans>
     ),
     tools: (
         <>
             <span>
-                <FormattedMessage defaultMessage="React.JS" />
+                <Trans>React.JS</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Node.JS / Firebase" />
+                <Trans>Node.JS / Firebase</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Flutter / Cordova" />
+                <Trans>Flutter / Cordova</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="SQL / NoSQL" />
+                <Trans>SQL / NoSQL</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Git" />
+                <Trans>Git</Trans>
             </span>
             <br />
         </>

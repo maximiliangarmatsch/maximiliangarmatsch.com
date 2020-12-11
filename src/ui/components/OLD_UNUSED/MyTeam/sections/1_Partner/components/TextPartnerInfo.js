@@ -1,19 +1,21 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Text } from '../../../../../Base/Base';
 
 export default function TextPartnerInfo() {
+    const { t } = useTranslation();
+
     return (
         <Text color="green">
             <Text color="white">
-                <FormattedMessage defaultMessage="Your Partner" />
+                {t('Your Partner')}
                 <br />
             </Text>
-            <FormattedMessage defaultMessage="Maximilian Garmatsch, B.Sc" />
+            {t('Maximilian Garmatsch, B.Sc')}
             <br />
-            <FormattedMessage defaultMessage="Senior Web Engineer" />
+            {t('Senior Web Engineer')}
             <br />
-            <FormattedMessage defaultMessage="Product Manager" />
+            {t('Product Manager')}
             <br />
         </Text>
     );

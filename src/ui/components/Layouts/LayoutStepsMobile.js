@@ -3,7 +3,7 @@ import { Box } from '../Base/Base';
 import StepButton from './components/StepButton';
 import Title from './components/Title';
 
-export default function MobileStepsLayout({
+export default function LayoutStepsMobile({
     children,
     title,
     to,

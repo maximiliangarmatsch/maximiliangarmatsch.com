@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from '../../components/Layers/BackgroundLayerDesktop';
 import IconButtonBig from '../../components/Buttons/IconButtonBig';
@@ -8,6 +8,7 @@ import TextWelcome from './TextWelcome';
 // import UserNameText from './components/UserNameText';
 
 export default function LandingPageDesktop() {
+    const { t } = useTranslation();
     return (
         <BackgroundLayerDesktop>
             <Box
@@ -23,7 +24,7 @@ export default function LandingPageDesktop() {
                 <TextWelcome />
                 <Box height="50px" width="70%" mt="25px">
                     <IconButtonBig to="/aboutme">
-                        <FormattedMessage defaultMessage="Learn more" />
+                        {t('Learn more')}
                     </IconButtonBig>
                 </Box>
             </Box>

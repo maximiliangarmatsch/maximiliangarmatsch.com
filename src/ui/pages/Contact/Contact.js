@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
 import { SizeContext } from '../../../context/SizeContext';
-import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
-import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
+import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import ContactBody from './ContactBody';
 
@@ -45,13 +45,13 @@ export default function Contact() {
     return (
         <DeviceProvider>
             {isDesktop ? (
-                <DesktopStepsLayout {...layoutProperty}>
+                <LayoutStepsDesktop {...layoutProperty}>
                     <ContactBody onSubmit={onSubmit} />
-                </DesktopStepsLayout>
+                </LayoutStepsDesktop>
             ) : (
-                <MobileStepsLayout {...layoutProperty}>
+                <LayoutStepsMobile {...layoutProperty}>
                     <ContactBody onSubmit={onSubmit} />
-                </MobileStepsLayout>
+                </LayoutStepsMobile>
             )}
         </DeviceProvider>
     );

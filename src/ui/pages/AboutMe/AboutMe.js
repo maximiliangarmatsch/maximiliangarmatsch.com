@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
 import { Box } from '../../components/Base/Base';
-import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
-import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
+import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
+import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import AchievementsBody from './AchievementsBody';
 
@@ -18,7 +18,7 @@ export default function AboutMe() {
     return (
         <DeviceProvider>
             {isDesktop ? (
-                <DesktopStepsLayout {...layoutProperty}>
+                <LayoutStepsDesktop {...layoutProperty}>
                     <Box
                         position="relative"
                         maxWidth="420px"
@@ -32,9 +32,9 @@ export default function AboutMe() {
                     >
                         <AchievementsBody />
                     </Box>
-                </DesktopStepsLayout>
+                </LayoutStepsDesktop>
             ) : (
-                <MobileStepsLayout {...layoutProperty}>
+                <LayoutStepsMobile {...layoutProperty}>
                     <Box
                         position="relative"
                         maxWidth="400px"
@@ -49,7 +49,7 @@ export default function AboutMe() {
                     >
                         <AchievementsBody />
                     </Box>
-                </MobileStepsLayout>
+                </LayoutStepsMobile>
             )}
         </DeviceProvider>
     );

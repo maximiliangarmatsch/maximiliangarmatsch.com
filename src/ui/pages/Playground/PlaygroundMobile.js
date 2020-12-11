@@ -1,15 +1,13 @@
 import React from 'react';
-// import { FormattedMessage } from 'react-intl';
 // import { Box } from '../../components/Base/Base';
 // import TextWelcome from './components/TextWelcome';
-import BackgroundLayerMobile from '../../components/Layers/BackgroundLayerMobile';
 
 // import IconButtonBig from './components/IconButtonBig';
 // import LoginButton from './components/LoginButton';
 
 export default function PlaygroundMobile() {
     return (
-        <BackgroundLayerMobile>
+        <>
             <h2>Test</h2>
             {/*    <Box*/}
             {/*        zIndex={2}*/}
@@ -35,6 +33,6 @@ export default function PlaygroundMobile() {
             {/*        /!*    <LoginButton />*!/*/}
             {/*        /!*</Box>*!/*/}
             {/*    </Box>*/}
-        </BackgroundLayerMobile>
+        </>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Trans } from 'react-i18next';
 import IconQualityAssuranceMobile from '../../Icons/Mobile/IconQualityAssuranceMobile';
 import IconQualityAssuranceDesktop from '../../Icons/Desktop/IconQualityAssuranceDesktop';
 
@@ -9,24 +9,22 @@ export const data = {
     iconDesktop: <IconQualityAssuranceDesktop />,
     headline: (
         <span>
-            <FormattedMessage defaultMessage="Quality Assurance" />
+            <Trans>Quality Assurance</Trans>
         </span>
     ),
-    quote: (
-        <FormattedMessage defaultMessage="“We test your application to perfection!”" />
-    ),
+    quote: <Trans>“We test your application to perfection!”</Trans>,
     tools: (
         <>
             <span>
-                <FormattedMessage defaultMessage="Cypress.JS" />
+                <Trans>Cypress.JS</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Selenium" />
+                <Trans>Selenium</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Browserstack.com" />
+                <Trans>Browserstack.com</Trans>
             </span>
         </>
     ),

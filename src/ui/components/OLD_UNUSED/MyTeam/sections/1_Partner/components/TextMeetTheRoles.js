@@ -1,8 +1,10 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Text } from '../../../../../Base/Base';
 
 export default function TextMeetTheRoles({ bottom }) {
+    const { t } = useTranslation();
+
     return (
         <Text
             as="p"
@@ -14,7 +16,7 @@ export default function TextMeetTheRoles({ bottom }) {
             `}
             bottom={bottom}
         >
-            <FormattedMessage defaultMessage="Meet the roles in our team!" />
+            {t('Meet the roles in our team!')}
         </Text>
     );
 }

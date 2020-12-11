@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box } from '../../components/Base/Base';
 import BackgroundLayerMobile from '../../components/Layers/BackgroundLayerMobile';
 import IconButtonBig from '../../components/Buttons/IconButtonBig';
@@ -7,6 +7,8 @@ import TextWelcome from './TextWelcome';
 // import LoginButton from './components/LoginButton';
 
 export default function LandingPageMobile() {
+    const { t } = useTranslation();
+
     return (
         <BackgroundLayerMobile>
             <Box
@@ -26,7 +28,7 @@ export default function LandingPageMobile() {
                 <TextWelcome />
                 <Box height="50px" width="100%" mt="25px">
                     <IconButtonBig to="/aboutme">
-                        <FormattedMessage defaultMessage="Learn more" />
+                        {t('Learn more')}
                     </IconButtonBig>
                 </Box>
                 {/*<Box height="50px" width="100%" mt="25px">*/}

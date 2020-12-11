@@ -1,15 +1,17 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Text } from '../../../../../Base/Base';
 
 export default function TextPartnerRole() {
+    const { t } = useTranslation();
+
     return (
         <Text color="green">
-            <FormattedMessage defaultMessage="Developer since 2001" />
+            {t('Developer since 2001')}
             <br />
-            <FormattedMessage defaultMessage="Professional since 2009" />
+            {t('Professional since 2009')}
             <br />
-            <FormattedMessage defaultMessage="Team Lead since 2018" />
+            {t('Team Lead since 2018')}
             <br />
         </Text>
     );

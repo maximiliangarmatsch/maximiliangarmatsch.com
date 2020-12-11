@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SizeContext } from '../../../context/SizeContext';
-import MobileStepsLayout from '../../components/Layouts/MobileStepsLayout';
-import DesktopStepsLayout from '../../components/Layouts/DesktopStepsLayout';
+import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
+import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import ForYouIWillBody from './ForYouIWillBody';
 
@@ -17,13 +17,13 @@ export default function ForYouIWill() {
     return (
         <DeviceProvider>
             {isDesktop ? (
-                <DesktopStepsLayout {...layoutProperty}>
+                <LayoutStepsDesktop {...layoutProperty}>
                     <ForYouIWillBody />
-                </DesktopStepsLayout>
+                </LayoutStepsDesktop>
             ) : (
-                <MobileStepsLayout {...layoutProperty}>
+                <LayoutStepsMobile {...layoutProperty}>
                     <ForYouIWillBody />
-                </MobileStepsLayout>
+                </LayoutStepsMobile>
             )}
         </DeviceProvider>
     );

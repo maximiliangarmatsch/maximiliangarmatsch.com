@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Trans } from 'react-i18next';
 import IconUiUxDesignMobile from '../../Icons/Mobile/IconUiUxDesignMobile';
 import IconUiUxDesignDesktop from '../../Icons/Desktop/IconUiUxDesignDesktop';
 
@@ -10,33 +10,36 @@ export const data = {
     headline: (
         <>
             <span>
-                <FormattedMessage defaultMessage="User Interface" />
+                <Trans>User Interface</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="User Experience" />
+                <Trans>User Experience</Trans>
             </span>
         </>
     ),
     quote: (
-        <FormattedMessage defaultMessage="“We put our effort into creating an intuitive experience for your users.”" />
+        <Trans>
+            “We put our effort into creating an intuitive experience for your
+            users.”
+        </Trans>
     ),
     tools: (
         <>
             <span>
-                <FormattedMessage defaultMessage="Figma" />
+                <Trans>Figma</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Adobe Photoshop" />
+                <Trans>Adobe Photoshop</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Adobe Ilustrator" />
+                <Trans>Adobe Ilustrator</Trans>
             </span>
             <br />
             <span>
-                <FormattedMessage defaultMessage="Adobe InDesign" />
+                <Trans>Adobe InDesign</Trans>
             </span>
         </>
     ),

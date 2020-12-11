@@ -1,9 +1,11 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import { Box } from '../Base/Base';
 import NavLink from './NavLink';
 
 export default function NavLinkHome({ style, arrowStyle }) {
+    const { t } = useTranslation();
+
     return (
         <Box
             position={{ md: 'absolute' }}
@@ -25,7 +27,7 @@ export default function NavLinkHome({ style, arrowStyle }) {
                     `}
                     style={arrowStyle}
                 />
-                <FormattedMessage defaultMessage="Home" />
+                {t('Home')}
             </NavLink>
         </Box>
     );
