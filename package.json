@@ -55,15 +55,18 @@
     },
     "lint-staged": {
         "*.{js, jsx }": [
-            "npm run lint:fix"
+            "npm run lint:fix",
+            "git add"
         ],
         "*.{html}": [
-            "prettier --write"
+            "prettier --write",
+            "git add"
         ]
     },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
+            
         }
     },
     "browserslist": {
