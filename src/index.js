@@ -15,6 +15,8 @@ Sentry.init({
     tracesSampleRate: 1.0,
 });
 
+//test
+
 const authSetUp = {
     domain: process.env.REACT_APP_AUTH_DOMAIN,
     clientId: process.env.REACT_APP_AUTH_CLIENT_ID,

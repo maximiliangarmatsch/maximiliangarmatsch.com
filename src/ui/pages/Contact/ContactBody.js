@@ -27,129 +27,123 @@ export default function ContactBody({ onSubmit }) {
                 onSubmit={onSubmit}
             >
                 <Box
-                    height="12%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
                     justifyContent="space-between"
                 >
-                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
-                        Your Fullname
-                    </InputLabel>
-                    <TextField
-                        name="fullname"
-                        variant="filled"
-                        style={{ width: '100%', color: 'white !important' }}
-                        inputProps={{ 'data-testid': 'contact-form-name' }}
-                    />
+                    <Box pb={5}>
+                        <InputLabel
+                            style={{ color: '#0DE99A', fontSize: '20px' }}
+                        >
+                            Name, Company, your Role
+                        </InputLabel>
+                    </Box>
+                    <Box pb={5}>
+                        <TextField
+                            name="fullname"
+                            id="textField"
+                            variant="filled"
+                            style={{
+                                width: '100%',
+                                backgroundColor: '#585858',
+                            }}
+                            inputProps={
+                                ({ 'data-testid': 'contact-form-name' },
+                                { 'data-testid': 'contact-form-company' })
+                            }
+                        />
+                    </Box>
                 </Box>
-
                 <Box
-                    height="12%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
                     justifyContent="space-between"
                 >
-                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
-                        Your Company and Your Position
-                    </InputLabel>
-                    <TextField
-                        name="companyposition"
-                        variant="filled"
-                        style={{ width: '100%', color: 'white' }}
-                        inputProps={{
-                            'data-testid': 'contact-form-company',
-                        }}
-                    />
+                    <Box pb={5}>
+                        <InputLabel
+                            style={{ color: '#0DE99A', fontSize: '20px' }}
+                        >
+                            Email or Phone number
+                        </InputLabel>
+                    </Box>
+                    <Box pb={5}>
+                        <TextField
+                            variant="filled"
+                            id="textField"
+                            style={{
+                                width: '100%',
+                                color: 'white',
+                                backgroundColor: '	#585858',
+                            }}
+                            inputProps={
+                                ({
+                                    'data-testid': 'contact-form-email',
+                                },
+                                { 'data-testid': 'contact-form-phone' })
+                            }
+                            name="email"
+                        />
+                    </Box>
                 </Box>
                 <Box
-                    height="12%"
                     width="100%"
                     display="flex"
                     flexDirection="column"
                     justifyContent="space-between"
                 >
-                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
-                        Email
-                    </InputLabel>
-                    <TextField
-                        variant="filled"
-                        style={{ width: '100%', color: 'white' }}
-                        inputProps={{
-                            'data-testid': 'contact-form-email',
-                        }}
-                        name="email"
+                    <Box pb={5}>
+                        <InputLabel
+                            style={{ color: '#0DE99A', fontSize: '20px' }}
+                        >
+                            Tell me about your project
+                        </InputLabel>
+                    </Box>
+                    <Box>
+                        <TextField
+                            name="aboutproject"
+                            id="textarea-form"
+                            variant="filled"
+                            multiline
+                            rows={4}
+                            style={{
+                                width: '100%',
+                                color: 'white',
+                                backgroundColor: '	#585858',
+                            }}
+                            inputProps={{
+                                'data-testid': 'contact-form-about-project',
+                            }}
+                        />
+                    </Box>
+                </Box>
+                <Box>
+                    <Box
+                        as="input"
+                        type="submit"
+                        value="Submit"
+                        css={`
+                            box-shadow: 0px 0px 6px #0cd58c;
+                            color: #585858;
+                        `}
+                        bg="green"
+                        borderRadius="12px"
+                        p="15px 80px"
+                        border="1px solid rgba(27, 25, 25, 0.5)"
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        color="deepBlack"
+                        fontSize="18px"
+                        fontWeight="500"
+                        cursor="pointer"
+                        mt="50px"
+                        position="absolute"
+                        left="55px"
+                        width="80%"
                     />
                 </Box>
-                <Box
-                    height="12%"
-                    width="100%"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="space-between"
-                >
-                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
-                        Phone Number
-                    </InputLabel>
-                    <TextField
-                        variant="filled"
-                        style={{ width: '100%', color: 'white' }}
-                        inputProps={{
-                            'data-testid': 'contact-form-phone',
-                        }}
-                        name="phone"
-                    />
-                </Box>
-
-                <Box
-                    height="30%"
-                    width="100%"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="space-between"
-                >
-                    <InputLabel style={{ color: '#0DE99A', fontSize: '20px' }}>
-                        Tell me about your project
-                    </InputLabel>
-                    <TextField
-                        name="aboutproject"
-                        id="textarea-form"
-                        variant="filled"
-                        style={{
-                            width: '100%',
-                            color: 'white',
-                        }}
-                        inputProps={{
-                            'data-testid': 'contact-form-about-project',
-                        }}
-                    />
-                </Box>
-
-                <Box
-                    as="input"
-                    type="submit"
-                    value="Submit"
-                    css={`
-                        box-shadow: 0px 0px 6px #0cd58c;
-                    `}
-                    bg="green"
-                    borderRadius="12px"
-                    p="15px 80px"
-                    border="1px solid rgba(27, 25, 25, 0.5)"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    color="deepBlack"
-                    fontSize="18px"
-                    fontWeight="500"
-                    cursor="pointer"
-                    mt="50px"
-                    position="absolute"
-                    bottom="10px"
-                    left="55px"
-                    width="80%"
-                />
             </form>
         </Box>
     );

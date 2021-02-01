@@ -1,6 +1,5 @@
 import React from 'react';
-import PortraitIcon from '@material-ui/icons/Portrait';
-import BuildIcon from '@material-ui/icons/Build';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { Link } from 'react-router-dom';
 import { FormatValuesContext } from '../../../context/FormatValuesContext';
 import { Box, Text } from '../../components/Base/Base';
@@ -38,7 +37,6 @@ export default function AchievementsBody() {
             <Box
                 display="flex"
                 flexDirection="column"
-                position="absolute"
                 width="100%"
                 height="80%"
                 left={{ _: '10px', lg: '0%' }}
@@ -59,55 +57,77 @@ export default function AchievementsBody() {
                         height="150px"
                         alt="Logo"
                         data-testid="max_image"
+                        pt={8}
                     />
                     <Box
                         display="flex"
                         flexDirection="column"
                         padding="0px 10px"
                     >
-                        <Text color="#0DE99A">
+                        <Text color="#0DE99A" style={{ fontSize: '16px' }}>
                             {' '}
-                            Maximilian Garmatsch 33, based in Berlin
+                            Maximilian Garmatsch
+                        </Text>
+                        <Text color="#0DE99A" style={{ fontSize: '16px' }}>
+                            {' '}
+                            Based in Berlin, Germany
                         </Text>
                         <Text fontSize="14px">Software Developer</Text>
                         <Text fontSize="14px">Engineering Manager</Text>
                     </Box>
                 </Box>
-                <Box width="100%" height="15%">
-                    <Link
-                        to="/cv"
-                        style={{
-                            color: 'white',
-                            textDecoration: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'flex-start',
-                        }}
-                        data-testid="cv-link"
-                    >
-                        <PortraitIcon style={{ fontSize: '40px' }} />{' '}
-                        <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
-                            My CV{' '}
+                <Box width="100%">
+                    <Box>
+                        <Text fontSize="13px">
+                            "After a decade of professional business- and
+                            consumer-software engineering, I see my next role in
+                            training, mentoring and leading webdevelopment
+                            teams, while facing advanced technical challenges in
+                            an ever changing globalized environment"
                         </Text>
-                    </Link>
+                    </Box>
                 </Box>
-                <Box width="100%" height="15%">
-                    <Link
-                        to="portfolio"
-                        style={{
-                            color: 'white',
-                            textDecoration: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'flex-start',
-                        }}
-                        data-testid="portfolio-link"
-                    >
-                        <BuildIcon style={{ fontSize: '40px' }} />
-                        <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
-                            My PORTFOLIO
-                        </Text>
-                    </Link>
+                <Box pt={35}>
+                    <Box width="100%">
+                        <Link
+                            to="/cv"
+                            style={{
+                                color: 'white',
+                                textDecoration: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'flex-start',
+                            }}
+                            data-testid="cv-link"
+                        >
+                            <PictureAsPdfIcon
+                                style={{ fontSize: '30px', color: '#0DE99A' }}
+                            />
+                            <Text fontSize={{ lg: '25px' }} ml={{ lg: '10px' }}>
+                                Download My CV
+                            </Text>
+                        </Link>
+                    </Box>
+                    {/* <Box width="100%">
+                        <Link
+                            to="portfolio"
+                            style={{
+                                color: 'white',
+                                textDecoration: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'flex-start',
+                            }}
+                            data-testid="portfolio-link"
+                        >
+                            <BuildIcon
+                                style={{ fontSize: '20px', color: '#0DE99A' }}
+                            />
+                            <Text fontSize={{ lg: '15px' }} ml={{ lg: '10px' }}>
+                                My PORTFOLIO
+                            </Text>
+                        </Link>
+                    </Box> */}
                 </Box>
             </Box>
         </FormatValuesContext.Provider>
