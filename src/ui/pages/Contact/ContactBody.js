@@ -3,7 +3,10 @@ import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '../../components/Base/Base';
 
-export default function ContactBody({ onSubmit }) {
+export default function ContactBody({ onSubmit, isSuccessful }) {
+    console.log('### ContactBody ', isSuccessful);
+    //todo show a "success screen" if isSuccessful
+
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}

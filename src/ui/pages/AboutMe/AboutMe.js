@@ -10,11 +10,13 @@ import AchievementsBody from './AchievementsBody';
 export default function AboutMe() {
     const isDesktop = useContext(SizeContext);
     const { t } = useTranslation();
+
     const layoutProperty = {
         title: t('About Me'),
         ButtonText: t('What I will do for you'),
         to: '/foryouiwill',
     };
+
     return (
         <DeviceProvider>
             {isDesktop ? (

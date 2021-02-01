@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
 import { SizeContext } from '../../../context/SizeContext';
@@ -15,6 +15,7 @@ emailjs.init(EMAILJS_userId);
 
 export default function Contact() {
     const { t } = useTranslation();
+    const [isSuccessful, isSuccessfulSet] = useState(false);
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
         title: t(`Let's get started.`),
@@ -34,6 +35,7 @@ export default function Contact() {
             )
             .then(
                 result => {
+                    isSuccessfulSet(true);
                     console.log(result.text);
                 },
                 error => {
@@ -46,11 +48,17 @@ export default function Contact() {
         <DeviceProvider>
             {isDesktop ? (
                 <LayoutStepsDesktop {...layoutProperty}>
-                    <ContactBody onSubmit={onSubmit} />
+                    <ContactBody
+                        onSubmit={onSubmit}
+                        isSuccessful={isSuccessful}
+                    />
                 </LayoutStepsDesktop>
             ) : (
                 <LayoutStepsMobile {...layoutProperty}>
-                    <ContactBody onSubmit={onSubmit} />
+                    <ContactBody
+                        onSubmit={onSubmit}
+                        isSuccessful={isSuccessful}
+                    />
                 </LayoutStepsMobile>
             )}
         </DeviceProvider>
