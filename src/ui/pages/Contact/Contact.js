@@ -7,7 +7,7 @@ import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import ContactBody from './ContactBody';
 
-const EMAILJS_userId = 'user_eBhucvRwzq5R3bUPaNqI7';
+const EMAILJS_userId = 'user_1DliHqPRQsPkdIOAmHY2Q';
 const EMAILJS_serviceId = 'service_cq190pr';
 const EMAILJS_templateId = 'template_4mbrgz9';
 
