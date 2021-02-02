@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
+import { useHistory } from 'react-router-dom';
 import { SizeContext } from '../../../context/SizeContext';
 import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
 import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
@@ -15,6 +16,7 @@ emailjs.init(EMAILJS_userId);
 
 export default function Contact() {
     const { t } = useTranslation();
+    const history = useHistory();
     const [isSuccessful, isSuccessfulSet] = useState(false);
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
@@ -36,6 +38,7 @@ export default function Contact() {
             .then(
                 result => {
                     isSuccessfulSet(true);
+                    history.push('/sucessScreen');
                     console.log(result.text);
                 },
                 error => {
