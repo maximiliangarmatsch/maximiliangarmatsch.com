@@ -78,7 +78,7 @@ export default function AchievementsBody() {
                 </Box>
                 <Box width="100%">
                     <Box>
-                        <Text fontSize={{ xs: '13px', md: '15px', xl: '18px' }}>
+                        <Text fontSize={{ xs: '13px', md: '14px', xl: '15px' }}>
                             "After a decade of professional business- and
                             consumer-software engineering, I see my next role in
                             training, mentoring and leading webdevelopment
