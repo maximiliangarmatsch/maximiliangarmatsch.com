@@ -8,10 +8,10 @@ export default function ForYouIWillBody() {
         <Box
             display="flex"
             flexDirection="column"
-            justifyContent="space-around"
+            justifyContent="center"
+            alighItems="center"
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
             height="100%"
-            p="10px"
             pt="0"
             css={`
                 @media screen and (max-width: 375px) {
@@ -76,7 +76,7 @@ function SectionCheckpoint({ children, dataTestId }) {
             fontSize={{ _: '14px', lg: '22px', xl: '19px' }}
             lineHeight={{ _: '16px', lg: '22px', xl: '19px' }}
             fontWeight="300"
-            mt={{ _: '15px', lg: '30px' }}
+            mt={{ _: '15px', lg: '10px' }}
             data-testid={dataTestId}
         >
             {children}
