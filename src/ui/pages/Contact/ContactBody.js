@@ -141,10 +141,12 @@ export default function ContactBody({ onSubmit, isSuccessful }) {
                         fontSize="18px"
                         fontWeight="500"
                         cursor="pointer"
-                        mt="50px"
                         position="absolute"
-                        left="55px"
-                        width="80%"
+                        width="calc(100% - 95px)"
+                        m={{ _: '0 20px', lg: '0' }}
+                        height="50px"
+                        bottom={{ _: '50px', lg: '50px' }}
+                        className="submit-btn"
                     />
                 </Box>
             </form>
