@@ -3,9 +3,38 @@ import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '../../components/Base/Base';
 
-export default function ContactBody({ onSubmit, isSuccessful }) {
-    console.log('### ContactBody ', isSuccessful);
+export default function ContactBody({
+    handleSubmit,
+    onSubmit,
+    isSuccessful,
+    setError,
+}) {
     //todo show a "success screen" if isSuccessful
+    const submit = e => {
+        console.log('### ContactBody ', isSuccessful);
+        e.preventDefault();
+        e.stopPropagation();
+        // isSubmittingSet(true);
+        setTimeout(() => {
+            onSubmit(onSubmitSuccess, onSubmitError, setError, e);
+        }, 500);
+    };
+
+    const error = (error, e) => {
+        console.warn('### FormHelpers:onSubmitError ERROR', error, e);
+    };
+
+    const onSubmitSuccess = () => {
+        try {
+            //isSubmittingSet(false);
+        } catch (e) {}
+    };
+
+    const onSubmitError = error => {
+        console.warn('### FormHelpers:onSubmitError ERROR', error);
+        // isSubmittingSet(false);
+        //DefaultCatch(error, setError, t);
+    };
 
     return (
         <Box
@@ -27,7 +56,8 @@ export default function ContactBody({ onSubmit, isSuccessful }) {
                     height: '100%',
                 }}
                 name="test"
-                onSubmit={onSubmit}
+                // onSubmit={submit}
+                onSubmit={() => handleSubmit(submit, error)}
             >
                 <Box
                     width="100%"
