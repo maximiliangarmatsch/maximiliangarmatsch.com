@@ -1,50 +1,40 @@
 import React from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
-import { useHistory } from 'react-router-dom';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
 import { Box } from '../../components/Base/Base';
-import FormValidation from './FormValidation';
+
 export default function ContactBody({
-    EMAILJS_userId,
-    EMAILJS_serviceId,
-    EMAILJS_templateId,
-    emailjs,
+    handleSubmit,
+    onSubmit,
+    isSuccessful,
+    setError,
 }) {
     //todo show a "success screen" if isSuccessful
-
-    const history = useHistory();
-    // const [isSuccessful, isSuccessfulSet] = useState(false);
-    const { handleSubmit, register, errors } = useForm({
-        resolver: yupResolver(FormValidation()),
-    });
-
-    function onSubmit(e) {
+    const submit = e => {
+        console.log('### ContactBody ', isSuccessful);
         e.preventDefault();
-        emailjs
-            .sendForm(
-                EMAILJS_serviceId,
-                EMAILJS_templateId,
-                e.target,
-                EMAILJS_userId
-            )
-            .then(
-                result => {
-                    console.log('sucsees');
-                    history.push('/sucessScreen');
-                    console.log(result.text);
-                },
-                error => {
-                    console.warn(
-                        '### FormHelpers:onSubmitError ERROR',
-                        error,
-                        e
-                    );
-                    console.log(error.text);
-                }
-            );
-    }
+        e.stopPropagation();
+        // isSubmittingSet(true);
+        setTimeout(() => {
+            onSubmit(onSubmitSuccess, onSubmitError, setError, e);
+        }, 500);
+    };
+
+    const error = (error, e) => {
+        console.warn('### FormHelpers:onSubmitError ERROR', error, e);
+    };
+
+    const onSubmitSuccess = () => {
+        try {
+            //isSubmittingSet(false);
+        } catch (e) {}
+    };
+
+    const onSubmitError = error => {
+        console.warn('### FormHelpers:onSubmitError ERROR', error);
+        // isSubmittingSet(false);
+        //DefaultCatch(error, setError, t);
+    };
 
     return (
         <Box
@@ -66,7 +56,8 @@ export default function ContactBody({
                     height: '100%',
                 }}
                 name="test"
-                onSubmit={handleSubmit(onSubmit)}
+                // onSubmit={submit}
+                onSubmit={() => handleSubmit(submit, error)}
             >
                 <Box
                     width="100%"
@@ -90,14 +81,11 @@ export default function ContactBody({
                                 width: '100%',
                                 backgroundColor: '#585858',
                             }}
-                            inputRef={register({
-                                required:
-                                    'You must provide your name,Company name, your role!',
-                            })}
-                            required
-                            error={!!errors.fullname}
+                            inputProps={
+                                ({ 'data-testid': 'contact-form-name' },
+                                { 'data-testid': 'contact-form-company' })
+                            }
                         />
-                        {errors.fullname && <span>{errors.fullname}</span>}
                     </Box>
                 </Box>
                 <Box
@@ -122,25 +110,14 @@ export default function ContactBody({
                                 color: 'white',
                                 backgroundColor: '	#585858',
                             }}
-                            // inputProps={
-                            //     ({
-                            //         'data-testid': 'contact-form-email',
-                            //     },
-                            //     { 'data-testid': 'contact-form-phone' })
-                            // }
-                            inputRef={register({
-                                required: 'You must provide the email address!',
-                                pattern: {
-                                    // value: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                    message:
-                                        'You must provide a valid email address!',
+                            inputProps={
+                                ({
+                                    'data-testid': 'contact-form-email',
                                 },
-                            })}
-                            required
-                            error={!!errors.email}
+                                { 'data-testid': 'contact-form-phone' })
+                            }
                             name="email"
                         />
-                        {errors.email && <span>{errors.email.message}</span>}
                     </Box>
                 </Box>
                 <Box
@@ -168,18 +145,10 @@ export default function ContactBody({
                                 color: 'white',
                                 backgroundColor: '	#585858',
                             }}
-                            // inputProps={{
-                            //     'data-testid': 'contact-form-about-project',
-                            // }}
-                            inputRef={register({
-                                required: 'You must provide project info!',
-                            })}
-                            required
-                            error={!!errors.aboutproject}
+                            inputProps={{
+                                'data-testid': 'contact-form-about-project',
+                            }}
                         />
-                        {errors.aboutproject && (
-                            <span>{errors.aboutproject}</span>
-                        )}
                     </Box>
                 </Box>
                 <Box>
