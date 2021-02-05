@@ -1,41 +1,26 @@
 import React from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
-import TextField from '@material-ui/core/TextField';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import { Box } from '../../components/Base/Base';
+import TextInput from '../../components/ReactHookFormTypes/TextInput';
+import FormValidation from './FormValidation';
 
-export default function ContactBody({
-    handleSubmit,
-    onSubmit,
-    isSuccessful,
-    setError,
-}) {
+export default function ContactBody({ onSubmit, isSuccessful }) {
     //todo show a "success screen" if isSuccessful
-    const submit = e => {
-        console.log('### ContactBody ', isSuccessful);
-        e.preventDefault();
-        e.stopPropagation();
-        // isSubmittingSet(true);
+    const { handleSubmit, errors, control } = useForm({
+        resolver: yupResolver(FormValidation()),
+    });
+
+    const submit = (values, e) => {
         setTimeout(() => {
-            onSubmit(onSubmitSuccess, onSubmitError, setError, e);
+            onSubmit(e);
         }, 500);
     };
 
     const error = (error, e) => {
         console.warn('### FormHelpers:onSubmitError ERROR', error, e);
     };
-
-    const onSubmitSuccess = () => {
-        try {
-            //isSubmittingSet(false);
-        } catch (e) {}
-    };
-
-    const onSubmitError = error => {
-        console.warn('### FormHelpers:onSubmitError ERROR', error);
-        // isSubmittingSet(false);
-        //DefaultCatch(error, setError, t);
-    };
-
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
@@ -49,6 +34,7 @@ export default function ContactBody({
             `}
         >
             <form
+                onSubmit={handleSubmit(submit, error)}
                 style={{
                     display: 'flex',
                     justifyContent: 'space-around',
@@ -56,8 +42,6 @@ export default function ContactBody({
                     height: '100%',
                 }}
                 name="test"
-                // onSubmit={submit}
-                onSubmit={() => handleSubmit(submit, error)}
             >
                 <Box
                     width="100%"
@@ -73,19 +57,21 @@ export default function ContactBody({
                         </InputLabel>
                     </Box>
                     <Box pb={5}>
-                        <TextField
+                        <TextInput
+                            autoFocus
                             name="fullname"
                             id="textField"
-                            variant="filled"
-                            style={{
-                                width: '100%',
-                                backgroundColor: '#585858',
-                            }}
+                            error={!!errors.fullname}
+                            helperText={
+                                errors.fullname && errors['fullname'].message
+                            }
+                            control={control}
+                            defaultValue=""
                             inputProps={
                                 ({ 'data-testid': 'contact-form-name' },
                                 { 'data-testid': 'contact-form-company' })
                             }
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box
@@ -102,22 +88,21 @@ export default function ContactBody({
                         </InputLabel>
                     </Box>
                     <Box pb={5}>
-                        <TextField
-                            variant="filled"
+                        <TextInput
+                            autoFocus
+                            name="email"
                             id="textField"
-                            style={{
-                                width: '100%',
-                                color: 'white',
-                                backgroundColor: '	#585858',
-                            }}
+                            error={!!errors.email}
+                            helperText={errors.email && errors['email'].message}
+                            control={control}
+                            defaultValue=""
                             inputProps={
                                 ({
                                     'data-testid': 'contact-form-email',
                                 },
                                 { 'data-testid': 'contact-form-phone' })
                             }
-                            name="email"
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box
@@ -134,21 +119,23 @@ export default function ContactBody({
                         </InputLabel>
                     </Box>
                     <Box>
-                        <TextField
+                        <TextInput
+                            autoFocus
                             name="aboutproject"
                             id="textarea-form"
-                            variant="filled"
+                            error={!!errors.aboutproject}
+                            helperText={
+                                errors.aboutproject &&
+                                errors['aboutproject'].message
+                            }
                             multiline
                             rows={4}
-                            style={{
-                                width: '100%',
-                                color: 'white',
-                                backgroundColor: '	#585858',
-                            }}
+                            control={control}
+                            defaultValue=""
                             inputProps={{
                                 'data-testid': 'contact-form-about-project',
                             }}
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box>
