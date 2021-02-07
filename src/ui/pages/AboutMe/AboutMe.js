@@ -44,7 +44,7 @@ export default function AboutMe() {
                         height="90%"
                         maxHeight={{ _: '500px', sm: '500px', md: '550px' }}
                         left="50%"
-                        top={{ _: '40%', sm: '40%', md: '50%' }}
+                        top={{ _: '40%', sm: '40%', md: '45%' }}
                         css={`
                             transform: translate(-50%, -50%);
                         `}

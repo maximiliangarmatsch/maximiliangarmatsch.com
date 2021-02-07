@@ -65,9 +65,9 @@ function SectionCheckpoint({ children, dataTestId }) {
             bg="#222"
             css={`
                 @media screen and (max-width: 1024px) and (min-width: 768px) {
-                    height: 250px;
-                    font-size: 20px;
-                    line-height: 40px;
+                    height: 190px;
+                    font-size: 19px;
+                    line-height: 20px;
                 }
                 box-shadow: 0px 0px 16px #000000;
             `}
