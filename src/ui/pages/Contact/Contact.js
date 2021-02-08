@@ -18,6 +18,7 @@ export default function Contact() {
     const { t } = useTranslation();
     const history = useHistory();
     const [isSuccessful, isSuccessfulSet] = useState(false);
+    const [showFormBtn, showFormBtnSet] = useState(false);
 
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
@@ -48,7 +49,10 @@ export default function Contact() {
     }
 
     return (
-        <DeviceProvider>
+        <DeviceProvider
+            showFormBtn={showFormBtn}
+            showFormBtnSet={showFormBtnSet}
+        >
             {isDesktop ? (
                 <LayoutStepsDesktop {...layoutProperty}>
                     <ContactBody

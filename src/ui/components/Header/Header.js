@@ -3,7 +3,7 @@ import { Flex } from '../Base/Base';
 import TextLogo from './TextLogo';
 import HeaderMenu from './HeaderMenu';
 
-export default function Header({ p }) {
+export default function Header({ p, showFormBtn, showFormBtnSet }) {
     return (
         <Flex
             as="header"
@@ -16,7 +16,10 @@ export default function Header({ p }) {
             bg="darkgrey"
         >
             <TextLogo />
-            <HeaderMenu />
+            <HeaderMenu
+                showFormBtn={showFormBtn}
+                showFormBtnSet={showFormBtnSet}
+            />
         </Flex>
     );
 }

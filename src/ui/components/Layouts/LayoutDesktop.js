@@ -3,7 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import { Box } from '../Base/Base';
 import Header from '../Header/Header';
 
-export default function LayoutDesktop({ children }) {
+export default function LayoutDesktop({
+    children,
+    showFormBtn,
+    showFormBtnSet,
+}) {
     return (
         <Box as={Grid} container>
             <Box as={Grid} container mb="10rem">
@@ -15,7 +19,11 @@ export default function LayoutDesktop({ children }) {
                     left={0}
                     zIndex="10"
                 >
-                    <Header p="0 5%" />
+                    <Header
+                        showFormBtn={showFormBtn}
+                        showFormBtnSet={showFormBtnSet}
+                        p="0 5%"
+                    />
                 </Box>
             </Box>
             <Box as={Grid} item container>

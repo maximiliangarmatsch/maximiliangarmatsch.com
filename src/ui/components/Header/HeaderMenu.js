@@ -5,7 +5,7 @@ import { Flex, Text } from '../Base/Base';
 import Icon from '../PortfolioIcons/Icon';
 import { SizeContext } from '../../../context/SizeContext';
 
-export default function HeaderMenu() {
+export default function HeaderMenu({ showFormBtn = true }) {
     const isDesktop = useContext(SizeContext);
 
     return (
@@ -16,17 +16,21 @@ export default function HeaderMenu() {
                     lineHeight="18px"
                     mr={{ lg: '50px', xl: '50px', xxl: '50px' }}
                 >
-                    <Link to="/contact">
-                        <AlternateEmailOutlinedIcon
-                            style={{
-                                color: '#0DE99A',
-                                fontSize: '40px',
-                                border: '1px solid #0DE99A ',
-                                padding: '5px',
-                                borderRadius: '5px',
-                            }}
-                        />
-                    </Link>
+                    {showFormBtn ? (
+                        <Link to="/contact">
+                            <AlternateEmailOutlinedIcon
+                                style={{
+                                    color: '#0DE99A',
+                                    fontSize: '40px',
+                                    border: '1px solid #0DE99A ',
+                                    padding: '5px',
+                                    borderRadius: '5px',
+                                }}
+                            />
+                        </Link>
+                    ) : (
+                        <></>
+                    )}
                 </Text>
             ) : (
                 <Text

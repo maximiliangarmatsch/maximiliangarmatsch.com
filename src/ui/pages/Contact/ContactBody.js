@@ -37,7 +37,7 @@ export default function ContactBody({ onSubmit, isSuccessful }) {
                 onSubmit={handleSubmit(submit, error)}
                 style={{
                     display: 'flex',
-                    justifyContent: 'space-around',
+                    justifyContent: 'center',
                     flexDirection: 'column',
                     height: '100%',
                 }}
