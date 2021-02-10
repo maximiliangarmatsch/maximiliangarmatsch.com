@@ -15,7 +15,7 @@ export default function SectionTemplateMobile({
     changeSection,
 }) {
     return (
-        <Box height="calc(100vh - 75px)" position="relative" id={id}>
+        <Box height="calc(100vh - 200px)" position="relative" id={id}>
             <Line
                 position="vertical"
                 length="30px"
@@ -24,7 +24,7 @@ export default function SectionTemplateMobile({
                         ? '50%'
                         : firstLine === 'left'
                         ? '20.5%'
-                        : '79%'
+                        : '79.2%'
                 }
             />
             <Line
@@ -37,7 +37,7 @@ export default function SectionTemplateMobile({
             <Line
                 absolute={true}
                 position="vertical"
-                length="calc(100vh - 75px - 30px)"
+                length="calc(100vh - 75px - 150px)"
                 left={aligment === 'left' ? '20.5%' : 'auto'}
                 right={aligment === 'right' ? '20.5%' : 'auto'}
             />

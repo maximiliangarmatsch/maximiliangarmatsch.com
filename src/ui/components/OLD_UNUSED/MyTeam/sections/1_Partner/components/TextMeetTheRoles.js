@@ -12,7 +12,7 @@ export default function TextMeetTheRoles({ bottom }) {
             position="absolute"
             left="50%"
             css={`
-                transform: translateX(-50%);
+                transform: translateX(-1%);
             `}
             bottom={bottom}
         >
