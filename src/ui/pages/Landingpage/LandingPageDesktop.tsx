@@ -7,7 +7,7 @@ import TextWelcome from './TextWelcome';
 // import LoginButton from './components/LoginButton';
 // import UserNameText from './components/UserNameText';
 
-export default function LandingPageDesktop() {
+const LandingPageDesktop: React.FC = () => {
     const { t } = useTranslation();
     return (
         <BackgroundLayerDesktop>
@@ -43,4 +43,6 @@ export default function LandingPageDesktop() {
             </Box>
         </BackgroundLayerDesktop>
     );
-}
+};
+
+export default LandingPageDesktop;

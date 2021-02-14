@@ -3,11 +3,17 @@ import LayoutDesktop from '../ui/components/Layouts/LayoutDesktop';
 import LayoutMobile from '../ui/components/Layouts/LayoutMobile';
 import { SizeContext } from '../context/SizeContext';
 
-export default function DeviceProvider({
-    children,
+interface DeviceProdiverProps {
+    showFormBtn?: boolean;
+    showFormBtnSet?: boolean;
+    children: any;
+}
+
+const DeviceProvider: React.FC<DeviceProdiverProps> = ({
     showFormBtn,
     showFormBtnSet,
-}) {
+    children,
+}) => {
     const isDesktop = useContext(SizeContext);
     return (
         <>
@@ -23,4 +29,5 @@ export default function DeviceProvider({
             )}
         </>
     );
-}
+};
+export default DeviceProvider;

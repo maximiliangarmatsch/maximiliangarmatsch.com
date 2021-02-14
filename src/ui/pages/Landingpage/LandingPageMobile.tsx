@@ -6,7 +6,7 @@ import IconButtonBig from '../../components/Buttons/IconButtonBig';
 import TextWelcome from './TextWelcome';
 // import LoginButton from './components/LoginButton';
 
-export default function LandingPageMobile() {
+const LandingPageMobile: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -37,4 +37,6 @@ export default function LandingPageMobile() {
             </Box>
         </BackgroundLayerMobile>
     );
-}
+};
+
+export default LandingPageMobile;

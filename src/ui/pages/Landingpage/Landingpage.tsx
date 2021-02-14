@@ -4,7 +4,7 @@ import DeviceProvider from '../../../helpers/DeviceProvider';
 import LandingPageMobile from './LandingPageMobile';
 import LandingPageDesktop from './LandingPageDesktop';
 
-export default function Landingpage() {
+const Landingpage: React.FC = () => {
     const isDesktop = useContext(SizeContext);
 
     return (
@@ -12,4 +12,5 @@ export default function Landingpage() {
             {!isDesktop ? <LandingPageMobile /> : <LandingPageDesktop />}
         </DeviceProvider>
     );
-}
+};
+export default Landingpage;
