@@ -3,14 +3,23 @@ import { Box } from '../Base/Base';
 import StepButton from './components/StepButton';
 import Title from './components/Title';
 
-export default function LayoutStepsMobile({
+interface LayoutStepsMobileProps {
+    children?: any;
+    title?: string;
+    to?: string;
+    ButtonText?: string;
+    lastStep?: boolean;
+    type?: any;
+}
+
+const LayoutStepsMobile: React.FC<LayoutStepsMobileProps> = ({
     children,
     title,
     to,
     ButtonText,
     lastStep = false,
     type,
-}) {
+}) => {
     return (
         <Box
             position="absolute"
@@ -34,4 +43,6 @@ export default function LayoutStepsMobile({
             />
         </Box>
     );
-}
+};
+
+export default LayoutStepsMobile;

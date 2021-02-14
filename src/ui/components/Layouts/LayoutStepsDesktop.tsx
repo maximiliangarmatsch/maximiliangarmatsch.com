@@ -4,14 +4,23 @@ import { Box } from '../Base/Base';
 import Title from './components/Title';
 import StepButton from './components/StepButton';
 
-export default function LayoutStepsDesktop({
+interface LayoutStepsDesktopProps {
+    children?: any;
+    title?: string;
+    to?: string;
+    ButtonText?: string;
+    lastStep?: boolean;
+    type?: any;
+}
+
+const LayoutStepsDesktop: React.FC<LayoutStepsDesktopProps> = ({
     children,
     title,
     to,
     ButtonText,
     lastStep = false,
     type,
-}) {
+}) => {
     return (
         <BackgroundLayerDesktop>
             <Box
@@ -46,4 +55,6 @@ export default function LayoutStepsDesktop({
             </Box>
         </BackgroundLayerDesktop>
     );
-}
+};
+
+export default LayoutStepsDesktop;

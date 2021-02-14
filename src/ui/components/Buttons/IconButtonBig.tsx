@@ -2,7 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '../Base/Base';
 
-export default function IconButtonBig({ to, children, newTab = false }) {
+interface IconButtonBigProps {
+    to?: any;
+    children?: any;
+    newTab?: boolean;
+    type?: any;
+    as?: any;
+}
+
+const IconButtonBig: React.FC<IconButtonBigProps> = ({
+    to,
+    children,
+    newTab = false,
+}) => {
     return (
         <Box
             as={Link}
@@ -33,4 +45,5 @@ export default function IconButtonBig({ to, children, newTab = false }) {
             </Box>
         </Box>
     );
-}
+};
+export default IconButtonBig;

@@ -2,7 +2,15 @@ import React from 'react';
 import { Box } from '../../Base/Base';
 import IconButtonBig from '../../Buttons/IconButtonBig';
 
-export default function StepButton({ to, text, lastStep }) {
+interface StepButtonProps {
+    to: any;
+    text: any;
+    as?: any;
+    type: any;
+    lastStep: boolean;
+}
+
+const StepButton: React.FC<StepButtonProps> = ({ to, text, lastStep }) => {
     return (
         <Box
             type="submit"
@@ -19,4 +27,6 @@ export default function StepButton({ to, text, lastStep }) {
             </IconButtonBig>
         </Box>
     );
-}
+};
+
+export default StepButton;

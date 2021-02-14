@@ -7,7 +7,7 @@ import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import AchievementsBody from './AchievementsBody';
 
-export default function AboutMe() {
+const AboutMe: React.FC = () => {
     const isDesktop = useContext(SizeContext);
     const { t } = useTranslation();
 
@@ -55,4 +55,6 @@ export default function AboutMe() {
             )}
         </DeviceProvider>
     );
-}
+};
+
+export default AboutMe;
