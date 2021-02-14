@@ -78,7 +78,7 @@ export default function AchievementsBody() {
                 </Box>
                 <Box width="100%">
                     <Box>
-                        <Text fontSize="13px">
+                        <Text fontSize={{ xs: '13px', md: '14px', xl: '15px' }}>
                             "After a decade of professional business- and
                             consumer-software engineering, I see my next role in
                             training, mentoring and leading webdevelopment
@@ -108,26 +108,6 @@ export default function AchievementsBody() {
                             </Text>
                         </Link>
                     </Box>
-                    {/* <Box width="100%">
-                        <Link
-                            to="portfolio"
-                            style={{
-                                color: 'white',
-                                textDecoration: 'none',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'flex-start',
-                            }}
-                            data-testid="portfolio-link"
-                        >
-                            <BuildIcon
-                                style={{ fontSize: '20px', color: '#0DE99A' }}
-                            />
-                            <Text fontSize={{ lg: '15px' }} ml={{ lg: '10px' }}>
-                                My PORTFOLIO
-                            </Text>
-                        </Link>
-                    </Box> */}
                 </Box>
             </Box>
         </FormatValuesContext.Provider>

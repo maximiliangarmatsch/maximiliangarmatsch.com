@@ -44,19 +44,20 @@ export default function FinalDesktop() {
                     {t('Tell us about your project')}
                 </Text>
             </Box>
-            <Box
-                as={Link}
-                position="absolute"
-                bottom="30px"
-                color="green"
-                left="50%"
-                css={`
-                    transform: translateX(-50%);
-                    text-decoration: none;
-                `}
-            >
-                {t('Back to Home')}
-            </Box>
+            <Link to="/">
+                <Box
+                    position="absolute"
+                    bottom="30px"
+                    color="green"
+                    left="50%"
+                    css={`
+                        transform: translateX(-50%);
+                        text-decoration: none;
+                    `}
+                >
+                    {t('Back to Home')}
+                </Box>
+            </Link>
         </Box>
     );
 }

@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from 'emailjs-com';
+import { useHistory } from 'react-router-dom';
 import { SizeContext } from '../../../context/SizeContext';
 import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
 import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
@@ -15,6 +16,10 @@ emailjs.init(EMAILJS_userId);
 
 export default function Contact() {
     const { t } = useTranslation();
+    const history = useHistory();
+    const [isSuccessful, isSuccessfulSet] = useState(false);
+    const [showFormBtn, showFormBtnSet] = useState(false);
+
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
         title: t(`Let's get started.`),
@@ -24,7 +29,6 @@ export default function Contact() {
 
     function onSubmit(e) {
         e.preventDefault();
-
         emailjs
             .sendForm(
                 EMAILJS_serviceId,
@@ -34,6 +38,8 @@ export default function Contact() {
             )
             .then(
                 result => {
+                    isSuccessfulSet(true);
+                    history.push('/sucessScreen');
                     console.log(result.text);
                 },
                 error => {
@@ -43,14 +49,23 @@ export default function Contact() {
     }
 
     return (
-        <DeviceProvider>
+        <DeviceProvider
+            showFormBtn={showFormBtn}
+            showFormBtnSet={showFormBtnSet}
+        >
             {isDesktop ? (
                 <LayoutStepsDesktop {...layoutProperty}>
-                    <ContactBody onSubmit={onSubmit} />
+                    <ContactBody
+                        onSubmit={onSubmit}
+                        isSuccessful={isSuccessful}
+                    />
                 </LayoutStepsDesktop>
             ) : (
                 <LayoutStepsMobile {...layoutProperty}>
-                    <ContactBody onSubmit={onSubmit} />
+                    <ContactBody
+                        onSubmit={onSubmit}
+                        isSuccessful={isSuccessful}
+                    />
                 </LayoutStepsMobile>
             )}
         </DeviceProvider>

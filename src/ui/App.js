@@ -12,6 +12,7 @@ import MyTeam from './components/OLD_UNUSED/MyTeam/MyTeam';
 import AboutMe from './pages/AboutMe/AboutMe';
 import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
 import Contact from './pages/Contact/Contact';
+import SuccessScreen from './pages/Contact/SuccessScreen';
 import DownloadCV from './pages/Download/DownloadCV';
 import DownloadPortfolio from './pages/Download/DownloadPortfolio';
 import Playground from './pages/Playground/Playground';
@@ -56,6 +57,9 @@ export default function App() {
 
                             <Route path="/impressum">
                                 <Impressum />
+                            </Route>
+                            <Route path="/sucessScreen">
+                                <SuccessScreen />
                             </Route>
                         </Switch>
                     </SizeContext.Provider>

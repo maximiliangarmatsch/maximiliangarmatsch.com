@@ -54,7 +54,7 @@ export default function FinalMobile() {
                     {t('Tell us about your project')}
                 </Text>
             </Box>
-            <Text
+            <Box
                 as={Link}
                 position="absolute"
                 bottom="30px"
@@ -67,7 +67,7 @@ export default function FinalMobile() {
                 to="/"
             >
                 {t('Back to Home')}
-            </Text>
+            </Box>
         </Box>
     );
 }

@@ -1,9 +1,26 @@
 import React from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
-import TextField from '@material-ui/core/TextField';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import { Box } from '../../components/Base/Base';
+import TextInput from '../../components/ReactHookFormTypes/TextInput';
+import FormValidation from './FormValidation';
 
-export default function ContactBody({ onSubmit }) {
+export default function ContactBody({ onSubmit, isSuccessful }) {
+    //todo show a "success screen" if isSuccessful
+    const { handleSubmit, errors, control } = useForm({
+        resolver: yupResolver(FormValidation()),
+    });
+
+    const submit = (values, e) => {
+        setTimeout(() => {
+            onSubmit(e);
+        }, 500);
+    };
+
+    const error = (error, e) => {
+        console.warn('### FormHelpers:onSubmitError ERROR', error, e);
+    };
     return (
         <Box
             maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
@@ -17,14 +34,14 @@ export default function ContactBody({ onSubmit }) {
             `}
         >
             <form
+                onSubmit={handleSubmit(submit, error)}
                 style={{
                     display: 'flex',
-                    justifyContent: 'space-around',
+                    justifyContent: 'center',
                     flexDirection: 'column',
                     height: '100%',
                 }}
                 name="test"
-                onSubmit={onSubmit}
             >
                 <Box
                     width="100%"
@@ -40,19 +57,21 @@ export default function ContactBody({ onSubmit }) {
                         </InputLabel>
                     </Box>
                     <Box pb={5}>
-                        <TextField
+                        <TextInput
+                            autoFocus
                             name="fullname"
                             id="textField"
-                            variant="filled"
-                            style={{
-                                width: '100%',
-                                backgroundColor: '#585858',
-                            }}
+                            error={!!errors.fullname}
+                            helperText={
+                                errors.fullname && errors['fullname'].message
+                            }
+                            control={control}
+                            defaultValue=""
                             inputProps={
                                 ({ 'data-testid': 'contact-form-name' },
                                 { 'data-testid': 'contact-form-company' })
                             }
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box
@@ -69,22 +88,21 @@ export default function ContactBody({ onSubmit }) {
                         </InputLabel>
                     </Box>
                     <Box pb={5}>
-                        <TextField
-                            variant="filled"
+                        <TextInput
+                            autoFocus
+                            name="email"
                             id="textField"
-                            style={{
-                                width: '100%',
-                                color: 'white',
-                                backgroundColor: '	#585858',
-                            }}
+                            error={!!errors.email}
+                            helperText={errors.email && errors['email'].message}
+                            control={control}
+                            defaultValue=""
                             inputProps={
                                 ({
                                     'data-testid': 'contact-form-email',
                                 },
                                 { 'data-testid': 'contact-form-phone' })
                             }
-                            name="email"
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box
@@ -101,21 +119,23 @@ export default function ContactBody({ onSubmit }) {
                         </InputLabel>
                     </Box>
                     <Box>
-                        <TextField
+                        <TextInput
+                            autoFocus
                             name="aboutproject"
                             id="textarea-form"
-                            variant="filled"
+                            error={!!errors.aboutproject}
+                            helperText={
+                                errors.aboutproject &&
+                                errors['aboutproject'].message
+                            }
                             multiline
                             rows={4}
-                            style={{
-                                width: '100%',
-                                color: 'white',
-                                backgroundColor: '	#585858',
-                            }}
+                            control={control}
+                            defaultValue=""
                             inputProps={{
                                 'data-testid': 'contact-form-about-project',
                             }}
-                        />
+                        ></TextInput>
                     </Box>
                 </Box>
                 <Box>
@@ -138,10 +158,12 @@ export default function ContactBody({ onSubmit }) {
                         fontSize="18px"
                         fontWeight="500"
                         cursor="pointer"
-                        mt="50px"
                         position="absolute"
-                        left="55px"
-                        width="80%"
+                        width="calc(100% - 95px)"
+                        m={{ _: '0 20px', lg: '0' }}
+                        height="50px"
+                        bottom={{ _: '50px', lg: '50px' }}
+                        className="submit-btn"
                     />
                 </Box>
             </form>
