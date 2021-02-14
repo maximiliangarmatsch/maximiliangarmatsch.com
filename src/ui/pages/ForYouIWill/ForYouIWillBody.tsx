@@ -2,7 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box } from '../../components/Base/Base';
 
-export default function ForYouIWillBody() {
+interface SectionCheckpointProps {
+    children: any;
+    dataTestId: string;
+}
+
+const ForYouIWillBody: React.FC = () => {
     const { t } = useTranslation();
     return (
         <Box
@@ -57,9 +62,12 @@ export default function ForYouIWillBody() {
             </SectionCheckpoint>
         </Box>
     );
-}
+};
 
-function SectionCheckpoint({ children, dataTestId }) {
+const SectionCheckpoint: React.FC<SectionCheckpointProps> = ({
+    children,
+    dataTestId,
+}) => {
     return (
         <Box
             bg="#222"
@@ -82,4 +90,6 @@ function SectionCheckpoint({ children, dataTestId }) {
             {children}
         </Box>
     );
-}
+};
+
+export default ForYouIWillBody;

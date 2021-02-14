@@ -6,7 +6,7 @@ import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import ForYouIWillBody from './ForYouIWillBody';
 
-export default function ForYouIWill() {
+const ForYouIWill: React.FC = () => {
     const { t } = useTranslation();
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
@@ -27,4 +27,6 @@ export default function ForYouIWill() {
             )}
         </DeviceProvider>
     );
-}
+};
+
+export default ForYouIWill;
