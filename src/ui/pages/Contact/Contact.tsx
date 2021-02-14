@@ -14,11 +14,10 @@ const EMAILJS_templateId = 'template_4mbrgz9';
 
 emailjs.init(EMAILJS_userId);
 
-export default function Contact() {
+const Contact: React.FC = () => {
     const { t } = useTranslation();
     const history = useHistory();
-    const [isSuccessful, isSuccessfulSet] = useState(false);
-    const [showFormBtn, showFormBtnSet] = useState(false);
+    const [showFormBtn] = useState(false);
 
     const isDesktop = useContext(SizeContext);
     const layoutProperty = {
@@ -27,7 +26,7 @@ export default function Contact() {
         type: 'submit',
     };
 
-    function onSubmit(e) {
+    function onSubmit(e: any) {
         e.preventDefault();
         emailjs
             .sendForm(
@@ -38,7 +37,6 @@ export default function Contact() {
             )
             .then(
                 result => {
-                    isSuccessfulSet(true);
                     history.push('/sucessScreen');
                     console.log(result.text);
                 },
@@ -49,25 +47,18 @@ export default function Contact() {
     }
 
     return (
-        <DeviceProvider
-            showFormBtn={showFormBtn}
-            showFormBtnSet={showFormBtnSet}
-        >
+        <DeviceProvider showFormBtn={showFormBtn}>
             {isDesktop ? (
                 <LayoutStepsDesktop {...layoutProperty}>
-                    <ContactBody
-                        onSubmit={onSubmit}
-                        isSuccessful={isSuccessful}
-                    />
+                    <ContactBody onSubmit={onSubmit} />
                 </LayoutStepsDesktop>
             ) : (
                 <LayoutStepsMobile {...layoutProperty}>
-                    <ContactBody
-                        onSubmit={onSubmit}
-                        isSuccessful={isSuccessful}
-                    />
+                    <ContactBody onSubmit={onSubmit} />
                 </LayoutStepsMobile>
             )}
         </DeviceProvider>
     );
-}
+};
+
+export default Contact;

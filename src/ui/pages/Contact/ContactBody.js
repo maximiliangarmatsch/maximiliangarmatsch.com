@@ -6,8 +6,7 @@ import { Box } from '../../components/Base/Base';
 import TextInput from '../../components/ReactHookFormTypes/TextInput';
 import FormValidation from './FormValidation';
 
-export default function ContactBody({ onSubmit, isSuccessful }) {
-    //todo show a "success screen" if isSuccessful
+export default function ContactBody({ onSubmit }) {
     const { handleSubmit, errors, control } = useForm({
         resolver: yupResolver(FormValidation()),
     });
