@@ -3,7 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import { Box } from '../Base/Base';
 import Header from '../Header/Header';
 
-export default function LayoutMobile({ children }) {
+interface LayoutMobileProps {
+    children?: any;
+}
+
+const LayoutMobile: React.FC<LayoutMobileProps> = ({ children }) => {
     return (
         <>
             <Box as={Grid} container mb="4rem">
@@ -22,4 +26,6 @@ export default function LayoutMobile({ children }) {
             </Box>
         </>
     );
-}
+};
+
+export default LayoutMobile;

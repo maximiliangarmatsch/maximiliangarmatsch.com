@@ -3,7 +3,12 @@ import { Flex } from '../Base/Base';
 import TextLogo from './TextLogo';
 import HeaderMenu from './HeaderMenu';
 
-export default function Header({ p, showFormBtn, showFormBtnSet }) {
+interface HeaderProps {
+    p?: any;
+    showFormBtn?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ p, showFormBtn }) => {
     return (
         <Flex
             as="header"
@@ -16,10 +21,8 @@ export default function Header({ p, showFormBtn, showFormBtnSet }) {
             bg="darkgrey"
         >
             <TextLogo />
-            <HeaderMenu
-                showFormBtn={showFormBtn}
-                showFormBtnSet={showFormBtnSet}
-            />
+            <HeaderMenu showFormBtn={showFormBtn} />
         </Flex>
     );
-}
+};
+export default Header;

@@ -3,11 +3,15 @@ import Grid from '@material-ui/core/Grid';
 import { Box } from '../Base/Base';
 import Header from '../Header/Header';
 
-export default function LayoutDesktop({
+interface LayoutDesktopProps {
+    children?: any;
+    showFormBtn?: boolean;
+}
+
+const LayoutDesktop: React.FC<LayoutDesktopProps> = ({
     children,
     showFormBtn,
-    showFormBtnSet,
-}) {
+}) => {
     return (
         <Box as={Grid} container>
             <Box as={Grid} container mb="10rem">
@@ -19,11 +23,7 @@ export default function LayoutDesktop({
                     left={0}
                     zIndex="10"
                 >
-                    <Header
-                        showFormBtn={showFormBtn}
-                        showFormBtnSet={showFormBtnSet}
-                        p="0 5%"
-                    />
+                    <Header showFormBtn={showFormBtn} p="0 5%" />
                 </Box>
             </Box>
             <Box as={Grid} item container>
@@ -35,4 +35,5 @@ export default function LayoutDesktop({
             </Box>
         </Box>
     );
-}
+};
+export default LayoutDesktop;

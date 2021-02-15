@@ -3,22 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 
-export default function DownloadCV() {
+const DownloadPortfolio: React.FC = () => {
     const location = useLocation();
 
     const { t } = useTranslation();
     let href = '';
     let downloadName = '';
 
-    if (location.pathname === '/cv') {
-        href = '/assets/CV - Maximilian Garmatsch - JavaScript Developer.pdf';
-        downloadName = 'CV - Maximilian Garmatsch - JavaScript Developer.pdf';
-    }
-    if (location.pathname === '/lebenslauf') {
+    if (location.pathname === '/portfolio') {
         href =
-            '/assets/Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
+            '/assets/Portfolio - Maximilian Garmatsch - Engineering Manager.pdf';
         downloadName =
-            'Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
+            'Portfolio - Maximilian Garmatsch - Engineering Manager.pdf';
     }
 
     useEffect(() => {
@@ -32,13 +28,11 @@ export default function DownloadCV() {
         <DeviceProvider>
             The download has started...
             <br />
-            <Link
-                to="/"
-                color="green"
-                style={{ color: 'green', textDecoration: 'none' }}
-            >
+            <Link to="/" style={{ color: 'green', textDecoration: 'none' }}>
                 {t('Back to the start')}
             </Link>
         </DeviceProvider>
     );
-}
+};
+
+export default DownloadPortfolio;

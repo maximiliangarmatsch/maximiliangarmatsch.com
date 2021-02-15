@@ -5,7 +5,7 @@ import LayoutStepsDesktop from '../../components/Layouts/LayoutStepsDesktop';
 import LayoutStepsMobile from '../../components/Layouts/LayoutStepsMobile';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 
-export default function SuccessScreen() {
+const SuccessScreen: React.FC = () => {
     const { t } = useTranslation();
 
     const isDesktop = useContext(SizeContext);
@@ -23,4 +23,6 @@ export default function SuccessScreen() {
             )}
         </DeviceProvider>
     );
-}
+};
+
+export default SuccessScreen;

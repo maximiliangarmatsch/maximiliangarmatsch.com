@@ -6,18 +6,21 @@ import { Box } from '../../components/Base/Base';
 import TextInput from '../../components/ReactHookFormTypes/TextInput';
 import FormValidation from './FormValidation';
 
-export default function ContactBody({ onSubmit }) {
+interface ContactBodyProps {
+    onSubmit(arg: any): void;
+}
+const ContactBody: React.FC<ContactBodyProps> = ({ onSubmit }) => {
     const { handleSubmit, errors, control } = useForm({
         resolver: yupResolver(FormValidation()),
     });
 
-    const submit = (values, e) => {
+    const submit = (values: any, e: any) => {
         setTimeout(() => {
             onSubmit(e);
         }, 500);
     };
 
-    const error = (error, e) => {
+    const error = (error: any, e: any) => {
         console.warn('### FormHelpers:onSubmitError ERROR', error, e);
     };
     return (
@@ -66,10 +69,9 @@ export default function ContactBody({ onSubmit }) {
                             }
                             control={control}
                             defaultValue=""
-                            inputProps={
-                                ({ 'data-testid': 'contact-form-name' },
-                                { 'data-testid': 'contact-form-company' })
-                            }
+                            inputProps={{
+                                'data-testid': 'contact-form-company',
+                            }}
                         ></TextInput>
                     </Box>
                 </Box>
@@ -95,12 +97,7 @@ export default function ContactBody({ onSubmit }) {
                             helperText={errors.email && errors['email'].message}
                             control={control}
                             defaultValue=""
-                            inputProps={
-                                ({
-                                    'data-testid': 'contact-form-email',
-                                },
-                                { 'data-testid': 'contact-form-phone' })
-                            }
+                            inputProps={{ 'data-testid': 'contact-form-phone' }}
                         ></TextInput>
                     </Box>
                 </Box>
@@ -168,4 +165,6 @@ export default function ContactBody({ onSubmit }) {
             </form>
         </Box>
     );
-}
+};
+
+export default ContactBody;

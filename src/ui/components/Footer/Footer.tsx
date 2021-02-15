@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '../Base/Base';
 
-export default function Footer() {
+const Footer: React.FC = () => {
     return (
         <Box
             as="footer"
@@ -17,4 +17,6 @@ export default function Footer() {
             zIndex="10"
         ></Box>
     );
-}
+};
+
+export default Footer;

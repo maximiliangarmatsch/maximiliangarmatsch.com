@@ -1,7 +1,12 @@
 import React from 'react';
 import { Box } from './Base/Base';
 
-export default function ImageMaximilian({ margin, size }) {
+interface ImageMaximilianProps {
+    margin?: number;
+    size?: number;
+}
+
+const ImageMaximilian: React.FC<ImageMaximilianProps> = ({ margin, size }) => {
     return (
         <Box
             as="img"
@@ -39,4 +44,6 @@ export default function ImageMaximilian({ margin, size }) {
             alt="Maximilian Garmatsch"
         />
     );
-}
+};
+
+export default ImageMaximilian;
