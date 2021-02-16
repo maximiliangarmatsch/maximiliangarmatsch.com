@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Box } from '../Base/Base';
 //import {} from "../../../../config/theme"
 
-export default function UserNameText(props) {
+const UserNameText: React.FC = () => {
     const { user } = useAuth0();
     return (
         <Box
@@ -32,4 +32,6 @@ export default function UserNameText(props) {
             {user ? user.name : 'GUEST'}
         </Box>
     );
-}
+};
+
+export default UserNameText;

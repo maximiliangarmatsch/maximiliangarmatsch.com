@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '../Base/Base';
-import CookieMessageMobile from '../Layouts/components/CookieMessageMobile';
+import CookieMessageDesktop from '../Layouts/components/CookieMessageDesktop';
 import ShadowLayer from './ShadowLayer';
 
-export default function BackgroundLayerMobile({ children }) {
+interface BackgroundLayerDesktopProps {
+    children: any;
+}
+const BackgroundLayerDesktop: React.FC<BackgroundLayerDesktopProps> = ({
+    children,
+}) => {
     const [showCookieMessage, setShowCookieMessage] = useState(false);
 
     useEffect(() => {
@@ -14,7 +19,8 @@ export default function BackgroundLayerMobile({ children }) {
 
     const acceptCookie = () => {
         setShowCookieMessage(false);
-        localStorage.setItem('cookieAccept', true);
+        //localStorage.setItem('cookieAccept', true);
+        localStorage.setItem('cookieAccept', 'true');
     };
 
     return (
@@ -25,19 +31,22 @@ export default function BackgroundLayerMobile({ children }) {
             `}
             position="absolute"
             left="0"
-            top="60px"
-            height="calc(100% - 120px)"
+            top={{ lg: '60px', xl: '70px', xxl: '100px' }}
+            height={{
+                lg: 'calc(100% - 60px)',
+                xl: 'calc(100% - 70px)',
+                xxl: 'calc(100% - 100px)',
+            }}
             width="100%"
             zIndex={1}
         >
             <Box
                 as="img"
-                position={{ _: 'fixed', sm: 'fixed', md: 'absolute' }}
-                bottom={{ _: '-35px', sm: '0px', md: '-5%' }}
-                left={{ _: '-65px', sm: '-65px', md: '0' }}
-                maxWidth={{ _: '500px', sm: '500px', md: 'inherit' }}
-                width={{ md: '100vw' }}
-                src="/assets/MaxTransparentMobile.png"
+                position="fixed"
+                bottom="0"
+                left={{ lg: '-80px', xl: '0px', xxl: '0px' }}
+                maxHeight={{ lg: '90vh', xl: '90vh', xxl: '90vh' }}
+                src="/assets/MaxTransparent.png"
                 css={
                     showCookieMessage &&
                     `
@@ -47,10 +56,12 @@ export default function BackgroundLayerMobile({ children }) {
             />
             <ShadowLayer />
             {showCookieMessage ? (
-                <CookieMessageMobile acceptCookie={acceptCookie} />
+                <CookieMessageDesktop acceptCookie={acceptCookie} />
             ) : (
                 children
             )}
         </Box>
     );
-}
+};
+
+export default BackgroundLayerDesktop;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '../Base/Base';
 
-export default function ShadowLayer() {
+const ShadowLayer: React.FC = () => {
     return (
         <Box
             bg="rgba(25, 25, 25, 0.64)"
@@ -16,4 +16,6 @@ export default function ShadowLayer() {
             zIndex={1}
         />
     );
-}
+};
+
+export default ShadowLayer;

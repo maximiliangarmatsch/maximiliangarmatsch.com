@@ -1,7 +1,11 @@
 import React from 'react';
 import { Box } from '../Base/Base';
 
-export default function IconCheckpoint({ size, children }) {
+interface IconCheckpointProps {
+    size: any;
+    children: any;
+}
+const IconCheckpoint: React.FC<IconCheckpointProps> = ({ size, children }) => {
     return (
         <Box
             borderRadius="50%"
@@ -19,4 +23,6 @@ export default function IconCheckpoint({ size, children }) {
             {children}
         </Box>
     );
-}
+};
+
+export default IconCheckpoint;

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Box } from '../Base/Base';
 
-export default function LoginButton() {
+const LoginButton: React.FC = () => {
     const {
         user,
         loginWithRedirect,
@@ -50,4 +50,6 @@ export default function LoginButton() {
             {user ? 'LOGOUT' : 'LOGIN'}
         </Box>
     );
-}
+};
+
+export default LoginButton;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex } from '../Base/Base';
 import Icon from './Icon';
 
-export default function PortfolioIcons() {
+const PortfolioIcons: React.FC = () => {
     return (
         <Flex
             flexDirection="column"
@@ -34,4 +34,5 @@ export default function PortfolioIcons() {
             />
         </Flex>
     );
-}
+};
+export default PortfolioIcons;

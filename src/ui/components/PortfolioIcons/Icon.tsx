@@ -2,7 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Flex, Box } from '../Base/Base';
 
-export default function Icon({
+interface IconProps {
+    to?: any;
+    iconSrc?: any;
+    alt?: any;
+    width?: any;
+    height?: any;
+    margin?: any;
+    target?: any;
+    href?: any;
+}
+const Icon: React.FC<IconProps> = ({
     to,
     iconSrc,
     alt,
@@ -11,7 +21,7 @@ export default function Icon({
     margin,
     target,
     href,
-}) {
+}) => {
     return (
         <Flex
             as={!href ? Link : 'a'}
@@ -26,4 +36,6 @@ export default function Icon({
             <Box as="img" width="100%" height="100%" src={iconSrc} alt={alt} />
         </Flex>
     );
-}
+};
+
+export default Icon;
