@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../components/Base/Base';
 
-export default function TextWelcome() {
+const TextWelcome: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -70,4 +70,6 @@ export default function TextWelcome() {
             </Text>
         </Box>
     );
-}
+};
+
+export default TextWelcome;

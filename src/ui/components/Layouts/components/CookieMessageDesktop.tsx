@@ -3,28 +3,33 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Box, Text } from '../../Base/Base';
 
-export default function CookieMessageMobile({ acceptCookie }) {
+interface CookieMessageDesktopProps {
+    acceptCookie: any;
+}
+const CookieMessageDesktop: React.FC<CookieMessageDesktopProps> = ({
+    acceptCookie,
+}) => {
     const { t } = useTranslation();
 
     return (
         <Box
+            maxWidth="600px"
             position="absolute"
-            maxHeight="40%"
-            bottom="0"
-            left="0"
+            top="50%"
+            right="10%"
             border="1px solid #0DE99A"
             bg="rgba(25, 25, 25, 0.64)"
-            fontSize="16px"
-            lineHeight="16px"
-            fontWeight="300"
+            fontSize="24px"
+            lineHeight="36px"
             color="green"
             zIndex="10"
-            p="20px"
+            p="50px"
             css={`
+                transform: translateY(-50%);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             `}
         >
-            <Text fontSize="20px" fontWeight="400">
+            <Text fontSize="28px">
                 {t('This site uses cookies.')}
                 <br />
                 <br />
@@ -54,10 +59,10 @@ export default function CookieMessageMobile({ acceptCookie }) {
                 `}
                 borderRadius="12px"
                 border="none"
-                fontSize="20px"
+                fontSize="26px"
                 color="green"
                 p="10px 15px"
-                mt="10px"
+                mt="20px"
                 onClick={acceptCookie}
                 data-testid="cookie-button"
             >
@@ -65,4 +70,6 @@ export default function CookieMessageMobile({ acceptCookie }) {
             </Box>
         </Box>
     );
-}
+};
+
+export default CookieMessageDesktop;

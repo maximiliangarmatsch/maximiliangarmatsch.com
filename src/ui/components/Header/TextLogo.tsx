@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Text } from '../Base/Base';
 
-export default function TextLogo() {
+const TextLogo: React.FC = () => {
     return (
         <Box
             as={Link}
@@ -37,4 +37,6 @@ export default function TextLogo() {
             </Text>
         </Box>
     );
-}
+};
+
+export default TextLogo;

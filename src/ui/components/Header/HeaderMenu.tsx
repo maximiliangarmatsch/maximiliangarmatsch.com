@@ -5,7 +5,10 @@ import { Flex, Text } from '../Base/Base';
 import Icon from '../PortfolioIcons/Icon';
 import { SizeContext } from '../../../context/SizeContext';
 
-export default function HeaderMenu({ showFormBtn = true }) {
+interface HeaderMenuProps {
+    showFormBtn?: boolean;
+}
+const HeaderMenu: React.FC<HeaderMenuProps> = ({ showFormBtn = true }) => {
     const isDesktop = useContext(SizeContext);
 
     return (
@@ -83,4 +86,6 @@ export default function HeaderMenu({ showFormBtn = true }) {
             />
         </Flex>
     );
-}
+};
+
+export default HeaderMenu;

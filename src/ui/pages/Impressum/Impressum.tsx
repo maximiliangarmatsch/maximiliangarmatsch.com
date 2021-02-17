@@ -30,7 +30,7 @@ import DataRetention from './PrivacyPolicy/6_DataRetention';
 import TermsOfService from './PrivacyPolicy/8_TermsOfService';
 import ChangesToPrivacyPolicy from './PrivacyPolicy/9_ChangesOfPrivacyPolicy';
 
-export default function Impressum() {
+const Impressum: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -101,9 +101,9 @@ export default function Impressum() {
             </div>
         </Box>
     );
-}
+};
 
-const A = chunks => (
+const A = (chunks: any) => (
     <Text
         as={Link}
         color="white"
@@ -116,3 +116,5 @@ const A = chunks => (
         {chunks}
     </Text>
 );
+
+export default Impressum;

@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import Popover from '@material-ui/core/Popover';
-import { Box } from '../../components/Base/Base';
+import { Box } from './Base';
 
-const InfoIconButton = ({ html }) => {
+const InfoIconButton = ({ html }: any) => {
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const onClick = event => {
+    const onClick = (event: any) => {
         event.stopPropagation();
         setAnchorEl(event.currentTarget);
     };
 
-    const onClose = event => {
+    const onClose = (event: any) => {
         event.stopPropagation();
         setAnchorEl(null);
     };

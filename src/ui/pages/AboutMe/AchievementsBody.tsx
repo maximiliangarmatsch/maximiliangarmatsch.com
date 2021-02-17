@@ -6,7 +6,7 @@ import { Box, Text } from '../../components/Base/Base';
 
 // exported for testing purpose
 export const formatValues = {
-    header: chunks => (
+    header: (chunks: any) => (
         <Text
             fontSize={{ _: '20px', sm: '20px', md: '26px' }}
             fontWeight="bold"
@@ -15,7 +15,7 @@ export const formatValues = {
             {chunks} <br />
         </Text>
     ),
-    subheader: chunks => (
+    subheader: (chunks: any) => (
         <Text
             fontSize={{ _: '14px', sm: '16px', md: '18px' }}
             fontWeight="bold"
@@ -24,7 +24,7 @@ export const formatValues = {
             {chunks} <br />
         </Text>
     ),
-    rest: chunks => (
+    rest: (chunks: any) => (
         <Text fontSize={{ _: '8px', sm: '10px', md: '12px' }} fontWeight="300">
             {chunks} <br />
         </Text>

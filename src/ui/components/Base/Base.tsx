@@ -12,7 +12,7 @@ import {
 } from 'styled-system';
 
 export const Box = styled('div')(
-    props => props.css,
+    (props: any) => props.css,
     compose(space, layout, typography, color, flexbox, position, border)
 );
 Box.propTypes = {
@@ -42,7 +42,7 @@ const ellipStyle = `
     white-space: nowrap;
 `;
 
-export const Text = forwardRef((props, ref) => {
+export const Text = forwardRef((props: any, ref) => {
     const { ellipsis, ...rest } = props;
     return <Box as="span" css={ellipsis && ellipStyle} ref={ref} {...rest} />;
 });
