@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function LinksToOtherWebsites() {
+const LinksToOtherWebsites: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -15,4 +15,6 @@ export default function LinksToOtherWebsites() {
             </P>
         </div>
     );
-}
+};
+
+export default LinksToOtherWebsites;

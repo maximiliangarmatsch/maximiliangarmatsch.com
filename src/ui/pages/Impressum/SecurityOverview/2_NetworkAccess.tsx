@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 import { Text } from '../../../components/Base/Base';
 
-export default function NetworkAccess() {
+const NetworkAccess: React.FC = () => {
     const { t } = useTranslation();
-    const span = chunks => (
+    const span = (chunks: any) => (
         <Text as="span" color="white">
             {chunks}
         </Text>
@@ -24,4 +24,6 @@ export default function NetworkAccess() {
             </P>
         </div>
     );
-}
+};
+
+export default NetworkAccess;

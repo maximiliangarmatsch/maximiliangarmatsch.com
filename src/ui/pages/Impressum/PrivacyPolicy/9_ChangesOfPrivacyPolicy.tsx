@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { H2, P } from '../../../components/Base/Text';
 import { Text } from '../../../components/Base/Base';
 
-export default function ChangesToPrivacyPolicy() {
+const ChangesToPrivacyPolicy: React.FC = () => {
     const { t } = useTranslation();
-    const span = chunks => (
+    const span = (chunks: any) => (
         <Text as="span" color="white">
             {chunks}
         </Text>
     );
-    const A = chunks => (
+    const A = (chunks: any) => (
         <Text
             as={Link}
             color="white"
@@ -41,4 +41,6 @@ If you have questions about our ${(
             </P>
         </div>
     );
-}
+};
+
+export default ChangesToPrivacyPolicy;

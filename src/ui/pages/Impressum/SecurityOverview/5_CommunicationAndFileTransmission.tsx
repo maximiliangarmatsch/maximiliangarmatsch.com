@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 import { Text } from '../../../components/Base/Base';
 
-export default function CommunicationAndFileTransmission() {
+const CommunicationAndFileTransmission: React.FC = () => {
     const { t } = useTranslation();
-    const span = chunks => (
+    const span = (chunks: any) => (
         <Text as="span" color="white">
             {chunks}
         </Text>
@@ -30,4 +30,6 @@ IMPORTANT: THE SECURITY OF YOUR DATA AND PERSONALLY IDENTIFIABLE AND PROPRIETARY
             </P>
         </div>
     );
-}
+};
+
+export default CommunicationAndFileTransmission;

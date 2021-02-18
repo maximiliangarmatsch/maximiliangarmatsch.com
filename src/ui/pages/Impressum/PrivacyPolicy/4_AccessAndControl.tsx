@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function AccessAndControl() {
+const AccessAndControl: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -20,4 +20,5 @@ Change/correct any data we have about you.Have us delete any data we have about 
             </P>
         </div>
     );
-}
+};
+export default AccessAndControl;

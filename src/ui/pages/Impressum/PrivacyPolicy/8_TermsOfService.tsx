@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function TermsOfService() {
+const TermsOfService: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -17,4 +17,6 @@ export default function TermsOfService() {
             </P>
         </div>
     );
-}
+};
+
+export default TermsOfService;

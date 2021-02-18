@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function InformationCollection() {
+const InformationCollection: React.FC = () => {
     const { t } = useTranslation();
     return (
         <div>
@@ -31,4 +31,6 @@ When it is necessary to share your information, we partner with another party to
             </P>
         </div>
     );
-}
+};
+
+export default InformationCollection;

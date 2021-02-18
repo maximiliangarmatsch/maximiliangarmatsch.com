@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function DataRetention() {
+const DataRetention: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -16,4 +16,6 @@ Billing information is retained for a period of 7 years. Information on legal tr
             </P>
         </div>
     );
-}
+};
+
+export default DataRetention;

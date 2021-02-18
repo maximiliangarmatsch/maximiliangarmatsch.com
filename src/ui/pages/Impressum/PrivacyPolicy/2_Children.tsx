@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function Children() {
+const Children: React.FC = () => {
     const { t } = useTranslation();
     return (
         <div>
@@ -14,4 +14,6 @@ export default function Children() {
             </P>
         </div>
     );
-}
+};
+
+export default Children;

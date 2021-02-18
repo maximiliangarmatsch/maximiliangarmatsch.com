@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 import { Text } from '../../../components/Base/Base';
 
-export default function UserAccountAccess() {
+const UserAccountAccess: React.FC = () => {
     const { t } = useTranslation();
-    const span = chunks => (
+    const span = (chunks: any) => (
         <Text as="span" color="white">
             {chunks}
         </Text>
@@ -27,4 +27,6 @@ Maximilian Franz Peter Garmatsh’s internal PINs, passwords and multi-factor ac
             </P>
         </div>
     );
-}
+};
+
+export default UserAccountAccess;

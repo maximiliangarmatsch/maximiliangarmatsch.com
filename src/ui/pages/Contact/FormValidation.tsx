@@ -4,10 +4,12 @@ import {
     EmailValidation,
 } from '../../../helpers/ValidationSchemas';
 
-export default function FormValidation() {
+const FormValidation: any = () => {
     return Yup.object().shape({
         fullname: RequiredValidation(),
         email: EmailValidation(true),
         aboutproject: RequiredValidation(),
     });
-}
+};
+
+export default FormValidation;

@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '../Base/Base';
 
-export default function NavLink({ to, children, style, fontSize }) {
+interface NavLinkProps {
+    to?: any;
+    children?: any;
+    style?: any;
+    fontSize?: any;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ to, children, style, fontSize }) => {
     return (
         <Box
             as={Link}
@@ -17,4 +24,6 @@ export default function NavLink({ to, children, style, fontSize }) {
             {children}
         </Box>
     );
-}
+};
+
+export default NavLink;

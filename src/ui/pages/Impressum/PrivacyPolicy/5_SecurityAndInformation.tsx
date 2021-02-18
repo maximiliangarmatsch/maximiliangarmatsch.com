@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { H2, P } from '../../../components/Base/Text';
 
-export default function SecurityAndInformation() {
+const SecurityAndInformation: React.FC = () => {
     const { t } = useTranslation();
 
     return (
@@ -24,4 +24,6 @@ Learn more about Security Overview.`)}
             </P>
         </div>
     );
-}
+};
+
+export default SecurityAndInformation;

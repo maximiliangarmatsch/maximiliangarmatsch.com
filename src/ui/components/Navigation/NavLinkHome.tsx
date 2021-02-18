@@ -3,7 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { Box } from '../Base/Base';
 import NavLink from './NavLink';
 
-export default function NavLinkHome({ style, arrowStyle }) {
+interface NavLinkHomeProps {
+    style?: any;
+    arrowStyle?: any;
+}
+
+const NavLinkHome: React.FC<NavLinkHomeProps> = ({ style, arrowStyle }) => {
     const { t } = useTranslation();
 
     return (
@@ -31,4 +36,6 @@ export default function NavLinkHome({ style, arrowStyle }) {
             </NavLink>
         </Box>
     );
-}
+};
+
+export default NavLinkHome;
