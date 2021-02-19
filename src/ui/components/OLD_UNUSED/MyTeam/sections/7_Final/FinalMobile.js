@@ -65,6 +65,7 @@ export default function FinalMobile() {
                     text-decoration: none;
                 `}
                 to="/"
+                data-testid="back-button"
             >
                 {t('Back to Home')}
             </Box>

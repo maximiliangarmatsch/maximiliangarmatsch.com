@@ -54,6 +54,7 @@ export default function FinalDesktop() {
                         transform: translateX(-50%);
                         text-decoration: none;
                     `}
+                    data-testid="back-button"
                 >
                     {t('Back to Home')}
                 </Box>
