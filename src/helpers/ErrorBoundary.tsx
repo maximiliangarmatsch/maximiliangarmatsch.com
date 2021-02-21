@@ -2,7 +2,7 @@ import React from 'react';
 import * as Sentry from '@sentry/browser';
 
 class ErrorBoundary extends React.Component {
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         this.state = {
             eventId: null,
@@ -15,7 +15,7 @@ class ErrorBoundary extends React.Component {
         return { hasError: true };
     }
 
-    componentDidCatch(error, errorInfo) {
+    componentDidCatch(error: any, errorInfo: any) {
         Sentry.withScope(scope => {
             scope.setExtras(errorInfo);
             const eventId = Sentry.captureException(error);
@@ -25,9 +25,9 @@ class ErrorBoundary extends React.Component {
 
     render() {
         //todo talk with designer about error-page
-        if (this.state.hasError) {
-            // return <button onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>Report feedback</button>
-        }
+        // if (this.state.hasError) {
+        //     // return <button onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>Report feedback</button>
+        // }
 
         return this.props.children;
     }

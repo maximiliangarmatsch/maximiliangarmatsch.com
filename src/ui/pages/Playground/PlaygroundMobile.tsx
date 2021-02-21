@@ -5,7 +5,7 @@ import React from 'react';
 // import IconButtonBig from './components/IconButtonBig';
 // import LoginButton from './components/LoginButton';
 
-export default function PlaygroundMobile() {
+const PlaygroundMobile: React.FC = () => {
     return (
         <>
             <h2>Test</h2>
@@ -35,4 +35,6 @@ export default function PlaygroundMobile() {
             {/*    </Box>*/}
         </>
     );
-}
+};
+
+export default PlaygroundMobile;

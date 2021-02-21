@@ -17,8 +17,8 @@ import DownloadCV from './pages/Download/DownloadCV';
 import DownloadPortfolio from './pages/Download/DownloadPortfolio';
 import Playground from './pages/Playground/Playground';
 
-export default function App() {
-    let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
+const App: React.FC = () => {
+    let isDesktop = useMediaQuery(`(min-width: 1025px)`);
 
     return (
         <ErrorBoundary>
@@ -68,7 +68,7 @@ export default function App() {
             </ThemeProvider>
         </ErrorBoundary>
     );
-}
+};
 
 const AppStyle = createGlobalStyle`
     html,
@@ -84,3 +84,5 @@ const AppStyle = createGlobalStyle`
         padding: 0;
     }
 `;
+
+export default App;

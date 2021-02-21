@@ -74,55 +74,6 @@ export function StartDateValidation(isRequired = false) {
         });
 }
 
-export function EndDateValidation(startDate) {
-    const { t } = useTranslation();
-    return Yup.date()
-        .nullable()
-        .transform(function(value) {
-            return this.isType(value) && value !== null ? value : undefined;
-        })
-        .when(startDate, (startDate, schema) => {
-            if (new Date(startDate) !== 'Invalid Date' && !isNaN(startDate)) {
-                return schema.min(
-                    startDate,
-                    t('End date must be later than or equal to start date')
-                );
-            }
-        });
-}
-
-export function PositiveIntegerValidation(minimum = false) {
-    const { t } = useTranslation();
-    if (minimum) {
-        return Yup.number()
-            .nullable()
-            .transform(function(value) {
-                return this.isType(value) && value !== null ? value : undefined;
-            })
-            .integer()
-            .positive()
-            .when(minimum, (minimumValue, schema) => {
-                if (minimumValue !== undefined && !isNaN(minimumValue)) {
-                    return schema.min(
-                        minimumValue,
-                        t('max number must be greater or equal to min number')
-                    );
-                } else {
-                    return schema.min(1);
-                }
-            });
-    } else {
-        return Yup.number()
-            .nullable()
-            .transform(function(value) {
-                return this.isType(value) && value !== null ? value : undefined;
-            })
-            .integer()
-            .positive()
-            .min(1);
-    }
-}
-
 export function NumberValidation() {
     const { t } = useTranslation();
     return Yup.string()
@@ -162,13 +113,4 @@ export function PhoneNumberValidation(isRequired = false) {
                 t('AtLeastXCharactersRequired', { X: phoneMinLength })
             )
             .trim();
-}
-
-export function bulkValidation(label, size) {
-    const res = {};
-    for (let i = 1; i <= size; i++) {
-        let index = i >= 10 || size < 10 ? i : `0${i}`;
-        res[`${label}_${index}`] = RequiredValidation();
-    }
-    return res;
 }

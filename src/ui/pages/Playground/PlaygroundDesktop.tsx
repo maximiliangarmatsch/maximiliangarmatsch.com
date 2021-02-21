@@ -5,7 +5,7 @@ import React from 'react';
 // import LoginButton from './components/LoginButton';
 // import UserNameText from './components/UserNameText';
 
-export default function PlaygroundDesktop() {
+const PlaygroundDesktop: React.FC = () => {
     return (
         <>
             <h2>test</h2>
@@ -41,4 +41,6 @@ export default function PlaygroundDesktop() {
             {/*</Box>*/}
         </>
     );
-}
+};
+
+export default PlaygroundDesktop;

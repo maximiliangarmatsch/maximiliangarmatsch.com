@@ -4,7 +4,7 @@ import DeviceProvider from '../../../helpers/DeviceProvider';
 import PlaygroundMobile from './PlaygroundMobile';
 import PlaygroundDesktop from './PlaygroundDesktop';
 
-export default function Playground() {
+const Playground: React.FC = () => {
     const isDesktop = useContext(SizeContext);
 
     return (
@@ -12,4 +12,6 @@ export default function Playground() {
             {!isDesktop ? <PlaygroundMobile /> : <PlaygroundDesktop />}
         </DeviceProvider>
     );
-}
+};
+
+export default Playground;

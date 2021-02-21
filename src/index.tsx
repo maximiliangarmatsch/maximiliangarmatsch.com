@@ -17,7 +17,7 @@ Sentry.init({
 
 //test
 
-const authSetUp = {
+const authSetUp: any = {
     domain: process.env.REACT_APP_AUTH_DOMAIN,
     clientId: process.env.REACT_APP_AUTH_CLIENT_ID,
     cacheLocation: 'localstorage',
