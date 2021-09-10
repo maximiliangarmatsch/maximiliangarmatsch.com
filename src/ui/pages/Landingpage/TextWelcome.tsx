@@ -63,10 +63,6 @@ const TextWelcome: React.FC = () => {
                 <br />
                 {t('Scalable Web & Mobile Apps')}
                 <br />
-                {t('Digital Marketing')}
-                <br />
-                {t('E-Commerce"')}
-                <br />
             </Text>
         </Box>
     );
