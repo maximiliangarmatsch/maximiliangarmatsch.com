@@ -75,14 +75,13 @@ const SectionCheckpoint: React.FC<SectionCheckpointProps> = ({
                 @media screen and (max-width: 1024px) and (min-width: 768px) {
                     height: 190px;
                     font-size: 19px;
-                    line-height: 20px;
                 }
                 box-shadow: 0px 0px 16px #000000;
             `}
             borderRadius="12px"
             p="20px 16px"
-            fontSize={{ _: '14px', lg: '22px', xl: '19px' }}
-            lineHeight={{ _: '16px', lg: '22px', xl: '19px' }}
+            fontSize={{ _: '14px', lg: '16.5px', xl: '19px' }}
+            lineHeight={{ _: '16.8px', lg: '19.8px', xl: '22.8px' }}
             fontWeight="300"
             mt={{ _: '15px', lg: '10px' }}
             data-testid={dataTestId}
