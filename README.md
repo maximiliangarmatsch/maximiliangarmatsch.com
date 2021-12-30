@@ -14,7 +14,7 @@ npm start
 - ESLint: Formats code nicely and shows typos.
 - Prettier
 - Babel
-- ....
+- other things....
 
 ### Code coverage
 I used istanbul.js for code instrumentation and nyc to generate report. 
